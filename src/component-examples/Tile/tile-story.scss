@@ -1,0 +1,20 @@
+//
+// Copyright IBM Corp. 2021, 2024
+//
+// This source code is licensed under the Apache-2.0 license found in the
+// LICENSE file in the root directory of this source tree.
+//
+
+@use '@carbon/react/scss/components/tile';
+@use '@carbon/react/scss/type';
+
+.experimental-tile {
+  @include tile.tile(
+    $enable-experimental-tile-contrast: true,
+    $enable-v12-tile-radio-icons: true
+  );
+}
+
+div .cds--tile--selectable:not(:last-child) {
+  margin-block-end: 1rem;
+}
