@@ -5,13 +5,13 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
-import { ArrowRight } from '@carbon/icons-react';
-import Link from './Link';
-import mdx from './Link.mdx';
+import React from "react";
+import { ArrowRight } from "@carbon/icons-react";
+import Link from "./Link";
+import mdx from "./Link.mdx";
 
 export default {
-  title: 'Components/Link',
+  title: "Components/Link",
   component: Link,
   parameters: {
     docs: {
@@ -58,7 +58,7 @@ export const Inline = () => {
         Ut facilisis semper lorem in aliquet. Aliquam accumsan ante justo, vitae
         fringilla eros vehicula id. Ut at enim quis libero pharetra ullamcorper.
         Maecenas feugiat sodales arcu ut porttitor. In blandit ultricies est.
-        Vivamus risus massa, cursus eu tellus sed, sagittis commodo nunc.{' '}
+        Vivamus risus massa, cursus eu tellus sed, sagittis commodo nunc.{" "}
         <Link inline href="#">
           Maecenas nunc mauris, consequat quis mauris sit amet
         </Link>
@@ -77,7 +77,8 @@ export const PairedWithIcon = (args) => {
     <Link
       href="#"
       renderIcon={() => <ArrowRight aria-label="Arrow Right" />}
-      {...args}>
+      {...args}
+    >
       Carbon Docs
     </Link>
   );

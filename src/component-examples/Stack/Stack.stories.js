@@ -5,11 +5,11 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
-import { Stack } from './Stack';
+import React from "react";
+import { Stack } from "./Stack";
 
 export default {
-  title: 'Layout/Stack',
+  title: "Layout/Stack",
   component: Stack,
   parameters: {
     controls: {
@@ -46,25 +46,25 @@ export const Default = (args) => {
 };
 
 Default.args = {
-  as: 'div',
+  as: "div",
 };
 
 Default.argTypes = {
   as: {
     control: {
-      type: 'text',
+      type: "text",
     },
   },
   gap: {
     options: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     control: {
-      type: 'select',
+      type: "select",
     },
   },
   orientation: {
-    options: ['horizontal', 'vertical'],
+    options: ["horizontal", "vertical"],
     control: {
-      type: 'select',
+      type: "select",
     },
   },
 };

@@ -8,7 +8,7 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
 
-import { MenuItem, MenuItemDivider } from '../Menu';
+import { MenuItem, MenuItemDivider } from '@carbon/react';
 
 import { Asset, User, Group } from '@carbon/react/icons';
 
@@ -65,7 +65,7 @@ Default.args = { label: 'Actions' };
 Default.argTypes = { ...sharedArgTypes };
 
 export const ExperimentalAutoAlign = (args) => (
-  <div style={{ width: '5000px', height: '5000px' }}>
+  <div style={ width: '5000px', height: '5000px' }>
     <div
       style={{
         position: 'absolute',
@@ -144,7 +144,7 @@ WithNestedMenu.argTypes = { ...sharedArgTypes };
 export const WithMenuAlignment = () => {
   return (
     <>
-      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+      <div style={ display: 'flex', justifyContent: 'space-between' }>
         <MenuButton label="Bottom" menuAlignment="bottom">
           <MenuItem label="First action" />
           <MenuItem label="Second action that is a longer item to test overflow and title." />

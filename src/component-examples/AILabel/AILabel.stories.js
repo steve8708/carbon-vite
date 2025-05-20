@@ -5,17 +5,17 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
+import React from "react";
 
-import { AILabel, AILabelContent, AILabelActions } from '.';
-import { View, FolderOpen, Folders } from '@carbon/icons-react';
-import Button from '../Button';
-import { IconButton } from '../IconButton';
-import mdx from './AILabel.mdx';
-import './ailabel-story.scss';
+import { AILabel, AILabelContent, AILabelActions } from ".";
+import { View, FolderOpen, Folders } from "@carbon/icons-react";
+import { Button } from "@carbon/react";
+import { IconButton } from "@carbon/react";
+import mdx from "./AILabel.mdx";
+import "./ailabel-story.scss";
 
 export default {
-  title: 'Components/AILabel',
+  title: "Components/AILabel",
   component: AILabel,
   parameters: {
     docs: {
@@ -252,7 +252,7 @@ export const ExplainabilityPopover = (args) => {
     <div className="ai-label-container-example ai-label-container centered">
       <AILabel autoAlign={false} defaultOpen {...args}>
         <AILabelContent>
-          {' '}
+          {" "}
           <div>
             <p className="secondary">AI Explained</p>
             <h2 className="ai-label-heading">84%</h2>
@@ -289,29 +289,29 @@ export const ExplainabilityPopover = (args) => {
 ExplainabilityPopover.argTypes = {
   showAILabelActions: {
     control: {
-      type: 'boolean',
+      type: "boolean",
     },
-    description: 'Playground only - toggle to show the callout toolbar',
+    description: "Playground only - toggle to show the callout toolbar",
   },
   align: {
     options: [
-      'top',
-      'top-start',
-      'top-end',
+      "top",
+      "top-start",
+      "top-end",
 
-      'bottom',
-      'bottom-start',
-      'bottom-end',
+      "bottom",
+      "bottom-start",
+      "bottom-end",
 
-      'left',
-      'left-end',
-      'left-start',
+      "left",
+      "left-end",
+      "left-start",
 
-      'right',
-      'right-end',
-      'right-start',
+      "right",
+      "right-end",
+      "right-start",
     ],
-    control: { type: 'select' },
+    control: { type: "select" },
   },
   revertActive: {
     table: {
@@ -435,29 +435,29 @@ export const Playground = (args) => {
 Playground.argTypes = {
   showAILabelActions: {
     control: {
-      type: 'boolean',
+      type: "boolean",
     },
-    description: 'Playground only - toggle to show the callout toolbar',
+    description: "Playground only - toggle to show the callout toolbar",
   },
   align: {
     options: [
-      'top',
-      'top-start',
-      'top-end',
+      "top",
+      "top-start",
+      "top-end",
 
-      'bottom',
-      'bottom-start',
-      'bottom-end',
+      "bottom",
+      "bottom-start",
+      "bottom-end",
 
-      'left',
-      'left-end',
-      'left-start',
+      "left",
+      "left-end",
+      "left-start",
 
-      'right',
-      'right-end',
-      'right-start',
+      "right",
+      "right-end",
+      "right-start",
     ],
-    control: { type: 'select' },
+    control: { type: "select" },
   },
   AILabelContent: {
     table: {

@@ -9,15 +9,15 @@ import React from 'react';
 
 import { WithLayer } from '../../../.storybook/templates/WithLayer';
 
-import { default as Select, SelectSkeleton } from '../Select';
-import SelectItem from '../SelectItem';
-import SelectItemGroup from '../SelectItemGroup';
-import Button from '../Button';
-import { AILabel, AILabelContent, AILabelActions } from '../AILabel';
-import { IconButton } from '../IconButton';
+import { default as Select, SelectSkeleton } from '@carbon/react';
+import { SelectItem } from '@carbon/react';
+import { SelectItemGroup } from '@carbon/react';
+import { Button } from '@carbon/react';
+import { AILabel, AILabelContent, AILabelActions } from '@carbon/react';
+import { IconButton } from '@carbon/react';
 import { View, FolderOpen, Folders } from '@carbon/icons-react';
 import mdx from './Select.mdx';
-import { Tooltip } from '../Tooltip';
+import { Tooltip } from '@carbon/react';
 
 export default {
   title: 'Components/Select',
@@ -64,7 +64,7 @@ export default {
       },
     },
   },
-  decorators: [(story) => <div style={{ width: '400px' }}>{story()}</div>],
+  decorators: [(story) => <div style={ width: '400px' }>{story()}</div>],
   subcomponents: {
     SelectItem,
     SelectItemGroup,

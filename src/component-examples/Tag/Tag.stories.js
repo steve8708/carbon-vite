@@ -6,13 +6,8 @@
  */
 
 import React from 'react';
-import { default as Tag } from '../Tag';
-import TagSkeleton from '../Tag/Tag.Skeleton';
-import DismissibleTag from '../Tag/DismissibleTag';
+import { Tag, TagSkeleton, Button, AILabel, AILabelContent, AILabelActions, IconButton, DismissibleTag } from '@carbon/react';
 import { Asleep, View, FolderOpen, Folders } from '@carbon/icons-react';
-import Button from '../Button';
-import { AILabel, AILabelContent, AILabelActions } from '../AILabel';
-import { IconButton } from '../IconButton';
 import '../AILabel/ailabel-story.scss';
 import mdx from './Tag.mdx';
 
@@ -218,7 +213,7 @@ export const withAILabel = () => {
   );
 
   return (
-    <div style={{ marginBottom: '4rem' }}>
+    <div style={ marginBottom: '4rem' }>
       <Tag
         decorator={aiLabel}
         className="some-class"

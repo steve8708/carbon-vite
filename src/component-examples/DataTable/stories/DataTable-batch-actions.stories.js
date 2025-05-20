@@ -5,11 +5,11 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
-import { action } from '@storybook/addon-actions';
-import { TrashCan, Save, Download, Add } from '@carbon/icons-react';
+import React from "react";
+import { action } from "@storybook/addon-actions";
+import { TrashCan, Save, Download, Add } from "@carbon/icons-react";
 
-import Button from '../../Button';
+import Button from "../../Button";
 import DataTable, {
   Table,
   TableBatchAction,
@@ -27,16 +27,16 @@ import DataTable, {
   TableToolbarContent,
   TableToolbarSearch,
   TableToolbarMenu,
-} from '..';
+} from "..";
 
-import { Toggletip, ToggletipButton, ToggletipContent } from '../../Toggletip';
+import { Toggletip, ToggletipButton, ToggletipContent } from "../../Toggletip";
 
-import { batchActionClick, rows, headers } from './shared';
-import mdx from '../DataTable.mdx';
-import Link from '../../Link';
+import { batchActionClick, rows, headers } from "./shared";
+import mdx from "../DataTable.mdx";
+import Link from "../../Link";
 
 export default {
-  title: 'Components/DataTable/Batch Actions',
+  title: "Components/DataTable/Batch Actions",
   component: DataTable,
   subcomponents: {
     TableBatchAction,
@@ -82,53 +82,60 @@ export const Default = (args) => (
         <TableContainer
           title="DataTable"
           description="With batch actions"
-          {...getTableContainerProps()}>
+          {...getTableContainerProps()}
+        >
           <TableToolbar {...getToolbarProps()}>
             <TableBatchActions {...batchActionProps}>
               <TableBatchAction
                 tabIndex={batchActionProps.shouldShowBatchActions ? 0 : -1}
                 renderIcon={TrashCan}
-                onClick={batchActionClick(selectedRows)}>
+                onClick={batchActionClick(selectedRows)}
+              >
                 Delete
               </TableBatchAction>
               <TableBatchAction
                 tabIndex={batchActionProps.shouldShowBatchActions ? 0 : -1}
                 renderIcon={Save}
-                onClick={batchActionClick(selectedRows)}>
+                onClick={batchActionClick(selectedRows)}
+              >
                 Save
               </TableBatchAction>
               <TableBatchAction
                 tabIndex={batchActionProps.shouldShowBatchActions ? 0 : -1}
                 renderIcon={Download}
-                onClick={batchActionClick(selectedRows)}>
+                onClick={batchActionClick(selectedRows)}
+              >
                 Download
               </TableBatchAction>
             </TableBatchActions>
             <TableToolbarContent
-              aria-hidden={batchActionProps.shouldShowBatchActions}>
+              aria-hidden={batchActionProps.shouldShowBatchActions}
+            >
               <TableToolbarSearch
                 tabIndex={batchActionProps.shouldShowBatchActions ? -1 : 0}
                 onChange={(evt) => {
-                  action('TableToolbarSearch - onChange')(evt);
+                  action("TableToolbarSearch - onChange")(evt);
                   onInputChange(evt);
                 }}
               />
               <TableToolbarMenu
-                tabIndex={batchActionProps.shouldShowBatchActions ? -1 : 0}>
-                <TableToolbarAction onClick={() => alert('Alert 1')}>
+                tabIndex={batchActionProps.shouldShowBatchActions ? -1 : 0}
+              >
+                <TableToolbarAction onClick={() => alert("Alert 1")}>
                   Action 1
                 </TableToolbarAction>
-                <TableToolbarAction onClick={() => alert('Alert 2')}>
+                <TableToolbarAction onClick={() => alert("Alert 2")}>
                   Action 2
                 </TableToolbarAction>
-                <TableToolbarAction onClick={() => alert('Alert 3')}>
+                <TableToolbarAction onClick={() => alert("Alert 3")}>
                   Action 3
                 </TableToolbarAction>
               </TableToolbarMenu>
               <Button
                 tabIndex={batchActionProps.shouldShowBatchActions ? -1 : 0}
-                onClick={action('Add new row')}
-                kind="primary">
+                onClick={action("Add new row")}
+                kind="primary"
+              >
                 Add new
               </Button>
             </TableToolbarContent>
@@ -153,7 +160,7 @@ export const Default = (args) => (
                 <TableRow key={i} {...getRowProps({ row })}>
                   <TableSelectRow
                     {...getSelectionProps({ row })}
-                    onChange={action('TableSelectRow - onChange')}
+                    onChange={action("TableSelectRow - onChange")}
                   />
                   {row.cells.map((cell) => (
                     <TableCell key={cell.id}>{cell.value}</TableCell>

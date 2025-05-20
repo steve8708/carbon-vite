@@ -5,15 +5,15 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
-import { WithLayer } from '../../../.storybook/templates/WithLayer';
-import mdx from './ProgressBar.mdx';
+import { WithLayer } from "../../../.storybook/templates/WithLayer";
+import mdx from "./ProgressBar.mdx";
 
-import ProgressBar from './';
+import ProgressBar from "./";
 
 export default {
-  title: 'Components/ProgressBar',
+  title: "Components/ProgressBar",
   component: ProgressBar,
   parameters: {
     docs: {
@@ -41,11 +41,11 @@ Default.argTypes = {
     },
   },
   hideLabel: {
-    control: { type: 'boolean' },
+    control: { type: "boolean" },
   },
   status: {
-    options: ['active', 'finished', 'error'],
-    control: { type: 'select' },
+    options: ["active", "finished", "error"],
+    control: { type: "select" },
   },
 };
 
@@ -77,16 +77,16 @@ export const Example = () => {
 
   let helperText = running
     ? `${progress.toFixed(1)}MB of ${size}MB`
-    : 'Fetching assets...';
+    : "Fetching assets...";
   if (progress >= size) {
-    helperText = 'Done';
+    helperText = "Done";
   }
 
   return (
     <ProgressBar
       value={running ? progress : null}
       max={size}
-      status={progress === size ? 'finished' : 'active'}
+      status={progress === size ? "finished" : "active"}
       label="Export data"
       helperText={helperText}
     />

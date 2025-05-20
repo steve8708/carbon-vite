@@ -114,16 +114,16 @@ export const Offset = () => {
   return (
     <FlexGrid>
       <Row>
-        <Column sm={{ span: 1, offset: 3 }}>
+        <Column sm={ span: 1, offset: 3 }>
           <DemoContent>Small: offset 3</DemoContent>
         </Column>
-        <Column sm={{ span: 2, offset: 2 }}>
+        <Column sm={ span: 2, offset: 2 }>
           <DemoContent>Small: offset 2</DemoContent>
         </Column>
-        <Column sm={{ span: 3, offset: 1 }}>
+        <Column sm={ span: 3, offset: 1 }>
           <DemoContent>Small: offset 1</DemoContent>
         </Column>
-        <Column sm={{ span: 4, offset: 0 }}>
+        <Column sm={ span: 4, offset: 0 }>
           <DemoContent>Small: offset 0</DemoContent>
         </Column>
       </Row>

@@ -8,15 +8,15 @@
 import './story.scss';
 import { Checkbox as CheckboxIcon } from '@carbon/icons-react';
 import React, { useState, useEffect, useRef } from 'react';
-import { Popover, PopoverContent } from '../Popover';
-import RadioButton from '../RadioButton';
-import RadioButtonGroup from '../RadioButtonGroup';
-import { default as Checkbox } from '../Checkbox';
+import { Popover, PopoverContent } from '@carbon/react';
+import { RadioButton } from '@carbon/react';
+import { RadioButtonGroup } from '@carbon/react';
+import { default as Checkbox } from '@carbon/react';
 import mdx from './Popover.mdx';
 import { Settings } from '@carbon/icons-react';
 import { keys, match } from '../../internal/keyboard';
-import OverflowMenu from '../OverflowMenu/OverflowMenu';
-import OverflowMenuItem from '../OverflowMenuItem';
+import { OverflowMenu } from '@carbon/react';
+import { OverflowMenuItem } from '@carbon/react';
 
 const prefix = 'cds';
 
@@ -90,7 +90,7 @@ export const TabTip = (args) => {
   const align = document?.dir === 'rtl' ? 'bottom-right' : 'bottom-left';
   const alignTwo = document?.dir === 'rtl' ? 'bottom-left' : 'bottom-right';
   return (
-    <div className="popover-tabtip-story" style={{ display: 'flex' }}>
+    <div className="popover-tabtip-story" style={ display: 'flex' }>
       <Popover
         align={align}
         open={open}
@@ -113,7 +113,7 @@ export const TabTip = (args) => {
         </button>
         <PopoverContent className="p-3">
           <RadioButtonGroup
-            style={{ alignItems: 'flex-start', flexDirection: 'column' }}
+            style={ alignItems: 'flex-start', flexDirection: 'column' }
             legendText="Row height 1"
             name="radio-button-group"
             defaultSelected="small">
@@ -151,7 +151,7 @@ export const TabTip = (args) => {
         </button>
         <PopoverContent className="p-3">
           <RadioButtonGroup
-            style={{ alignItems: 'flex-start', flexDirection: 'column' }}
+            style={ alignItems: 'flex-start', flexDirection: 'column' }
             legendText="Row height 2"
             name="radio-button-group-2"
             defaultSelected="small-2">
@@ -250,7 +250,7 @@ export const ExperimentalAutoAlign = (args) => {
   });
 
   return (
-    <div style={{ width: '5000px', height: '5000px' }}>
+    <div style={ width: '5000px', height: '5000px' }>
       <div
         style={{
           position: 'absolute',
@@ -312,7 +312,7 @@ export const ExperimentalAutoAlignBoundary = () => {
           placeItems: 'center',
         }}
       />
-      <div style={{ placeItems: 'center', height: '32px', width: '32px' }}>
+      <div style={ placeItems: 'center', height: '32px', width: '32px' }>
         <Popover
           open={open}
           align="top"
@@ -355,7 +355,7 @@ export const Test = () => {
   const align = document?.dir === 'rtl' ? 'bottom-right' : 'bottom-left';
   const alignTwo = document?.dir === 'rtl' ? 'bottom-left' : 'bottom-right';
   return (
-    <div style={{ display: 'flex', gap: '8rem' }}>
+    <div style={ display: 'flex', gap: '8rem' }>
       <OverflowMenu
         flipped={document?.dir === 'rtl'}
         aria-label="overflow-menu">
@@ -388,7 +388,7 @@ export const Test = () => {
         </button>
         <PopoverContent className="p-3">
           <RadioButtonGroup
-            style={{ alignItems: 'flex-start', flexDirection: 'column' }}
+            style={ alignItems: 'flex-start', flexDirection: 'column' }
             legendText="Row height"
             name="radio-button-group"
             defaultSelected="small">
@@ -421,7 +421,7 @@ export const TabTipExperimentalAutoAlign = () => {
   });
 
   return (
-    <div style={{ width: '5000px', height: '5000px' }}>
+    <div style={ width: '5000px', height: '5000px' }>
       <div
         style={{
           position: 'absolute',

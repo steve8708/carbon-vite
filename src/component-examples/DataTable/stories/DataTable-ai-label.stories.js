@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
+import React from "react";
 import DataTable, {
   Table,
   TableBody,
@@ -21,17 +21,17 @@ import DataTable, {
   TableExpandHeader,
   TableExpandRow,
   TableExpandedRow,
-} from '..';
-import { rows, headers } from './shared';
-import mdx from '../../AILabel/AILabelDatatable.mdx';
-import Button from '../../Button';
-import { IconButton } from '../../IconButton';
-import { View, FolderOpen, Folders } from '@carbon/icons-react';
-import { AILabel, AILabelContent, AILabelActions } from '../../AILabel';
-import './datatable-story.scss';
+} from "..";
+import { rows, headers } from "./shared";
+import mdx from "../../AILabel/AILabelDatatable.mdx";
+import Button from "../../Button";
+import { IconButton } from "../../IconButton";
+import { View, FolderOpen, Folders } from "@carbon/icons-react";
+import { AILabel, AILabelContent, AILabelActions } from "../../AILabel";
+import "./datatable-story.scss";
 
 export default {
-  title: 'Components/DataTable/WithAILabel',
+  title: "Components/DataTable/WithAILabel",
   component: DataTable,
   subcomponents: {
     TableSelectAll,
@@ -97,29 +97,30 @@ const sharedArgTypes = {
 
 const columnAILabelHeaders = [
   {
-    key: 'name',
-    header: 'Name',
+    key: "name",
+    header: "Name",
   },
   {
-    key: 'protocol',
-    header: 'Protocol',
+    key: "protocol",
+    header: "Protocol",
   },
   {
-    key: 'port',
-    header: 'Port',
+    key: "port",
+    header: "Port",
   },
   {
-    key: 'rule',
-    header: 'Rule',
+    key: "rule",
+    header: "Rule",
   },
   {
-    key: 'attached_groups',
-    header: 'Attached groups',
+    key: "attached_groups",
+    header: "Attached groups",
     decorator: (
       <AILabel
         className="ai-label-container"
         autoAlign={false}
-        align="bottom-right">
+        align="bottom-right"
+      >
         <AILabelContent>
           <div>
             <p className="secondary">AI Explained</p>
@@ -151,8 +152,8 @@ const columnAILabelHeaders = [
     ),
   },
   {
-    key: 'status',
-    header: 'Status',
+    key: "status",
+    header: "Status",
   },
 ];
 
@@ -201,7 +202,8 @@ export const AILabelWithSelection = (args) => (
       <TableContainer
         title="DataTable"
         description="With selection"
-        {...getTableContainerProps()}>
+        {...getTableContainerProps()}
+      >
         <Table {...getTableProps()} aria-label="sample table">
           <TableHead>
             <TableRow>
@@ -251,7 +253,8 @@ export const AILabelWithRadioSelection = (args) => (
       <TableContainer
         title="DataTable"
         description="With radio selection"
-        {...getTableContainerProps()}>
+        {...getTableContainerProps()}
+      >
         <Table {...getTableProps()} aria-label="sample table">
           <TableHead>
             <TableRow>
@@ -303,7 +306,8 @@ export const AILabelWithSelectionAndExpansion = (args) => (
       <TableContainer
         title="DataTable"
         description="With expansion"
-        {...getTableContainerProps()}>
+        {...getTableContainerProps()}
+      >
         <Table {...getTableProps()} aria-label="sample table">
           <TableHead>
             <TableRow>
@@ -337,7 +341,8 @@ export const AILabelWithSelectionAndExpansion = (args) => (
                 <TableExpandedRow
                   colSpan={headers.length + 3}
                   className="demo-expanded-td"
-                  {...getExpandedRowProps({ row })}>
+                  {...getExpandedRowProps({ row })}
+                >
                   <h6>Expandable row content</h6>
                   <div>Description here</div>
                 </TableExpandedRow>
@@ -367,7 +372,8 @@ export const AILabelWithExpansion = (args) => (
       <TableContainer
         title="DataTable"
         description="With expansion"
-        {...getTableContainerProps()}>
+        {...getTableContainerProps()}
+      >
         <Table {...getTableProps()} aria-label="sample table">
           <TableHead>
             <TableRow>
@@ -399,7 +405,8 @@ export const AILabelWithExpansion = (args) => (
                 <TableExpandedRow
                   colSpan={headers.length + 2}
                   className="demo-expanded-td"
-                  {...getExpandedRowProps({ row })}>
+                  {...getExpandedRowProps({ row })}
+                >
                   <h6>Expandable row content</h6>
                   <div>Description here</div>
                 </TableExpandedRow>
@@ -432,7 +439,8 @@ export const ColumnAILabelWithSelectionAndExpansion = (args) => (
         title="DataTable"
         description="With expansion"
         className="ai-label-column-table"
-        {...getTableContainerProps()}>
+        {...getTableContainerProps()}
+      >
         <Table {...getTableProps()} aria-label="sample table">
           <TableHead>
             <TableRow>
@@ -446,7 +454,8 @@ export const ColumnAILabelWithSelectionAndExpansion = (args) => (
                   key={i}
                   {...getHeaderProps({
                     header,
-                  })}>
+                  })}
+                >
                   {header.header}
                 </TableHeader>
               ))}
@@ -469,7 +478,8 @@ export const ColumnAILabelWithSelectionAndExpansion = (args) => (
                   <TableExpandedRow
                     colSpan={headers.length + 2}
                     className="demo-expanded-td"
-                    {...getExpandedRowProps({ row })}>
+                    {...getExpandedRowProps({ row })}
+                  >
                     <h6>Expandable row content</h6>
                     <div>Description here</div>
                   </TableExpandedRow>
@@ -498,14 +508,16 @@ export const ColumnAILabelSort = (args) => (
       <TableContainer
         title="DataTable"
         description="With sorting"
-        className="ai-label-column-table">
+        className="ai-label-column-table"
+      >
         <Table {...getTableProps()} aria-label="sample table">
           <TableHead>
             <TableRow>
               {headers.map((header) => (
                 <TableHeader
                   key={header.key}
-                  {...getHeaderProps({ header, isSortable: true })}>
+                  {...getHeaderProps({ header, isSortable: true })}
+                >
                   {header.header}
                 </TableHeader>
               ))}

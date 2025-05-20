@@ -7,8 +7,8 @@
 
 import React from 'react';
 
-import { VStack } from '../Stack';
-import Toggle, { ToggleSkeleton } from '../Toggle';
+import { VStack } from '@carbon/react';
+import { Toggle, { ToggleSkeleton } } from '@carbon/react';
 import mdx from './Toggle.mdx';
 
 export default {
@@ -98,7 +98,7 @@ export const WithAccessibleLabels = () => {
       <Toggle id="toggle-5" labelText="Label" hideLabel />
 
       <div>
-        <div id="toggle-6-label" style={{ marginBlockEnd: '0.5rem' }}>
+        <div id="toggle-6-label" style={ marginBlockEnd: '0.5rem' }>
           Internal aria-label toggle
         </div>
         <Toggle aria-labelledby="toggle-6-label" id="toggle-6" />
@@ -108,7 +108,7 @@ export const WithAccessibleLabels = () => {
         <label
           id="toggle-7-label"
           htmlFor="toggle-7"
-          style={{ display: 'block', marginBlockEnd: '0.5rem' }}>
+          style={ display: 'block', marginBlockEnd: '0.5rem' }>
           External toggle label
         </label>
         <Toggle aria-labelledby="toggle-7-label" id="toggle-7" />

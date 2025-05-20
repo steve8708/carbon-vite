@@ -6,7 +6,7 @@
  */
 
 import React from 'react';
-import PaginationNav from '../PaginationNav';
+import { PaginationNav } from '@carbon/react';
 import './styles.scss';
 import mdx from './PaginationNav.mdx';
 
@@ -23,7 +23,7 @@ export default {
 
 export const Default = (args) => {
   return (
-    <div style={{ width: '800px' }}>
+    <div style={ width: '800px' }>
       <PaginationNav totalItems={25} {...args} />
     </div>
   );

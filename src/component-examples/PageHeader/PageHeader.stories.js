@@ -16,12 +16,12 @@ import {
   PageHeaderHeroImage,
   PageHeaderTabs,
 } from '../PageHeader';
-import { Dropdown } from '../Dropdown';
-import { Tag } from '../Tag';
-import { ContentSwitcher } from '../ContentSwitcher';
-import { IconSwitch } from '../Switch';
-import { Button } from '../Button';
-import { Grid, Column } from '../Grid';
+import { Dropdown } from '@carbon/react';
+import { Tag } from '@carbon/react';
+import { ContentSwitcher } from '@carbon/react';
+import { IconSwitch } from '@carbon/react';
+import { Button } from '@carbon/react';
+import { Grid, Column } from '@carbon/react';
 import { breakpoints } from '@carbon/layout';
 import image1 from './_story-assets/2x1.jpg';
 import image2 from './_story-assets/3x2.jpg';
@@ -38,7 +38,7 @@ import {
   ViewMode_2,
 } from '@carbon/icons-react';
 import mdx from './PageHeader.mdx';
-import { TabList, Tab, TabPanels, TabPanel } from '../Tabs/Tabs';
+import { TabList, Tab, TabPanels, TabPanel } from '@carbon/react';
 
 const BeeIcon = () => <Bee size={32} />;
 
@@ -214,7 +214,7 @@ export const ContentWithHeroImage = (args) => (
                 <img
                   src={image1}
                   alt="a default image"
-                  style={{ maxWidth: '100%', height: 'auto' }}
+                  style={ maxWidth: '100%', height: 'auto' }
                 />
               </picture>
             </PageHeader.HeroImage>

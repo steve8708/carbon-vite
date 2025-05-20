@@ -5,97 +5,97 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React, { useState } from 'react';
-import { action } from '@storybook/addon-actions';
-import { Document, Folder } from '@carbon/icons-react';
-import { Button, VStack } from '../../';
+import React, { useState } from "react";
+import { action } from "@storybook/addon-actions";
+import { Document, Folder } from "@carbon/icons-react";
+import { Button, VStack } from "../../";
 
-import { TreeView, TreeNode } from './';
+import { TreeView, TreeNode } from "./";
 
-import { WithFeatureFlags } from '../../../.storybook/templates/WithFeatureFlags';
+import { WithFeatureFlags } from "../../../.storybook/templates/WithFeatureFlags";
 
 const nodes = [
   {
-    id: '1',
-    value: 'Artificial intelligence',
+    id: "1",
+    value: "Artificial intelligence",
     label: <span>Artificial intelligence</span>,
     renderIcon: Document,
   },
   {
-    id: '2',
-    value: 'Blockchain',
-    label: 'Blockchain',
+    id: "2",
+    value: "Blockchain",
+    label: "Blockchain",
     renderIcon: Document,
   },
   {
-    id: '3',
-    value: 'Business automation',
-    label: 'Business automation',
+    id: "3",
+    value: "Business automation",
+    label: "Business automation",
     renderIcon: Folder,
     children: [
       {
-        id: '3-1',
-        value: 'Business process automation',
-        label: 'Business process automation',
+        id: "3-1",
+        value: "Business process automation",
+        label: "Business process automation",
         renderIcon: Document,
       },
       {
-        id: '3-2',
-        value: 'Business process mapping',
-        label: 'Business process mapping',
+        id: "3-2",
+        value: "Business process mapping",
+        label: "Business process mapping",
         renderIcon: Document,
       },
     ],
   },
   {
-    id: '4',
-    value: 'Business operations',
-    label: 'Business operations',
+    id: "4",
+    value: "Business operations",
+    label: "Business operations",
     renderIcon: Document,
   },
   {
-    id: '5',
-    value: 'Cloud computing',
-    label: 'Cloud computing',
+    id: "5",
+    value: "Cloud computing",
+    label: "Cloud computing",
     isExpanded: true,
     renderIcon: Folder,
     children: [
       {
-        id: '5-1',
-        value: 'Containers',
-        label: 'Containers',
+        id: "5-1",
+        value: "Containers",
+        label: "Containers",
         renderIcon: Document,
       },
       {
-        id: '5-2',
-        value: 'Databases',
-        label: 'Databases',
+        id: "5-2",
+        value: "Databases",
+        label: "Databases",
         renderIcon: Document,
       },
       {
-        id: '5-3',
-        value: 'DevOps',
-        label: 'DevOps',
+        id: "5-3",
+        value: "DevOps",
+        label: "DevOps",
         isExpanded: true,
         renderIcon: Folder,
         children: [
           {
-            id: '5-4',
-            value: 'Solutions',
-            label: 'Solutions',
+            id: "5-4",
+            value: "Solutions",
+            label: "Solutions",
             renderIcon: Document,
           },
           {
-            id: '5-5',
-            value: 'Case studies',
-            label: 'Case studies',
+            id: "5-5",
+            value: "Case studies",
+            label: "Case studies",
             isExpanded: true,
             renderIcon: Folder,
             children: [
               {
-                id: '5-6',
-                value: 'Resources',
-                label: 'Resources',
+                id: "5-6",
+                value: "Resources",
+                label: "Resources",
                 renderIcon: Document,
               },
             ],
@@ -105,62 +105,62 @@ const nodes = [
     ],
   },
   {
-    id: '6',
-    value: 'Data & Analytics',
-    label: 'Data & Analytics',
+    id: "6",
+    value: "Data & Analytics",
+    label: "Data & Analytics",
     renderIcon: Folder,
     children: [
       {
-        id: '6-1',
-        value: 'Big data',
-        label: 'Big data',
+        id: "6-1",
+        value: "Big data",
+        label: "Big data",
         renderIcon: Document,
       },
       {
-        id: '6-2',
-        value: 'Business intelligence',
-        label: 'Business intelligence',
+        id: "6-2",
+        value: "Business intelligence",
+        label: "Business intelligence",
         renderIcon: Document,
       },
     ],
   },
   {
-    id: '7',
-    value: 'Models',
-    label: 'Models',
+    id: "7",
+    value: "Models",
+    label: "Models",
     isExpanded: true,
     disabled: true,
     renderIcon: Folder,
     children: [
       {
-        id: '7-1',
-        value: 'Audit',
-        label: 'Audit',
+        id: "7-1",
+        value: "Audit",
+        label: "Audit",
         renderIcon: Document,
       },
       {
-        id: '7-2',
-        value: 'Monthly data',
-        label: 'Monthly data',
+        id: "7-2",
+        value: "Monthly data",
+        label: "Monthly data",
         renderIcon: Document,
       },
       {
-        id: '8',
-        value: 'Data warehouse',
-        label: 'Data warehouse',
+        id: "8",
+        value: "Data warehouse",
+        label: "Data warehouse",
         isExpanded: true,
         renderIcon: Folder,
         children: [
           {
-            id: '8-1',
-            value: 'Report samples',
-            label: 'Report samples',
+            id: "8-1",
+            value: "Report samples",
+            label: "Report samples",
             renderIcon: Document,
           },
           {
-            id: '8-2',
-            value: 'Sales performance',
-            label: 'Sales performance',
+            id: "8-2",
+            value: "Sales performance",
+            label: "Sales performance",
             renderIcon: Document,
           },
         ],
@@ -182,14 +182,14 @@ function renderTree(nodes) {
 }
 
 export default {
-  title: 'components/TreeView/Feature Flag',
+  title: "components/TreeView/Feature Flag",
   component: TreeView,
   subcomponents: {
     TreeNode,
   },
-  tags: ['!autodocs'],
+  tags: ["!autodocs"],
   args: {
-    onSelect: action('onSelect'),
+    onSelect: action("onSelect"),
   },
   decorators: [
     (Story) => (
@@ -211,16 +211,18 @@ export const Default = (args) => {
           kind="tertiary"
           size="sm"
           onClick={() => {
-            setSelected(['5-2']);
-          }}>
+            setSelected(["5-2"]);
+          }}
+        >
           Select &quot;Databases&quot;
         </Button>
         <Button
           kind="tertiary"
           size="sm"
           onClick={() => {
-            setActive('5-2');
-          }}>
+            setActive("5-2");
+          }}
+        >
           Activate &quot;Databases&quot;
         </Button>
       </VStack>
@@ -232,7 +234,8 @@ export const Default = (args) => {
           active={active}
           onActivate={setActive}
           selected={selected}
-          onSelect={setSelected}>
+          onSelect={setSelected}
+        >
           {renderTree(nodes)}
         </TreeView>
       </div>
@@ -249,7 +252,7 @@ Default.argTypes = {
   active: { control: { disable: true } },
   selected: { control: { disable: true } },
   size: {
-    options: ['xs', 'sm'],
-    control: { type: 'select' },
+    options: ["xs", "sm"],
+    control: { type: "select" },
   },
 };

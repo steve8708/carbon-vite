@@ -5,13 +5,13 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
-import { ClassPrefix } from '../ClassPrefix';
-import { usePrefix } from '../../internal/usePrefix';
-import mdx from './ClassPrefix.mdx';
+import React from "react";
+import { ClassPrefix } from "@carbon/react";
+import { usePrefix } from "../../internal/usePrefix";
+import mdx from "./ClassPrefix.mdx";
 
 export default {
-  title: 'Components/ClassPrefix',
+  title: "Components/ClassPrefix",
   component: ClassPrefix,
   parameters: {
     docs: {

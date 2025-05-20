@@ -5,13 +5,13 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
-import OrderedList from '../OrderedList';
-import ListItem from '../ListItem';
-import mdx from './OrderedList.mdx';
+import React from "react";
+import { OrderedList } from "@carbon/react";
+import { ListItem } from "@carbon/react";
+import mdx from "./OrderedList.mdx";
 
 export default {
-  title: 'Components/OrderedList',
+  title: "Components/OrderedList",
   component: OrderedList,
   subcomponents: {
     ListItem,
@@ -60,17 +60,17 @@ Default.argTypes = {
   },
   isExpressive: {
     control: {
-      type: 'boolean',
+      type: "boolean",
     },
   },
   native: {
     control: {
-      type: 'boolean',
+      type: "boolean",
     },
   },
   nested: {
     control: {
-      type: 'boolean',
+      type: "boolean",
     },
   },
 };

@@ -5,14 +5,14 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
-import { InlineNotification } from '../../Notification';
-import { action } from '@storybook/addon-actions';
-import mdx from '../Notification.mdx';
+import React from "react";
+import { InlineNotification } from "../../Notification";
+import { action } from "@storybook/addon-actions";
+import mdx from "../Notification.mdx";
 
 // eslint-disable-next-line storybook/csf-component
 export default {
-  title: 'Components/Notifications/Inline',
+  title: "Components/Notifications/Inline",
   component: InlineNotification,
   parameters: {
     docs: {
@@ -20,13 +20,13 @@ export default {
     },
   },
   args: {
-    kind: 'error',
+    kind: "error",
     lowContrast: false,
     hideCloseButton: false,
-    ['aria-label']: 'closes notification',
-    statusIconDescription: 'notification',
-    onClose: action('onClose'),
-    onCloseButtonClick: action('onCloseButtonClick'),
+    ["aria-label"]: "closes notification",
+    statusIconDescription: "notification",
+    onClose: action("onClose"),
+    onCloseButtonClick: action("onCloseButtonClick"),
   },
 };
 
@@ -38,7 +38,7 @@ Default.argTypes = {
       disable: true,
     },
   },
-  ['aria-label']: {
+  ["aria-label"]: {
     table: {
       disable: true,
     },
@@ -54,10 +54,10 @@ Default.argTypes = {
     },
   },
   onClose: {
-    action: 'onClose',
+    action: "onClose",
   },
   onCloseButtonClick: {
-    action: 'onCloseButtonClick',
+    action: "onCloseButtonClick",
   },
   children: {
     table: {
@@ -71,6 +71,6 @@ Default.argTypes = {
   },
 };
 Default.args = {
-  title: 'Notification title',
-  subtitle: 'Subtitle text goes here',
+  title: "Notification title",
+  subtitle: "Subtitle text goes here",
 };

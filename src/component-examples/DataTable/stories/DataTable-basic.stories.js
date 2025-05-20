@@ -5,8 +5,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
-import { DataTable } from '..';
+import React from "react";
+import { DataTable } from "..";
 
 const {
   Table,
@@ -18,11 +18,11 @@ const {
   TableRow,
 } = DataTable;
 
-import mdx from '../DataTable.mdx';
-import './datatable-story.scss';
+import mdx from "../DataTable.mdx";
+import "./datatable-story.scss";
 
 export default {
-  title: 'Components/DataTable/Basic',
+  title: "Components/DataTable/Basic",
   component: DataTable,
   subcomponents: {
     TableContainer,
@@ -86,63 +86,63 @@ const sharedArgTypes = {
 export const Default = (args) => {
   const rows = [
     {
-      id: 'load-balancer-1',
-      name: 'Load Balancer 1',
-      rule: 'Round robin',
-      Status: 'Starting',
-      other: 'Test',
-      example: '22',
+      id: "load-balancer-1",
+      name: "Load Balancer 1",
+      rule: "Round robin",
+      Status: "Starting",
+      other: "Test",
+      example: "22",
     },
     {
-      id: 'load-balancer-2',
-      name: 'Load Balancer 2',
-      rule: 'DNS delegation',
-      status: 'Active',
-      other: 'Test',
-      example: '22',
+      id: "load-balancer-2",
+      name: "Load Balancer 2",
+      rule: "DNS delegation",
+      status: "Active",
+      other: "Test",
+      example: "22",
     },
     {
-      id: 'load-balancer-3',
-      name: 'Load Balancer 3',
-      rule: 'Round robin',
-      status: 'Disabled',
-      other: 'Test',
-      example: '22',
+      id: "load-balancer-3",
+      name: "Load Balancer 3",
+      rule: "Round robin",
+      status: "Disabled",
+      other: "Test",
+      example: "22",
     },
     {
-      id: 'load-balancer-4',
-      name: 'Load Balancer 4',
-      rule: 'Round robin',
-      status: 'Disabled',
-      other: 'Test',
-      example: '22',
+      id: "load-balancer-4",
+      name: "Load Balancer 4",
+      rule: "Round robin",
+      status: "Disabled",
+      other: "Test",
+      example: "22",
     },
     {
-      id: 'load-balancer-5',
-      name: 'Load Balancer 5',
-      rule: 'Round robin',
-      status: 'Disabled',
-      other: 'Test',
-      example: '22',
+      id: "load-balancer-5",
+      name: "Load Balancer 5",
+      rule: "Round robin",
+      status: "Disabled",
+      other: "Test",
+      example: "22",
     },
     {
-      id: 'load-balancer-6',
-      name: 'Load Balancer 6',
-      rule: 'Round robin',
-      status: 'Disabled',
-      other: 'Test',
-      example: '22',
+      id: "load-balancer-6",
+      name: "Load Balancer 6",
+      rule: "Round robin",
+      status: "Disabled",
+      other: "Test",
+      example: "22",
     },
     {
-      id: 'load-balancer-7',
-      name: 'Load Balancer 7',
-      rule: 'Round robin',
-      status: 'Disabled',
-      other: 'Test',
-      example: '22',
+      id: "load-balancer-7",
+      name: "Load Balancer 7",
+      rule: "Round robin",
+      status: "Disabled",
+      other: "Test",
+      example: "22",
     },
   ];
-  const headers = ['Name', 'Rule', 'Status', 'Other', 'Example'];
+  const headers = ["Name", "Rule", "Status", "Other", "Example"];
 
   return (
     <Table {...args} aria-label="sample table">
@@ -159,7 +159,7 @@ export const Default = (args) => {
         {rows.map((row) => (
           <TableRow key={row.id}>
             {Object.keys(row)
-              .filter((key) => key !== 'id')
+              .filter((key) => key !== "id")
               .map((key) => {
                 return <TableCell key={key}>{row[key]}</TableCell>;
               })}
@@ -177,98 +177,98 @@ Default.argTypes = {
 export const XLWithTwoLines = (args) => {
   const rows = [
     {
-      id: 'load-balancer-1',
+      id: "load-balancer-1",
       name: (
         <div className="sb-two-lines">
           <p>Load Balancer 1</p>
           <p>Austin, Tx</p>
         </div>
       ),
-      rule: 'Round robin',
-      Status: 'Starting',
-      other: 'Test',
-      example: '22',
+      rule: "Round robin",
+      Status: "Starting",
+      other: "Test",
+      example: "22",
     },
     {
-      id: 'load-balancer-2',
+      id: "load-balancer-2",
       name: (
         <div className="sb-two-lines">
           <p>Load Balancer 2</p>
           <p>Austin, Tx</p>
         </div>
       ),
-      rule: 'DNS delegation',
-      status: 'Active',
-      other: 'Test',
-      example: '22',
+      rule: "DNS delegation",
+      status: "Active",
+      other: "Test",
+      example: "22",
     },
     {
-      id: 'load-balancer-3',
+      id: "load-balancer-3",
       name: (
         <div className="sb-two-lines">
           <p>Load Balancer 3</p>
           <p>Austin, Tx</p>
         </div>
       ),
-      rule: 'Round robin',
-      status: 'Disabled',
-      other: 'Test',
-      example: '22',
+      rule: "Round robin",
+      status: "Disabled",
+      other: "Test",
+      example: "22",
     },
     {
-      id: 'load-balancer-4',
+      id: "load-balancer-4",
       name: (
         <div className="sb-two-lines">
           <p>Load Balancer 4</p>
           <p>Austin, Tx</p>
         </div>
       ),
-      rule: 'Round robin',
-      status: 'Disabled',
-      other: 'Test',
-      example: '22',
+      rule: "Round robin",
+      status: "Disabled",
+      other: "Test",
+      example: "22",
     },
     {
-      id: 'load-balancer-5',
+      id: "load-balancer-5",
       name: (
         <div className="sb-two-lines">
           <p>Load Balancer 5</p>
           <p>Austin, Tx</p>
         </div>
       ),
-      rule: 'Round robin',
-      status: 'Disabled',
-      other: 'Test',
-      example: '22',
+      rule: "Round robin",
+      status: "Disabled",
+      other: "Test",
+      example: "22",
     },
     {
-      id: 'load-balancer-6',
+      id: "load-balancer-6",
       name: (
         <div className="sb-two-lines">
           <p>Load Balancer 6</p>
           <p>Austin, Tx</p>
         </div>
       ),
-      rule: 'Round robin',
-      status: 'Disabled',
-      other: 'Test',
-      example: '22',
+      rule: "Round robin",
+      status: "Disabled",
+      other: "Test",
+      example: "22",
     },
     {
-      id: 'load-balancer-7',
+      id: "load-balancer-7",
       name: (
         <div className="sb-two-lines">
           <p>Load Balancer 7</p>
           <p>Austin, Tx</p>
         </div>
       ),
-      rule: 'Round robin',
-      status: 'Disabled',
-      other: 'Test',
-      example: '22',
+      rule: "Round robin",
+      status: "Disabled",
+      other: "Test",
+      example: "22",
     },
   ];
-  const headers = ['Name', 'Rule', 'Status', 'Other', 'Example'];
+  const headers = ["Name", "Rule", "Status", "Other", "Example"];
 
   return (
     <Table size="xl" useZebraStyles={false} aria-label="sample table" {...args}>
@@ -285,7 +285,7 @@ export const XLWithTwoLines = (args) => {
         {rows.map((row) => (
           <TableRow key={row.id}>
             {Object.keys(row)
-              .filter((key) => key !== 'id')
+              .filter((key) => key !== "id")
               .map((key) => {
                 return <TableCell key={key}>{row[key]}</TableCell>;
               })}

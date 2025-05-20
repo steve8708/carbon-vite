@@ -6,7 +6,7 @@
  */
 
 import React from 'react';
-import FluidTextInput from '../FluidTextInput';
+import { FluidTextInput } from '@carbon/react';
 import FluidTextInputSkeleton from './FluidTextInput.Skeleton';
 import {
   ToggletipLabel,
@@ -40,7 +40,7 @@ const ToggleTip = (
 );
 
 export const Default = (args) => (
-  <div style={{ width: args.defaultWidth }}>
+  <div style={ width: args.defaultWidth }>
     <FluidTextInput {...args} />
   </div>
 );
@@ -125,7 +125,7 @@ export const DefaultWithTooltip = () => (
 );
 
 export const Skeleton = () => (
-  <div style={{ width: '300px' }}>
+  <div style={ width: '300px' }>
     <FluidTextInputSkeleton
       labelText="Label"
       placeholder="Placeholder text"

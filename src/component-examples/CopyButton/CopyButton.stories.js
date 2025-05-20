@@ -6,12 +6,12 @@
  */
 /* eslint-disable no-console */
 
-import React from 'react';
-import CopyButton from './CopyButton';
-import mdx from './CopyButton.mdx';
+import React from "react";
+import CopyButton from "./CopyButton";
+import mdx from "./CopyButton.mdx";
 
 export default {
-  title: 'Components/CopyButton',
+  title: "Components/CopyButton",
   component: CopyButton,
   parameters: {
     docs: {
@@ -31,6 +31,6 @@ Default.argTypes = {
     },
   },
   onClick: {
-    action: 'onClick',
+    action: "onClick",
   },
 };

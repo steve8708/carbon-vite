@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
+import React from "react";
 import DataTable, {
   Table,
   TableBody,
@@ -16,13 +16,13 @@ import DataTable, {
   TableRow,
   TableSelectAll,
   TableSelectRow,
-} from '..';
-import { rows, headers } from './shared';
-import mdx from '../DataTable.mdx';
-import { action } from '@storybook/addon-actions';
+} from "..";
+import { rows, headers } from "./shared";
+import mdx from "../DataTable.mdx";
+import { action } from "@storybook/addon-actions";
 
 export default {
-  title: 'Components/DataTable/Selection',
+  title: "Components/DataTable/Selection",
   component: DataTable,
   subcomponents: {
     TableSelectAll,
@@ -77,7 +77,8 @@ export const Default = (args) => (
       <TableContainer
         title="DataTable"
         description="With selection"
-        {...getTableContainerProps()}>
+        {...getTableContainerProps()}
+      >
         <Table {...getTableProps()} aria-label="sample table">
           <TableHead>
             <TableRow>
@@ -99,11 +100,12 @@ export const Default = (args) => (
                 key={i}
                 {...getRowProps({ row })}
                 onClick={(evt) => {
-                  action('TableRow onClick')(evt);
-                }}>
+                  action("TableRow onClick")(evt);
+                }}
+              >
                 <TableSelectRow
                   {...getSelectionProps({ row })}
-                  onChange={action('TableSelectRow - onChange')}
+                  onChange={action("TableSelectRow - onChange")}
                 />
                 {row.cells.map((cell) => (
                   <TableCell key={cell.id}>{cell.value}</TableCell>
@@ -133,7 +135,8 @@ export const WithRadioSelection = (args) => (
       <TableContainer
         title="DataTable"
         description="With radio selection"
-        {...getTableContainerProps()}>
+        {...getTableContainerProps()}
+      >
         <Table {...getTableProps()} aria-label="sample table">
           <TableHead>
             <TableRow>
@@ -177,7 +180,8 @@ export const WithSelectionAndSorting = (args) => (
       <TableContainer
         title="DataTable"
         description="With selection"
-        {...getTableContainerProps()}>
+        {...getTableContainerProps()}
+      >
         <Table {...getTableProps()} aria-label="sample table">
           <TableHead>
             <TableRow>

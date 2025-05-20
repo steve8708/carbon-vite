@@ -18,9 +18,9 @@ import {
   ToggletipButton,
   ToggletipContent,
 } from '../Toggletip';
-import { AILabel, AILabelContent, AILabelActions } from '../AILabel';
-import { IconButton } from '../IconButton';
-import { Button } from '../Button';
+import { AILabel, AILabelContent, AILabelActions } from '@carbon/react';
+import { IconButton } from '@carbon/react';
+import { Button } from '@carbon/react';
 import { Information, View, FolderOpen, Folders } from '@carbon/icons-react';
 
 export default {
@@ -60,7 +60,7 @@ const items = [
 ];
 
 export const Default = (args) => (
-  <div style={{ width: args.defaultWidth }}>
+  <div style={ width: args.defaultWidth }>
     <FluidMultiSelect
       onChange={() => {}}
       id="default"
@@ -164,7 +164,7 @@ const ToggleTip = (
 );
 
 export const Filterable = () => (
-  <div style={{ width: '400px' }}>
+  <div style={ width: '400px' }>
     <FluidMultiSelect
       isFilterable
       onChange={() => {}}
@@ -181,7 +181,7 @@ export const Filterable = () => (
 export const _FilterableWithLayer = () => (
   <WithLayer>
     {(layer) => (
-      <div style={{ width: 300 }}>
+      <div style={ width: 300 }>
         <FluidMultiSelect
           isFilterable
           id={`carbon-multiselect-example-${layer}`}
@@ -196,7 +196,7 @@ export const _FilterableWithLayer = () => (
 );
 
 export const Condensed = () => (
-  <div style={{ width: '400px' }}>
+  <div style={ width: '400px' }>
     <FluidMultiSelect
       onChange={() => {}}
       id="default"
@@ -241,7 +241,7 @@ const aiLabel = (
 );
 
 export const withAILabel = (args) => (
-  <div style={{ width: '400px' }}>
+  <div style={ width: '400px' }>
     <FluidMultiSelect
       onChange={() => {}}
       initialSelectedItem={items[2]}
@@ -261,7 +261,7 @@ withAILabel.argTypes = {
 };
 
 export const Skeleton = () => (
-  <div style={{ width: 400 }}>
+  <div style={ width: 400 }>
     <FluidMultiSelectSkeleton />
   </div>
 );

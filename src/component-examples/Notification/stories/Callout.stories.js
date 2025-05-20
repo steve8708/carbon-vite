@@ -5,13 +5,13 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
-import { Callout } from '../../Notification';
-import { Link } from '../../Link';
-import mdx from '../Notification.mdx';
+import React from "react";
+import { Callout } from "../../Notification";
+import { Link } from "../../Link";
+import mdx from "../Notification.mdx";
 
 export default {
-  title: 'Components/Notifications/Callout',
+  title: "Components/Notifications/Callout",
   component: Callout,
   parameters: {
     docs: {
@@ -19,9 +19,9 @@ export default {
     },
   },
   args: {
-    kind: 'info',
+    kind: "info",
     lowContrast: false,
-    statusIconDescription: 'notification',
+    statusIconDescription: "notification",
   },
   argTypes: {
     children: {
@@ -45,9 +45,10 @@ export const WithInteractiveElements = () => (
     title="Notification title"
     titleId="my fancy id 123"
     kind="info"
-    lowContrast>
+    lowContrast
+  >
     <div className="cds--inline-notification__subtitle">
-      Additional text can describe the notification, or a link to{' '}
+      Additional text can describe the notification, or a link to{" "}
       <Link inline href="#" aria-describedby="my fancy id 123">
         learn more
       </Link>
@@ -67,7 +68,7 @@ Default.argTypes = {
     },
   },
   kind: {
-    options: ['info', 'warning'],
-    control: { type: 'select' },
+    options: ["info", "warning"],
+    control: { type: "select" },
   },
 };

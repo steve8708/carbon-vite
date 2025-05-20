@@ -5,16 +5,16 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
-import { ActionableNotification } from '../../Notification';
-import { action } from '@storybook/addon-actions';
-import { WithFeatureFlags } from '../../../../.storybook/templates/WithFeatureFlags';
+import React from "react";
+import { ActionableNotification } from "../../Notification";
+import { action } from "@storybook/addon-actions";
+import { WithFeatureFlags } from "../../../../.storybook/templates/WithFeatureFlags";
 
 // eslint-disable-next-line storybook/csf-component
 export default {
-  title: 'Components/Notifications/Actionable/Feature Flag',
+  title: "Components/Notifications/Actionable/Feature Flag",
   component: ActionableNotification,
-  tags: ['!autodocs'],
+  tags: ["!autodocs"],
   decorators: [
     (Story) => (
       <WithFeatureFlags>
@@ -23,13 +23,13 @@ export default {
     ),
   ],
   args: {
-    kind: 'error',
+    kind: "error",
     lowContrast: false,
     hideCloseButton: false,
-    ['aria-label']: 'closes notification',
-    statusIconDescription: 'notification',
-    onClose: action('onClose'),
-    onCloseButtonClick: action('onCloseButtonClick'),
+    ["aria-label"]: "closes notification",
+    statusIconDescription: "notification",
+    onClose: action("onClose"),
+    onCloseButtonClick: action("onCloseButtonClick"),
   },
 };
 
@@ -38,7 +38,7 @@ export const FocusWrapWithoutSentinels = (args) => (
 );
 
 FocusWrapWithoutSentinels.argTypes = {
-  ['aria-label']: {
+  ["aria-label"]: {
     table: {
       disable: true,
     },
@@ -49,13 +49,13 @@ FocusWrapWithoutSentinels.argTypes = {
     },
   },
   onActionButtonClick: {
-    action: 'onActionButtonClick',
+    action: "onActionButtonClick",
   },
   onClose: {
-    action: 'onClose',
+    action: "onClose",
   },
   onCloseButtonClick: {
-    action: 'onCloseButtonClick',
+    action: "onCloseButtonClick",
   },
   children: {
     table: {
@@ -74,8 +74,8 @@ FocusWrapWithoutSentinels.argTypes = {
   },
 };
 FocusWrapWithoutSentinels.args = {
-  actionButtonLabel: 'Action',
+  actionButtonLabel: "Action",
   inline: false,
-  title: 'Notification title',
-  subtitle: 'Subtitle text goes here',
+  title: "Notification title",
+  subtitle: "Subtitle text goes here",
 };

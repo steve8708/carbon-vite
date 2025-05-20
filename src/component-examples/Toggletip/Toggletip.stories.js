@@ -7,8 +7,8 @@
 
 import { Information } from '@carbon/icons-react';
 import React, { useRef, useEffect } from 'react';
-import { default as Button } from '../Button';
-import { default as Link } from '../Link';
+import { default as Button } from '@carbon/react';
+import { default as Link } from '@carbon/react';
 import {
   ToggletipLabel,
   Toggletip,
@@ -56,7 +56,7 @@ export const ExperimentalAutoAlign = () => {
   });
 
   return (
-    <div style={{ width: '5000px', height: '5000px' }}>
+    <div style={ width: '5000px', height: '5000px' }>
       <div
         style={{
           position: 'absolute',

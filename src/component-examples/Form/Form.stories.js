@@ -6,38 +6,38 @@
  */
 
 import React from 'react';
-import Checkbox from '../Checkbox';
+import { Checkbox } from '@carbon/react';
 import Form from './Form';
-import FormGroup from '../FormGroup';
-import FileUploader from '../FileUploader';
-import { NumberInput } from '../NumberInput';
-import RadioButton from '../RadioButton';
-import RadioButtonGroup from '../RadioButtonGroup';
-import Button from '../Button';
-import Search from '../Search';
-import Select from '../Select';
-import SelectItem from '../SelectItem';
-import TextArea from '../TextArea';
-import TextInput from '../TextInput';
-import { Stack } from '../Stack';
-import ComboBox from '../ComboBox';
-import Dropdown from '../Dropdown';
-import DatePicker from '../DatePicker';
-import DatePickerInput from '../DatePickerInput';
-import { MultiSelect, FilterableMultiSelect } from '../MultiSelect';
-import FluidComboBox from '../FluidComboBox';
-import FluidForm from '../FluidForm';
-import FluidNumberInput from '../FluidNumberInput';
-import FluidDatePicker from '../FluidDatePicker';
-import FluidDatePickerInput from '../FluidDatePickerInput';
-import FluidDropdown from '../FluidDropdown';
-import FluidMultiSelect from '../FluidMultiSelect';
-import FluidSelect from '../FluidSelect';
-import FluidTextArea from '../FluidTextArea';
-import FluidTextInput from '../FluidTextInput';
-import { IconButton } from '../IconButton';
+import { FormGroup } from '@carbon/react';
+import { FileUploader } from '@carbon/react';
+import { NumberInput } from '@carbon/react';
+import { RadioButton } from '@carbon/react';
+import { RadioButtonGroup } from '@carbon/react';
+import { Button } from '@carbon/react';
+import { Search } from '@carbon/react';
+import { Select } from '@carbon/react';
+import { SelectItem } from '@carbon/react';
+import { TextArea } from '@carbon/react';
+import { TextInput } from '@carbon/react';
+import { Stack } from '@carbon/react';
+import { ComboBox } from '@carbon/react';
+import { Dropdown } from '@carbon/react';
+import { DatePicker } from '@carbon/react';
+import { DatePickerInput } from '@carbon/react';
+import { MultiSelect, FilterableMultiSelect } from '@carbon/react';
+import { FluidComboBox } from '@carbon/react';
+import { FluidForm } from '@carbon/react';
+import { FluidNumberInput } from '@carbon/react';
+import { FluidDatePicker } from '@carbon/react';
+import { FluidDatePickerInput } from '@carbon/react';
+import { FluidDropdown } from '@carbon/react';
+import { FluidMultiSelect } from '@carbon/react';
+import { FluidSelect } from '@carbon/react';
+import { FluidTextArea } from '@carbon/react';
+import { FluidTextInput } from '@carbon/react';
+import { IconButton } from '@carbon/react';
 import { View, FolderOpen, Folders } from '@carbon/icons-react';
-import { AILabel, AILabelContent, AILabelActions } from '../AILabel';
+import { AILabel, AILabelContent, AILabelActions } from '@carbon/react';
 import '../AILabel/ailabel-story.scss';
 
 import mdx from './Form.mdx';
@@ -375,8 +375,8 @@ export const withAILabel = (args) => {
       </Form>
 
       <FluidForm aria-label="sample ai form" className="fluid-ai-label-form">
-        <div style={{ display: 'flex' }}>
-          <FluidDatePicker datePickerType="single" style={{ width: '100%' }}>
+        <div style={ display: 'flex' }>
+          <FluidDatePicker datePickerType="single" style={ width: '100%' }>
             <FluidDatePickerInput
               placeholder="mm/dd/yyyy"
               labelText="Date Picker label"
@@ -388,7 +388,7 @@ export const withAILabel = (args) => {
           </FluidDatePicker>
         </div>
 
-        <div style={{ display: 'flex' }}>
+        <div style={ display: 'flex' }>
           <FluidNumberInput
             {...numberInputProps}
             id="fluid-number-input"
@@ -396,7 +396,7 @@ export const withAILabel = (args) => {
             {...rest}
           />
         </div>
-        <div style={{ display: 'flex' }}>
+        <div style={ display: 'flex' }>
           <FluidTextInput
             {...TextInputProps}
             id="fluid-text-input"
@@ -404,7 +404,7 @@ export const withAILabel = (args) => {
             {...rest}
           />
         </div>
-        <div style={{ display: 'flex' }}>
+        <div style={ display: 'flex' }>
           <FluidTextArea
             {...textareaProps}
             id="fluid-text-area"
@@ -412,7 +412,7 @@ export const withAILabel = (args) => {
             {...rest}
           />
         </div>
-        <div style={{ display: 'flex' }}>
+        <div style={ display: 'flex' }>
           <FluidDropdown
             isCondensed
             initialSelectedItem={items[2]}
@@ -425,7 +425,7 @@ export const withAILabel = (args) => {
             {...rest}
           />
         </div>
-        <div style={{ display: 'flex' }}>
+        <div style={ display: 'flex' }>
           <FluidComboBox
             isCondensed
             onChange={() => {}}
@@ -438,7 +438,7 @@ export const withAILabel = (args) => {
             {...rest}
           />
         </div>
-        <div style={{ display: 'flex' }}>
+        <div style={ display: 'flex' }>
           <FluidMultiSelect
             isCondensed
             onChange={() => {}}
@@ -452,7 +452,7 @@ export const withAILabel = (args) => {
             {...rest}
           />
         </div>
-        <div style={{ display: 'flex' }}>
+        <div style={ display: 'flex' }>
           <FluidMultiSelect
             isFilterable
             isCondensed
@@ -467,7 +467,7 @@ export const withAILabel = (args) => {
             {...rest}
           />
         </div>
-        <div style={{ display: 'flex' }}>
+        <div style={ display: 'flex' }>
           <FluidSelect decorator={aiLabel} {...rest} id="select-2">
             <SelectItem value="" text="" />
             <SelectItem value="option-1" text="Option 1" />

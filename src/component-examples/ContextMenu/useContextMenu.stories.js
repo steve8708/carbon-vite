@@ -9,11 +9,11 @@ import React, { useRef } from 'react';
 import { action } from '@storybook/addon-actions';
 
 import { usePrefix } from '../../internal/usePrefix';
-import CodeSnippet from '../CodeSnippet';
-import UnorderedList from '../UnorderedList';
-import ListItem from '../ListItem';
+import { CodeSnippet } from '@carbon/react';
+import { UnorderedList } from '@carbon/react';
+import { ListItem } from '@carbon/react';
 
-import { Menu, MenuItem, MenuItemDivider, MenuItemRadioGroup } from '../Menu';
+import { Menu, MenuItem, MenuItemDivider, MenuItemRadioGroup } from '@carbon/react';
 
 import { useContextMenu } from './';
 import mdx from './useContextMenu.mdx';
@@ -29,7 +29,7 @@ export default {
 };
 
 const Text = () => (
-  <div style={{ width: '40rem' }}>
+  <div style={ width: '40rem' }>
     <h2>Right click anywhere in the story frame</h2>
     <br />
     <p>
@@ -40,7 +40,7 @@ const Text = () => (
       opening. Props that the{' '}
       <CodeSnippet type="inline">{`useContextMenu()`}</CodeSnippet>
       hook does not set and can be configured by the user are:
-      <UnorderedList style={{ paddingLeft: '2rem', margin: '2rem 0' }}>
+      <UnorderedList style={ paddingLeft: '2rem', margin: '2rem 0' }>
         <ListItem>className</ListItem>
         <ListItem>label</ListItem>
         <ListItem>size</ListItem>

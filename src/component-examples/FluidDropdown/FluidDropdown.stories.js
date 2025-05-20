@@ -6,16 +6,16 @@
  */
 
 import React from 'react';
-import { FluidDropdown, FluidDropdownSkeleton } from '../FluidDropdown';
+import { FluidDropdown, FluidDropdownSkeleton } from '@carbon/react';
 import {
   ToggletipLabel,
   Toggletip,
   ToggletipButton,
   ToggletipContent,
 } from '../Toggletip';
-import { AILabel, AILabelContent, AILabelActions } from '../AILabel';
-import { IconButton } from '../IconButton';
-import { Button } from '../Button';
+import { AILabel, AILabelContent, AILabelActions } from '@carbon/react';
+import { IconButton } from '@carbon/react';
+import { Button } from '@carbon/react';
 import { Information, View, FolderOpen, Folders } from '@carbon/icons-react';
 
 export default {
@@ -103,7 +103,7 @@ const sharedArgTypes = {
 };
 
 export const Default = (args) => (
-  <div style={{ width: args.defaultWidth }}>
+  <div style={ width: args.defaultWidth }>
     <FluidDropdown
       id="default"
       titleText="Label"
@@ -152,7 +152,7 @@ const ToggleTip = (
 );
 
 export const Condensed = () => (
-  <div style={{ width: '400px' }}>
+  <div style={ width: '400px' }>
     <FluidDropdown
       id="default"
       isCondensed
@@ -196,7 +196,7 @@ const aiLabel = (
 );
 
 export const withAILabel = (args) => (
-  <div style={{ width: '400px' }}>
+  <div style={ width: '400px' }>
     <FluidDropdown
       initialSelectedItem={items[2]}
       id="default"
@@ -215,7 +215,7 @@ withAILabel.argTypes = {
 };
 
 export const Skeleton = () => (
-  <div style={{ width: 400 }}>
+  <div style={ width: 400 }>
     <FluidDropdownSkeleton />
   </div>
 );

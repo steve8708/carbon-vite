@@ -10,8 +10,8 @@
 import React from 'react';
 import './story.scss';
 import { default as Accordion, AccordionItem, AccordionSkeleton } from '.';
-import Button from '../Button';
-import ButtonSet from '../ButtonSet';
+import { Button } from '@carbon/react';
+import { ButtonSet } from '@carbon/react';
 import mdx from './Accordion.mdx';
 import { WithLayer } from '../../../.storybook/templates/WithLayer';
 
@@ -226,7 +226,7 @@ export const Skeleton = (args) => (
 );
 
 Skeleton.decorators = [
-  (story) => <div style={{ width: '500px' }}>{story()}</div>,
+  (story) => <div style={ width: '500px' }>{story()}</div>,
 ];
 
 Skeleton.args = {

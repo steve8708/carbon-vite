@@ -8,7 +8,7 @@
 import './Grid.stories.scss';
 
 import React from 'react';
-import { Grid, Column, ColumnHang, GridSettings } from '../Grid';
+import { Grid, Column, ColumnHang, GridSettings } from '@carbon/react';
 import mdx from './Grid.mdx';
 
 export default {
@@ -332,21 +332,21 @@ export const GridStartEnd = () => {
   return (
     <Grid>
       <Column
-        sm={{ span: 1, start: 4 }}
-        md={{ span: 2, start: 7 }}
-        lg={{ span: 4, start: 13 }}>
+        sm={ span: 1, start: 4 }
+        md={ span: 2, start: 7 }
+        lg={ span: 4, start: 13 }>
         span, start
       </Column>
       <Column
-        sm={{ span: 2, end: 5 }}
-        md={{ span: 4, end: 9 }}
-        lg={{ span: 8, end: 17 }}>
+        sm={ span: 2, end: 5 }
+        md={ span: 4, end: 9 }
+        lg={ span: 8, end: 17 }>
         span, end
       </Column>
       <Column
-        sm={{ start: 1, end: 4 }}
-        md={{ start: 3, end: 9 }}
-        lg={{ start: 5, end: 17 }}>
+        sm={ start: 1, end: 4 }
+        md={ start: 3, end: 9 }
+        lg={ start: 5, end: 17 }>
         start, end
       </Column>
     </Grid>
@@ -359,25 +359,25 @@ export const Offset = () => {
   return (
     <Grid>
       <Column
-        sm={{ span: 1, offset: 3 }}
-        md={{ span: 2, offset: 6 }}
-        lg={{ span: 4, offset: 12 }}
+        sm={ span: 1, offset: 3 }
+        md={ span: 2, offset: 6 }
+        lg={ span: 4, offset: 12 }
       />
       <Column
-        sm={{ span: 2, offset: 2 }}
-        md={{ span: 4, offset: 4 }}
-        lg={{ span: 8, offset: 8 }}
+        sm={ span: 2, offset: 2 }
+        md={ span: 4, offset: 4 }
+        lg={ span: 8, offset: 8 }
       />
       <Column
-        sm={{ span: 3, offset: 1 }}
-        md={{ span: 6, offset: 2 }}
-        lg={{ span: 12, offset: 4 }}
+        sm={ span: 3, offset: 1 }
+        md={ span: 6, offset: 2 }
+        lg={ span: 12, offset: 4 }
       />
-      <Column sm={{ span: 4 }} md={{ span: 8 }} lg={{ span: 16 }} />
+      <Column sm={ span: 4 } md={ span: 8 } lg={ span: 16 } />
       <Column
-        sm={{ span: '25%', offset: 1 }}
-        md={{ span: '50%', offset: 2 }}
-        lg={{ span: '75%', offset: 4 }}
+        sm={ span: '25%', offset: 1 }
+        md={ span: '50%', offset: 2 }
+        lg={ span: '75%', offset: 4 }
       />
     </Grid>
   );

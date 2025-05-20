@@ -15,7 +15,7 @@ import {
 } from '../Menu';
 import { OverflowMenu } from './';
 import { WithFeatureFlags } from '../../../.storybook/templates/WithFeatureFlags';
-import { FeatureFlags } from '../FeatureFlags';
+import { FeatureFlags } from '@carbon/react';
 
 export default {
   title: 'Components/OverflowMenu/Feature Flag',
@@ -46,7 +46,7 @@ export const AutoAlign = () => {
   });
 
   return (
-    <div style={{ width: '5000px', height: '5000px' }}>
+    <div style={ width: '5000px', height: '5000px' }>
       <div
         style={{
           position: 'absolute',
@@ -96,7 +96,7 @@ export const Nested = () => {
 export const WithMenuAlignment = (args) => {
   return (
     <>
-      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+      <div style={ display: 'flex', justifyContent: 'space-between' }>
         <OverflowMenu {...args} menuAlignment="bottom-start">
           <MenuItem label="Stop app" />
           <MenuItem label="Restart app" />

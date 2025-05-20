@@ -7,15 +7,15 @@
 
 import React, { useState } from 'react';
 import Modal from './';
-import Button from '../Button';
-import Select from '../Select';
-import { MultiSelect } from '../MultiSelect';
-import Dropdown from '../Dropdown';
-import SelectItem from '../SelectItem';
-import TextInput from '../TextInput';
-import { ClassPrefix } from '../ClassPrefix';
+import { Button } from '@carbon/react';
+import { Select } from '@carbon/react';
+import { MultiSelect } from '@carbon/react';
+import { Dropdown } from '@carbon/react';
+import { SelectItem } from '@carbon/react';
+import { TextInput } from '@carbon/react';
+import { ClassPrefix } from '@carbon/react';
 import './Modal.stories.scss';
-import { FeatureFlags } from '../FeatureFlags';
+import { FeatureFlags } from '@carbon/react';
 import { Annotation } from '../../../.storybook/templates/Annotation';
 import LinkTo from '@storybook/addon-links/react';
 
@@ -50,7 +50,7 @@ export const EnableDialogElement = () => {
               modalLabel="Account resources"
               primaryButtonText="Add"
               secondaryButtonText="Cancel">
-              <p style={{ marginBottom: '1rem' }}>
+              <p style={ marginBottom: '1rem' }>
                 Custom domains direct requests for your apps in this Cloud
                 Foundry organization to a URL that you own. A custom domain can
                 be a shared domain, a shared subdomain, or a shared domain and
@@ -61,7 +61,7 @@ export const EnableDialogElement = () => {
                 id="text-input-1"
                 labelText="Domain name"
                 placeholder="e.g. github.com"
-                style={{ marginBottom: '1rem' }}
+                style={ marginBottom: '1rem' }
               />
               <Select id="select-1" defaultValue="us-south" labelText="Region">
                 <SelectItem value="us-south" text="US South" />
@@ -126,7 +126,7 @@ export const EnableExperimentalFocusWrapWithoutSentinels = () => {
               modalLabel="Account resources"
               primaryButtonText="Add"
               secondaryButtonText="Cancel">
-              <p style={{ marginBottom: '1rem' }}>
+              <p style={ marginBottom: '1rem' }>
                 Custom domains direct requests for your apps in this Cloud
                 Foundry organization to a URL that you own. A custom domain can
                 be a shared domain, a shared subdomain, or a shared domain and
@@ -137,7 +137,7 @@ export const EnableExperimentalFocusWrapWithoutSentinels = () => {
                 id="text-input-1"
                 labelText="Domain name"
                 placeholder="e.g. github.com"
-                style={{ marginBottom: '1rem' }}
+                style={ marginBottom: '1rem' }
               />
               <Select id="select-1" defaultValue="us-south" labelText="Region">
                 <SelectItem value="us-south" text="US South" />

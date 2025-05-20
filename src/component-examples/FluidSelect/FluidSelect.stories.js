@@ -7,16 +7,16 @@
 
 import React from 'react';
 import { FluidSelect, FluidSelectSkeleton } from '.';
-import SelectItem from '../SelectItem';
+import { SelectItem } from '@carbon/react';
 import {
   ToggletipLabel,
   Toggletip,
   ToggletipButton,
   ToggletipContent,
 } from '../Toggletip';
-import Button from '../Button';
-import { AILabel, AILabelContent, AILabelActions } from '../AILabel';
-import { IconButton } from '../IconButton';
+import { Button } from '@carbon/react';
+import { AILabel, AILabelContent, AILabelActions } from '@carbon/react';
+import { IconButton } from '@carbon/react';
 import { Information, View, FolderOpen, Folders } from '@carbon/icons-react';
 import mdx from './FluidSelect.mdx';
 
@@ -119,7 +119,7 @@ const ToggleTip = (
 );
 
 export const Default = (args) => (
-  <div style={{ width: args.defaultWidth }}>
+  <div style={ width: args.defaultWidth }>
     <FluidSelect {...args} id="select-1">
       <SelectItem value="" text="" />
       <SelectItem value="option-1" text="Option 1" />
@@ -182,7 +182,7 @@ const aiLabel = (
 );
 
 export const withAILabel = (args) => (
-  <div style={{ width: 400 }}>
+  <div style={ width: 400 }>
     <FluidSelect
       id="select-1"
       labelText="Select an option"
@@ -203,7 +203,7 @@ export const withAILabel = (args) => (
 withAILabel.argTypes = { ...sharedArgTypes };
 
 export const Skeleton = () => (
-  <div style={{ width: 400 }}>
+  <div style={ width: 400 }>
     <FluidSelectSkeleton />
   </div>
 );

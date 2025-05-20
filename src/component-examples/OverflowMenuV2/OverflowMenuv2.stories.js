@@ -5,11 +5,11 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
-import { action } from '@storybook/addon-actions';
-import LinkTo from '@storybook/addon-links/react';
+import React from "react";
+import { action } from "@storybook/addon-actions";
+import LinkTo from "@storybook/addon-links/react";
 
-import { WithDeprecationNotice } from '../../../.storybook/templates/WithDeprecationNotice';
+import { WithDeprecationNotice } from "../../../.storybook/templates/WithDeprecationNotice";
 
 import {
   MenuItem,
@@ -17,12 +17,12 @@ import {
   MenuItemGroup,
   MenuItemRadioGroup,
   MenuItemSelectable,
-} from '../Menu';
+} from "../Menu";
 
-import { OverflowMenuV2 } from './';
+import { OverflowMenuV2 } from "./";
 
 export default {
-  title: 'Experimental/unstable__OverflowMenuV2',
+  title: "Experimental/unstable__OverflowMenuV2",
   component: OverflowMenuV2,
   subcomponents: {
     MenuItem,
@@ -34,20 +34,21 @@ export default {
 };
 
 export const _OverflowMenuV2 = () => {
-  const onClick = action('onClick (MenuItem)');
+  const onClick = action("onClick (MenuItem)");
 
   return (
     <WithDeprecationNotice
       text={
         <span>
           `OverflowMenuV2` is deprecated and will be removed in the next major
-          version. Use `OverflowMenu` with the `enable-v12-overflowmenu`{' '}
+          version. Use `OverflowMenu` with the `enable-v12-overflowmenu`{" "}
           <LinkTo title="Experimental/Feature Flags" name="Overview">
             feature flag
-          </LinkTo>{' '}
+          </LinkTo>{" "}
           instead.
         </span>
-      }>
+      }
+    >
       <OverflowMenuV2>
         <MenuItem label="Stop app" onClick={onClick} />
         <MenuItem label="Restart app" onClick={onClick} />

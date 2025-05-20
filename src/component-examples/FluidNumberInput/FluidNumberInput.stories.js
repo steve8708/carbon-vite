@@ -38,7 +38,7 @@ const ToggleTip = (
 );
 
 export const Default = (args) => (
-  <div style={{ width: args.defaultWidth }}>
+  <div style={ width: args.defaultWidth }>
     <FluidNumberInput {...args} />
   </div>
 );
@@ -103,7 +103,7 @@ Default.argTypes = {
 };
 
 export const Skeleton = () => (
-  <div style={{ width: '400px' }}>
+  <div style={ width: '400px' }>
     <FluidNumberInputSkeleton
       label="Label"
       placeholder="Placeholder text"

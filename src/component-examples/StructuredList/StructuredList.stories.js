@@ -195,7 +195,7 @@ WithBackgroundLayer.argTypes = {
 };
 
 export const Skeleton = (args) => (
-  <div style={{ width: '800px' }}>
+  <div style={ width: '800px' }>
     <StructuredListSkeleton {...args} />
   </div>
 );

@@ -5,17 +5,17 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
-import { action } from '@storybook/addon-actions';
-import { Add, Notification } from '@carbon/icons-react';
-import { default as Button, ButtonSkeleton } from '../Button';
-import ButtonSet from '../ButtonSet';
-import { Stack } from '../Stack';
-import mdx from './Button.mdx';
-import './button-story.scss';
+import React from "react";
+import { action } from "@storybook/addon-actions";
+import { Add, Notification } from "@carbon/icons-react";
+import { default as Button, ButtonSkeleton } from "@carbon/react";
+import { ButtonSet } from "@carbon/react";
+import { Stack } from "@carbon/react";
+import mdx from "./Button.mdx";
+import "./button-story.scss";
 
 export default {
-  title: 'Components/Button',
+  title: "Components/Button",
   component: Button,
   subcomponents: {
     ButtonSet,
@@ -24,19 +24,19 @@ export default {
   argTypes: {
     kind: {
       options: [
-        'primary',
-        'secondary',
-        'tertiary',
-        'ghost',
-        'danger',
-        'danger--tertiary',
-        'danger--ghost',
+        "primary",
+        "secondary",
+        "tertiary",
+        "ghost",
+        "danger",
+        "danger--tertiary",
+        "danger--ghost",
       ],
-      control: { type: 'select' },
+      control: { type: "select" },
     },
     size: {
-      options: ['sm', 'md', 'lg', 'xl', '2xl'],
-      control: { type: 'select' },
+      options: ["sm", "md", "lg", "xl", "2xl"],
+      control: { type: "select" },
     },
     children: {
       control: false,
@@ -133,7 +133,7 @@ export const IconButton = (args) => (
     renderIcon={Add}
     iconDescription="Icon Description"
     hasIconOnly
-    onClick={action('onClick')}
+    onClick={action("onClick")}
     {...args}
   />
 );
@@ -149,7 +149,7 @@ export const IconButtonWithBadge = (args) => {
       hasIconOnly
       renderIcon={Notification}
       iconDescription="Notification"
-      onClick={action('onClick')}
+      onClick={action("onClick")}
       autoAlign
       {...args}
     />

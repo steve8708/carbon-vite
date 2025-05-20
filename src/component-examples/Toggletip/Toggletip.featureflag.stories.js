@@ -5,25 +5,25 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
-import { Information } from '@carbon/icons-react';
+import React from "react";
+import { Information } from "@carbon/icons-react";
 
-import { Link } from '../Link';
-import { Button } from '../Button';
+import { Link } from "@carbon/react";
+import { Button } from "@carbon/react";
 import {
   ToggletipLabel,
   Toggletip,
   ToggletipButton,
   ToggletipContent,
   ToggletipActions,
-} from '../Toggletip';
-import { WithFeatureFlags } from '../../../.storybook/templates/WithFeatureFlags';
+} from "../Toggletip";
+import { WithFeatureFlags } from "../../../.storybook/templates/WithFeatureFlags";
 
 // eslint-disable-next-line storybook/csf-component
 export default {
-  title: 'Components/Toggletip/Feature Flag',
+  title: "Components/Toggletip/Feature Flag",
   component: Toggletip,
-  tags: ['!autodocs'],
+  tags: ["!autodocs"],
 
   decorators: [
     (Story) => (
@@ -60,30 +60,30 @@ export const FloatingStyles = (args) => {
 };
 
 FloatingStyles.args = {
-  align: 'bottom',
+  align: "bottom",
 };
 
 FloatingStyles.argTypes = {
   align: {
     options: [
-      'top',
-      'top-start',
-      'top-end',
+      "top",
+      "top-start",
+      "top-end",
 
-      'bottom',
-      'bottom-start',
-      'bottom-end',
+      "bottom",
+      "bottom-start",
+      "bottom-end",
 
-      'left',
-      'left-end',
-      'left-start',
+      "left",
+      "left-end",
+      "left-start",
 
-      'right',
-      'right-end',
-      'right-start',
+      "right",
+      "right-end",
+      "right-start",
     ],
     control: {
-      type: 'select',
+      type: "select",
     },
   },
 };

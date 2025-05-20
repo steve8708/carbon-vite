@@ -5,12 +5,12 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
-import { ProgressIndicator, ProgressStep, ProgressIndicatorSkeleton } from './';
-import mdx from './ProgressIndicator.mdx';
+import React from "react";
+import { ProgressIndicator, ProgressStep, ProgressIndicatorSkeleton } from "./";
+import mdx from "./ProgressIndicator.mdx";
 
 export default {
-  title: 'Components/ProgressIndicator',
+  title: "Components/ProgressIndicator",
   component: ProgressIndicator,
   subcomponents: {
     ProgressStep,
@@ -25,7 +25,7 @@ export default {
 
 export const Interactive = () => {
   return (
-    <ProgressIndicator currentIndex={1} onChange={() => alert('Clicked')}>
+    <ProgressIndicator currentIndex={1} onChange={() => alert("Clicked")}>
       <ProgressStep
         label="Click me"
         description="Step 1: Register a onChange event"
@@ -100,12 +100,12 @@ Default.argTypes = {
     },
   },
   currentIndex: {
-    control: { type: 'number' },
+    control: { type: "number" },
   },
   spaceEqually: {
-    control: { type: 'boolean' },
+    control: { type: "boolean" },
   },
   vertical: {
-    control: { type: 'boolean' },
+    control: { type: "boolean" },
   },
 };

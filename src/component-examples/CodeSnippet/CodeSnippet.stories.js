@@ -144,7 +144,7 @@ export const SinglelineWithLayer = () => {
 export const Skeleton = () => {
   return (
     <div>
-      <CodeSnippetSkeleton type="single" style={{ marginBottom: 8 }} />
+      <CodeSnippetSkeleton type="single" style={ marginBottom: 8 } />
       <CodeSnippetSkeleton type="multi" />
     </div>
   );

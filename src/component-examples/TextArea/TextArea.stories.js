@@ -5,19 +5,19 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
+import React from "react";
 
-import { WithLayer } from '../../../.storybook/templates/WithLayer';
-import { View, FolderOpen, Folders, Information } from '@carbon/icons-react';
-import Button from '../Button';
-import { AILabel, AILabelContent, AILabelActions } from '../AILabel';
-import { IconButton } from '../IconButton';
-import { default as TextArea, TextAreaSkeleton } from './';
-import { Tooltip } from '../Tooltip';
-import mdx from './TextArea.mdx';
+import { WithLayer } from "../../../.storybook/templates/WithLayer";
+import { View, FolderOpen, Folders, Information } from "@carbon/icons-react";
+import { Button } from "@carbon/react";
+import { AILabel, AILabelContent, AILabelActions } from "@carbon/react";
+import { IconButton } from "@carbon/react";
+import { default as TextArea, TextAreaSkeleton } from "./";
+import { Tooltip } from "@carbon/react";
+import mdx from "./TextArea.mdx";
 
 export default {
-  title: 'Components/TextArea',
+  title: "Components/TextArea",
   component: TextArea,
   parameters: {
     docs: {
@@ -47,32 +47,32 @@ const sharedArgTypes = {
   },
   cols: {
     control: {
-      type: 'number',
+      type: "number",
     },
   },
   defaultValue: {
     control: {
-      type: 'text',
+      type: "text",
     },
   },
   disabled: {
     control: {
-      type: 'boolean',
+      type: "boolean",
     },
   },
   enableCounter: {
     control: {
-      type: 'boolean',
+      type: "boolean",
     },
   },
   helperText: {
     control: {
-      type: 'text',
+      type: "text",
     },
   },
   hideLabel: {
     control: {
-      type: 'boolean',
+      type: "boolean",
     },
   },
   id: {
@@ -80,47 +80,47 @@ const sharedArgTypes = {
   },
   invalid: {
     control: {
-      type: 'boolean',
+      type: "boolean",
     },
   },
   invalidText: {
     control: {
-      type: 'text',
+      type: "text",
     },
   },
   labelText: {
     control: {
-      type: 'text',
+      type: "text",
     },
   },
   maxCount: {
     control: {
-      type: 'number',
+      type: "number",
     },
   },
   placeholder: {
     control: {
-      type: 'text',
+      type: "text",
     },
   },
   rows: {
     control: {
-      type: 'number',
+      type: "number",
     },
   },
   warn: {
     control: {
-      type: 'boolean',
+      type: "boolean",
     },
   },
   warnText: {
     control: {
-      type: 'text',
+      type: "text",
     },
   },
   value: {
     control: {
-      type: 'text',
+      type: "text",
     },
   },
 };
@@ -135,18 +135,18 @@ Default.argTypes = {
 
 Default.args = {
   enableCounter: true,
-  helperText: 'TextArea helper text',
-  labelText: 'TextArea label',
+  helperText: "TextArea helper text",
+  labelText: "TextArea label",
   maxCount: 500,
   disabled: false,
   hideLabel: false,
   invalid: false,
   invalidText:
-    'Error message that is really long can wrap to more lines but should not be excessively long.',
-  placeholder: '',
+    "Error message that is really long can wrap to more lines but should not be excessively long.",
+  placeholder: "",
   rows: 4,
   warn: false,
-  warnText: 'This is a warning message.',
+  warnText: "This is a warning message.",
 };
 
 export const _WithLayer = () => (

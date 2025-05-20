@@ -9,7 +9,7 @@
 
 import React from 'react';
 import DataTableSkeleton from './DataTableSkeleton';
-import { headers } from '../DataTable/stories/shared';
+import { headers } from '@carbon/react';
 
 const props = () => ({
   zebra: false,
@@ -27,7 +27,7 @@ export const Skeleton = (args) => {
   const { ...rest } = props();
 
   return (
-    <div style={{ width: '800px' }}>
+    <div style={ width: '800px' }>
       <DataTableSkeleton
         {...args}
         {...rest}

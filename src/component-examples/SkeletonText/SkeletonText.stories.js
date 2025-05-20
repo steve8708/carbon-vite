@@ -7,13 +7,13 @@
 
 /* eslint-disable no-console */
 
-import React from 'react';
+import React from "react";
 
-import SkeletonText from '.';
-import mdx from './SkeletonText.mdx';
+import SkeletonText from ".";
+import mdx from "./SkeletonText.mdx";
 
 export default {
-  title: 'Components/Skeleton/SkeletonText',
+  title: "Components/Skeleton/SkeletonText",
   component: SkeletonText,
   parameters: {
     docs: {
@@ -29,7 +29,7 @@ export const Default = (args) => {
 Default.args = {
   heading: false,
   paragraph: false,
-  width: '100%',
+  width: "100%",
   lineCount: 3,
 };
 
@@ -39,22 +39,22 @@ Default.argTypes = {
   },
   heading: {
     control: {
-      type: 'boolean',
+      type: "boolean",
     },
   },
   paragraph: {
     control: {
-      type: 'boolean',
+      type: "boolean",
     },
   },
   width: {
     control: {
-      type: 'text',
+      type: "text",
     },
   },
   lineCount: {
     control: {
-      type: 'number',
+      type: "number",
     },
   },
 };

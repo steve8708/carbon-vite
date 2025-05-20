@@ -5,23 +5,23 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
-import ModalWrapper from './ModalWrapper';
+import React from "react";
+import ModalWrapper from "./ModalWrapper";
 
 export default {
-  title: 'Deprecated/ModalWrapper',
+  title: "Deprecated/ModalWrapper",
   component: ModalWrapper,
   argTypes: {
     triggerButtonKind: {
       options: [
-        'primary',
-        'secondary',
-        'danger',
-        'ghost',
-        'danger--primary',
-        'danger--ghost',
-        'danger--tertiary',
-        'tertiary',
+        "primary",
+        "secondary",
+        "danger",
+        "ghost",
+        "danger--primary",
+        "danger--ghost",
+        "danger--tertiary",
+        "tertiary",
       ],
     },
   },
@@ -34,7 +34,8 @@ export const Default = (args) => {
       modalHeading="Modal heading"
       modalLabel="Label"
       handleSubmit={() => {}}
-      {...args}>
+      {...args}
+    >
       <p>Modal content here</p>
     </ModalWrapper>
   );

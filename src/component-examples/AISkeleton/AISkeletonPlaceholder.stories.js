@@ -7,12 +7,12 @@
 
 /* eslint-disable no-console */
 
-import React from 'react';
+import React from "react";
 
-import AISkeletonPlaceholder from './AISkeletonPlaceholder';
+import AISkeletonPlaceholder from "./AISkeletonPlaceholder";
 
 export default {
-  title: 'Components/Skeleton/AISkeleton',
+  title: "Components/Skeleton/AISkeleton",
   component: AISkeletonPlaceholder,
 };
 

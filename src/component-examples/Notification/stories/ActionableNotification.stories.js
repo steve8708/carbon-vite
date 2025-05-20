@@ -5,14 +5,14 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
-import { ActionableNotification } from '../../Notification';
-import { action } from '@storybook/addon-actions';
-import mdx from '../Notification.mdx';
+import React from "react";
+import { ActionableNotification } from "../../Notification";
+import { action } from "@storybook/addon-actions";
+import mdx from "../Notification.mdx";
 
 // eslint-disable-next-line storybook/csf-component
 export default {
-  title: 'Components/Notifications/Actionable',
+  title: "Components/Notifications/Actionable",
   component: ActionableNotification,
   parameters: {
     docs: {
@@ -20,20 +20,20 @@ export default {
     },
   },
   args: {
-    kind: 'error',
+    kind: "error",
     lowContrast: false,
     hideCloseButton: false,
-    ['aria-label']: 'close notification',
-    statusIconDescription: 'notification',
-    onClose: action('onClose'),
-    onCloseButtonClick: action('onCloseButtonClick'),
+    ["aria-label"]: "close notification",
+    statusIconDescription: "notification",
+    onClose: action("onClose"),
+    onCloseButtonClick: action("onCloseButtonClick"),
   },
 };
 
 export const Default = (args) => <ActionableNotification {...args} />;
 
 Default.argTypes = {
-  ['aria-label']: {
+  ["aria-label"]: {
     table: {
       disable: true,
     },
@@ -44,13 +44,13 @@ Default.argTypes = {
     },
   },
   onActionButtonClick: {
-    action: 'onActionButtonClick',
+    action: "onActionButtonClick",
   },
   onClose: {
-    action: 'onClose',
+    action: "onClose",
   },
   onCloseButtonClick: {
-    action: 'onCloseButtonClick',
+    action: "onCloseButtonClick",
   },
   children: {
     table: {
@@ -69,9 +69,9 @@ Default.argTypes = {
   },
 };
 Default.args = {
-  actionButtonLabel: 'Action',
+  actionButtonLabel: "Action",
   inline: false,
   closeOnEscape: true,
-  title: 'Notification title',
-  subtitle: 'Subtitle text goes here',
+  title: "Notification title",
+  subtitle: "Subtitle text goes here",
 };

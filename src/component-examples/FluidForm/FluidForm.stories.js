@@ -8,17 +8,17 @@
 import React from 'react';
 
 import FluidForm from '.';
-import FluidDatePicker from '../FluidDatePicker';
-import FluidDatePickerInput from '../FluidDatePickerInput';
-import FluidSelect from '../FluidSelect';
-import SelectItem from '../SelectItem';
-import SelectItemGroup from '../SelectItemGroup';
-import FluidTextInput from '../FluidTextInput';
-import FluidTextArea from '../FluidTextArea';
-import FluidTimePicker from '../FluidTimePicker';
-import FluidTimePickerSelect from '../FluidTimePickerSelect';
-import FluidNumberInput from '../FluidNumberInput';
-import ModalWrapper from '../ModalWrapper';
+import { FluidDatePicker } from '@carbon/react';
+import { FluidDatePickerInput } from '@carbon/react';
+import { FluidSelect } from '@carbon/react';
+import { SelectItem } from '@carbon/react';
+import { SelectItemGroup } from '@carbon/react';
+import { FluidTextInput } from '@carbon/react';
+import { FluidTextArea } from '@carbon/react';
+import { FluidTimePicker } from '@carbon/react';
+import { FluidTimePickerSelect } from '@carbon/react';
+import { FluidNumberInput } from '@carbon/react';
+import { ModalWrapper } from '@carbon/react';
 import mdx from './FluidForm.mdx';
 
 const additionalProps = {
@@ -59,7 +59,7 @@ export default {
 export const Default = () => (
   <>
     <FluidForm aria-label="sample form" {...additionalProps}>
-      <div style={{ display: 'flex' }}>
+      <div style={ display: 'flex' }>
         <FluidTimePicker
           id="time-picker-1"
           labelText="Time"
@@ -107,7 +107,7 @@ export const Default = () => (
           </SelectItemGroup>
         </FluidSelect>
       </div>
-      <div style={{ display: 'flex' }}>
+      <div style={ display: 'flex' }>
         <FluidTextInput {...TextInputProps} />
         <FluidNumberInput
           label="Number Input Label"

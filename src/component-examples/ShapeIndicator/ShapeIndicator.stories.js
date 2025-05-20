@@ -5,12 +5,12 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
-import ShapeIndicator from '.';
-import mdx from './ShapeIndicator.mdx';
+import React from "react";
+import ShapeIndicator from ".";
+import mdx from "./ShapeIndicator.mdx";
 
 export default {
-  title: 'Experimental/StatusIndicators/unstable__ShapeIndicator',
+  title: "Experimental/StatusIndicators/unstable__ShapeIndicator",
   component: ShapeIndicator,
   parameters: {
     docs: {
@@ -23,10 +23,11 @@ export const Default = (props) => {
   return (
     <div
       style={{
-        display: 'flex',
-        flexFlow: 'column',
-        rowGap: '.5rem',
-      }}>
+        display: "flex",
+        flexFlow: "column",
+        rowGap: ".5rem",
+      }}
+    >
       <ShapeIndicator kind="failed" label="Failed" {...props} />
       <ShapeIndicator kind="critical" label="Critical" {...props} />
       <ShapeIndicator kind="high" label="High" {...props} />
@@ -49,7 +50,7 @@ Default.args = {
 Default.argTypes = {
   label: {
     control: {
-      type: 'text',
+      type: "text",
     },
   },
   kind: {
@@ -57,7 +58,7 @@ Default.argTypes = {
   },
   textSize: {
     control: {
-      type: 'select',
+      type: "select",
     },
     options: [12, 14],
   },

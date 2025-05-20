@@ -5,14 +5,14 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
-import { OverflowMenu } from './OverflowMenu';
-import { default as OverflowMenuItem } from '../OverflowMenuItem';
-import { Filter } from '@carbon/icons-react';
-import mdx from './OverflowMenu.mdx';
+import React from "react";
+import { OverflowMenu } from "./OverflowMenu";
+import { default as OverflowMenuItem } from "@carbon/react";
+import { Filter } from "@carbon/icons-react";
+import mdx from "./OverflowMenu.mdx";
 
 export default {
-  title: 'Components/OverflowMenu',
+  title: "Components/OverflowMenu",
   component: OverflowMenu,
   subcomponents: {
     OverflowMenuItem,
@@ -26,7 +26,7 @@ export default {
 
 export const RenderCustomIcon = () => {
   return (
-    <OverflowMenu flipped={document?.dir === 'rtl'} renderIcon={Filter}>
+    <OverflowMenu flipped={document?.dir === "rtl"} renderIcon={Filter}>
       <OverflowMenuItem itemText="Filter A" />
       <OverflowMenuItem itemText="Filter B" />
     </OverflowMenu>
@@ -45,7 +45,7 @@ export const Default = (args) => (
 );
 
 Default.args = {
-  flipped: document?.dir === 'rtl',
+  flipped: document?.dir === "rtl",
   focusTrap: false,
   open: false,
 };
@@ -53,21 +53,21 @@ Default.args = {
 Default.argTypes = {
   align: {
     options: [
-      'top',
-      'top-start',
-      'top-end',
+      "top",
+      "top-start",
+      "top-end",
 
-      'bottom',
-      'bottom-start',
-      'bottom-end',
+      "bottom",
+      "bottom-start",
+      "bottom-end",
 
-      'left',
-      'left-end',
-      'left-start',
+      "left",
+      "left-end",
+      "left-start",
 
-      'right',
-      'right-end',
-      'right-start',
+      "right",
+      "right-end",
+      "right-start",
     ],
   },
   ariaLabel: {
@@ -92,12 +92,12 @@ Default.argTypes = {
   },
   flipped: {
     control: {
-      type: 'boolean',
+      type: "boolean",
     },
   },
   focusTrap: {
     control: {
-      type: 'boolean',
+      type: "boolean",
     },
   },
   iconClass: {
@@ -106,7 +106,7 @@ Default.argTypes = {
     },
   },
   iconDescription: {
-    control: { type: 'text' },
+    control: { type: "text" },
   },
   id: {
     table: {
@@ -135,7 +135,7 @@ Default.argTypes = {
   },
   open: {
     control: {
-      type: 'boolean',
+      type: "boolean",
     },
   },
   renderIcon: {
@@ -144,7 +144,7 @@ Default.argTypes = {
     },
   },
   size: {
-    options: ['sm', 'md', 'lg'],
-    control: { type: 'select' },
+    options: ["sm", "md", "lg"],
+    control: { type: "select" },
   },
 };

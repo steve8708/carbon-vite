@@ -5,28 +5,28 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import './story.scss';
+import "./story.scss";
 
-import React from 'react';
+import React from "react";
 
 // eslint-disable-next-line storybook/csf-component
 export default {
-  title: 'Elements/IBM Plex',
+  title: "Elements/IBM Plex",
   argTypes: {
     fontWeight: {
       control: {
-        type: 'radio',
+        type: "radio",
       },
       mapping: {
         Light: 300,
         Regular: 400,
         SemiBold: 600,
       },
-      options: ['Light', 'Regular', 'SemiBold'],
+      options: ["Light", "Regular", "SemiBold"],
     },
   },
   args: {
-    fontWeight: 'Regular',
+    fontWeight: "Regular",
   },
 };
 

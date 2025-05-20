@@ -5,18 +5,18 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
-import '../AILabel/ailabel-story.scss';
-import { default as Checkbox, CheckboxSkeleton } from './';
-import mdx from './Checkbox.mdx';
-import CheckboxGroup from '../CheckboxGroup';
-import Button from '../Button';
-import { AILabel, AILabelContent, AILabelActions } from '../AILabel';
-import { IconButton } from '../IconButton';
-import { View, FolderOpen, Folders } from '@carbon/icons-react';
+import React from "react";
+import "../AILabel/ailabel-story.scss";
+import { default as Checkbox, CheckboxSkeleton } from "./";
+import mdx from "./Checkbox.mdx";
+import { CheckboxGroup } from "@carbon/react";
+import { Button } from "@carbon/react";
+import { AILabel, AILabelContent, AILabelActions } from "@carbon/react";
+import { IconButton } from "@carbon/react";
+import { View, FolderOpen, Folders } from "@carbon/icons-react";
 
 export default {
-  title: 'Components/Checkbox',
+  title: "Components/Checkbox",
   component: Checkbox,
   subcomponents: {
     CheckboxGroup,
@@ -30,57 +30,57 @@ export default {
 };
 
 const sharedArgs = {
-  helperText: 'Helper text goes here',
+  helperText: "Helper text goes here",
   invalid: false,
-  invalidText: 'Invalid message goes here',
+  invalidText: "Invalid message goes here",
   warn: false,
-  warnText: 'Warning message goes here',
+  warnText: "Warning message goes here",
 };
 
 const sharedArgTypes = {
   helperText: {
-    description: 'Provide text for the form group for additional help',
+    description: "Provide text for the form group for additional help",
     control: {
-      type: 'text',
+      type: "text",
     },
   },
   invalid: {
-    description: 'Specify whether the form group is currently invalid',
+    description: "Specify whether the form group is currently invalid",
     control: {
-      type: 'boolean',
+      type: "boolean",
     },
   },
   invalidText: {
     description:
-      'Provide the text that is displayed when the form group is in an invalid state',
+      "Provide the text that is displayed when the form group is in an invalid state",
     control: {
-      type: 'text',
+      type: "text",
     },
   },
   legendText: {
     description:
-      'Provide the text to be rendered inside of the fieldset <legend>',
+      "Provide the text to be rendered inside of the fieldset <legend>",
     control: {
-      type: 'text',
+      type: "text",
     },
   },
   readOnly: {
-    description: 'Specify whether the CheckboxGroup is read-only',
+    description: "Specify whether the CheckboxGroup is read-only",
     control: {
-      type: 'boolean',
+      type: "boolean",
     },
   },
   warn: {
-    description: 'Specify whether the form group is currently in warning state',
+    description: "Specify whether the form group is currently in warning state",
     control: {
-      type: 'boolean',
+      type: "boolean",
     },
   },
   warnText: {
     description:
-      'Provide the text that is displayed when the form group is in warning state',
+      "Provide the text that is displayed when the form group is in warning state",
     control: {
-      type: 'text',
+      type: "text",
     },
   },
   checked: {
@@ -129,9 +129,9 @@ const sharedArgTypes = {
     },
   },
   orientation: {
-    description: 'Provide how checkbox should be displayed',
-    control: 'select',
-    options: ['horizontal', 'vertical'],
+    description: "Provide how checkbox should be displayed",
+    control: "select",
+    options: ["horizontal", "vertical"],
   },
 };
 
@@ -155,7 +155,8 @@ export const Horizontal = (args) => {
       className="some-class"
       legendText="Group label"
       helperText="Helper text goes here"
-      {...args}>
+      {...args}
+    >
       <Checkbox labelText={`Checkbox label`} id="checkbox-label-1" />
       <Checkbox labelText={`Checkbox label`} id="checkbox-label-2" />
       <Checkbox labelText={`Checkbox label`} id="checkbox-label-3" />
@@ -169,8 +170,8 @@ Horizontal.argTypes = { ...sharedArgTypes };
 
 export const Single = () => {
   const checkboxEvents = {
-    className: 'some-class',
-    labelText: 'Checkbox label',
+    className: "some-class",
+    labelText: "Checkbox label",
   };
   return (
     <>
@@ -240,7 +241,8 @@ export const withAILabel = (args) => {
       <CheckboxGroup
         legendText="Group Label"
         decorator={AILabelFunc()}
-        {...args}>
+        {...args}
+      >
         <Checkbox labelText={`Checkbox label`} id="checkbox-label-1" />
         <Checkbox labelText={`Checkbox label`} id="checkbox-label-2" />
         <Checkbox labelText={`Checkbox label`} id="checkbox-label-3" />
@@ -264,12 +266,12 @@ export const withAILabel = (args) => {
         <Checkbox
           labelText={`Checkbox label`}
           id="checkbox-label-7"
-          decorator={AILabelFunc('inline')}
+          decorator={AILabelFunc("inline")}
         />
         <Checkbox
           labelText={`Checkbox label`}
           id="checkbox-label-8"
-          decorator={AILabelFunc('inline')}
+          decorator={AILabelFunc("inline")}
         />
         <Checkbox labelText={`Checkbox label`} id="checkbox-label-9" />
       </CheckboxGroup>
@@ -279,10 +281,10 @@ export const withAILabel = (args) => {
 
 withAILabel.args = {
   invalid: false,
-  invalidText: 'Invalid message goes here',
+  invalidText: "Invalid message goes here",
   readOnly: false,
   warn: false,
-  warnText: 'Warning message goes here',
+  warnText: "Warning message goes here",
 };
 
 withAILabel.argTypes = { ...sharedArgTypes };

@@ -5,16 +5,16 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import { WithLayer } from '../../../.storybook/templates/WithLayer';
+import { WithLayer } from "../../../.storybook/templates/WithLayer";
 
-import { SliderSkeleton } from '.';
-import Slider from './Slider';
-import mdx from './Slider.mdx';
+import { SliderSkeleton } from ".";
+import Slider from "./Slider";
+import mdx from "./Slider.mdx";
 
 export default {
-  title: 'Components/Slider',
+  title: "Components/Slider",
   component: Slider,
   subcomponents: {
     SliderSkeleton,
@@ -37,10 +37,10 @@ export const Default = (args) => {
 
 Default.argTypes = {
   ariaLabelInput: {
-    control: { type: 'text' },
+    control: { type: "text" },
   },
   unstable_ariaLabelInputUpper: {
-    control: { type: 'text' },
+    control: { type: "text" },
   },
   light: {
     table: {
@@ -60,7 +60,7 @@ Default.argTypes = {
   disabled: {
     control: {
       control: {
-        type: 'boolean',
+        type: "boolean",
       },
     },
   },
@@ -71,17 +71,17 @@ Default.argTypes = {
   },
   hideTextInput: {
     control: {
-      type: 'boolean',
+      type: "boolean",
     },
   },
   invalid: {
     control: {
-      type: 'boolean',
+      type: "boolean",
     },
   },
   invalidText: {
     control: {
-      type: 'text',
+      type: "text",
     },
   },
   labelText: {
@@ -90,38 +90,38 @@ Default.argTypes = {
     },
   },
   min: {
-    control: { type: 'number' },
+    control: { type: "number" },
   },
   max: {
-    control: { type: 'number' },
+    control: { type: "number" },
   },
   name: {
-    control: { type: 'text' },
+    control: { type: "text" },
   },
   unstable_nameUpper: {
-    control: { type: 'text' },
+    control: { type: "text" },
   },
   readOnly: {
     control: {
-      type: 'boolean',
+      type: "boolean",
     },
   },
   required: {
     control: {
-      type: 'boolean',
+      type: "boolean",
     },
   },
   step: {
-    control: { type: 'number' },
+    control: { type: "number" },
   },
   stepMultiplier: {
-    control: { type: 'number' },
+    control: { type: "number" },
   },
   value: {
-    control: { type: 'number' },
+    control: { type: "number" },
   },
   unstable_valueUpper: {
-    control: { type: 'number' },
+    control: { type: "number" },
   },
   onBlur: {
     table: {
@@ -145,23 +145,23 @@ Default.argTypes = {
   },
   warn: {
     control: {
-      type: 'boolean',
+      type: "boolean",
     },
   },
   warnText: {
     control: {
-      type: 'text',
+      type: "text",
     },
   },
 };
 
 Default.args = {
-  ariaLabelInput: 'Lower bound',
-  unstable_ariaLabelInputUpper: 'Upper bound',
+  ariaLabelInput: "Lower bound",
+  unstable_ariaLabelInputUpper: "Upper bound",
   disabled: false,
   hideTextInput: false,
   invalid: false,
-  invalidText: 'Invalid message goes here',
+  invalidText: "Invalid message goes here",
   min: 0,
   max: 100,
   readOnly: false,
@@ -171,7 +171,7 @@ Default.args = {
   value: 50,
   unstable_valueUpper: undefined,
   warn: false,
-  warnText: 'Warning message goes here',
+  warnText: "Warning message goes here",
 };
 
 export const SliderWithHiddenInputs = () => {
@@ -203,11 +203,11 @@ export const SliderWithCustomValueLabel = () => {
       hideTextInput
       formatLabel={(val) => {
         if (val < 25) {
-          return 'Low';
+          return "Low";
         } else if (val > 75) {
-          return 'High';
+          return "High";
         }
-        return 'Medium';
+        return "Medium";
       }}
     />
   );
@@ -219,7 +219,8 @@ export const ControlledSlider = () => {
     <>
       <button
         type="button"
-        onClick={() => setVal(Math.round(Math.random() * 100))}>
+        onClick={() => setVal(Math.round(Math.random() * 100))}
+      >
         randomize value
       </button>
       <Slider
@@ -254,7 +255,8 @@ export const ControlledSliderWithLayer = () => {
     <WithLayer>
       <button
         type="button"
-        onClick={() => setVal(Math.round(Math.random() * 100))}>
+        onClick={() => setVal(Math.round(Math.random() * 100))}
+      >
         randomize value
       </button>
       <Slider

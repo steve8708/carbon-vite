@@ -5,15 +5,15 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
-import { MultiSelect } from '../MultiSelect';
-import { WithFeatureFlags } from '../../../.storybook/templates/WithFeatureFlags';
+import React from "react";
+import { MultiSelect } from "@carbon/react";
+import { WithFeatureFlags } from "../../../.storybook/templates/WithFeatureFlags";
 
 // eslint-disable-next-line storybook/csf-component
 export default {
-  title: 'Components/MultiSelect/Feature Flag',
+  title: "Components/MultiSelect/Feature Flag",
   component: MultiSelect,
-  tags: ['!autodocs'],
+  tags: ["!autodocs"],
   decorators: [
     (Story) => (
       <WithFeatureFlags>
@@ -25,29 +25,29 @@ export default {
 
 const comboBoxItems = [
   {
-    id: 'option-0',
-    text: 'An example option that is really long to show what should be done to handle long text',
+    id: "option-0",
+    text: "An example option that is really long to show what should be done to handle long text",
   },
   {
-    id: 'option-1',
-    text: 'Option 1',
+    id: "option-1",
+    text: "Option 1",
   },
   {
-    id: 'option-2',
-    text: 'Option 2',
+    id: "option-2",
+    text: "Option 2",
   },
   {
-    id: 'option-3',
-    text: 'Option 3 - a disabled item',
+    id: "option-3",
+    text: "Option 3 - a disabled item",
     disabled: true,
   },
   {
-    id: 'option-4',
-    text: 'Option 4',
+    id: "option-4",
+    text: "Option 4",
   },
   {
-    id: 'option-5',
-    text: 'Option 5',
+    id: "option-5",
+    text: "Option 5",
   },
 ];
 
@@ -59,20 +59,20 @@ export const FloatingStyles = (args) => (
     helperText="This is helper text"
     items={comboBoxItems}
     direction={args.direction}
-    itemToString={(item) => (item ? item.text : '')}
+    itemToString={(item) => (item ? item.text : "")}
     selectionFeedback="top-after-reopen"
   />
 );
 
 FloatingStyles.args = {
-  direction: 'bottom',
+  direction: "bottom",
 };
 
 FloatingStyles.argTypes = {
   direction: {
-    options: ['top', 'bottom'],
+    options: ["top", "bottom"],
     control: {
-      type: 'radio',
+      type: "radio",
     },
   },
 };

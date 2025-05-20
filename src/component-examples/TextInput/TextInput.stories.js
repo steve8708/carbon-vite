@@ -7,15 +7,15 @@
 
 import React from 'react';
 import { WithLayer } from '../../../.storybook/templates/WithLayer';
-import FluidForm from '../FluidForm';
+import { FluidForm } from '@carbon/react';
 import { View, FolderOpen, Folders, Information } from '@carbon/icons-react';
-import Button from '../Button';
-import { AILabel, AILabelContent, AILabelActions } from '../AILabel';
-import { IconButton } from '../IconButton';
+import { Button } from '@carbon/react';
+import { AILabel, AILabelContent, AILabelActions } from '@carbon/react';
+import { IconButton } from '@carbon/react';
 import mdx from './TextInput.mdx';
 
-import { default as TextInput, TextInputSkeleton } from '../TextInput';
-import { Tooltip } from '../Tooltip';
+import { default as TextInput, TextInputSkeleton } from '@carbon/react';
+import { Tooltip } from '@carbon/react';
 
 export default {
   title: 'Components/TextInput',
@@ -117,7 +117,7 @@ const sharedArgTypes = {
 
 export const Default = (args) => {
   return (
-    <div style={{ width: args.defaultWidth }}>
+    <div style={ width: args.defaultWidth }>
       <TextInput {...args} id="text-input-1" type="text" />
     </div>
   );

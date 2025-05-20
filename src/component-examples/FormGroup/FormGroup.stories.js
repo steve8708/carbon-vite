@@ -6,12 +6,12 @@
  */
 
 import React from 'react';
-import { FormGroup } from '../FormGroup';
-import TextInput from '../TextInput';
-import RadioButtonGroup from '../RadioButtonGroup';
-import RadioButton from '../RadioButton';
-import Button from '../Button';
-import { Stack } from '../Stack';
+import { FormGroup } from '@carbon/react';
+import { TextInput } from '@carbon/react';
+import { RadioButtonGroup } from '@carbon/react';
+import { RadioButton } from '@carbon/react';
+import { Button } from '@carbon/react';
+import { Stack } from '@carbon/react';
 
 import mdx from './FormGroup.mdx';
 
@@ -49,7 +49,7 @@ export default {
 
 export const Default = (args) => {
   return (
-    <FormGroup style={{ maxWidth: '400px' }} {...args}>
+    <FormGroup style={ maxWidth: '400px' } {...args}>
       <Stack gap={7}>
         <TextInput id="one" labelText="First Name" />
         <TextInput id="two" labelText="Last Name" />

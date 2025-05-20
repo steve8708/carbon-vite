@@ -5,18 +5,18 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React, { useState } from 'react';
-import { Popover, PopoverContent } from '../Popover';
-import { WithFeatureFlags } from '../../../.storybook/templates/WithFeatureFlags';
-import { Checkbox as CheckboxIcon } from '@carbon/icons-react';
+import React, { useState } from "react";
+import { Popover, PopoverContent } from "@carbon/react";
+import { WithFeatureFlags } from "../../../.storybook/templates/WithFeatureFlags";
+import { Checkbox as CheckboxIcon } from "@carbon/icons-react";
 
-import './story.scss';
+import "./story.scss";
 
 // eslint-disable-next-line storybook/csf-component
 export default {
-  title: 'Components/Popover/Feature Flag',
+  title: "Components/Popover/Feature Flag",
   component: Popover,
-  tags: ['!autodocs'],
+  tags: ["!autodocs"],
   decorators: [
     (Story) => (
       <WithFeatureFlags>
@@ -32,10 +32,11 @@ export const FloatingStyles = (args) => {
   return (
     <div
       style={{
-        width: '100%',
-        display: 'flex',
-        justifyContent: 'center',
-      }}>
+        width: "100%",
+        display: "flex",
+        justifyContent: "center",
+      }}
+    >
       <Popover open={open} align={args.align}>
         <div className="playground-trigger">
           <CheckboxIcon
@@ -61,30 +62,30 @@ export const FloatingStyles = (args) => {
 };
 
 FloatingStyles.args = {
-  align: 'bottom',
+  align: "bottom",
 };
 
 FloatingStyles.argTypes = {
   align: {
     options: [
-      'top',
-      'top-start',
-      'top-end',
+      "top",
+      "top-start",
+      "top-end",
 
-      'bottom',
-      'bottom-start',
-      'bottom-end',
+      "bottom",
+      "bottom-start",
+      "bottom-end",
 
-      'left',
-      'left-end',
-      'left-start',
+      "left",
+      "left-end",
+      "left-start",
 
-      'right',
-      'right-end',
-      'right-start',
+      "right",
+      "right-end",
+      "right-start",
     ],
     control: {
-      type: 'select',
+      type: "select",
     },
   },
 };

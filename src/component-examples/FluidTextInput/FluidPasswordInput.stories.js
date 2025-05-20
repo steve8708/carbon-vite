@@ -16,7 +16,7 @@ export default {
 };
 
 export const Default = (args) => (
-  <div style={{ width: args.defaultWidth }}>
+  <div style={ width: args.defaultWidth }>
     <FluidPasswordInput
       {...args}
       id="input-1"

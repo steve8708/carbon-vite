@@ -7,12 +7,12 @@
 
 /* eslint-disable no-console */
 
-import React from 'react';
+import React from "react";
 
-import AISkeletonText from './AISkeletonText';
+import AISkeletonText from "./AISkeletonText";
 
 export default {
-  title: 'Components/Skeleton/AISkeleton',
+  title: "Components/Skeleton/AISkeleton",
   component: AISkeletonText,
 };
 

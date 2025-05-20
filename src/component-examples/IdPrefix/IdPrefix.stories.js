@@ -5,13 +5,13 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
-import { IdPrefix } from '.';
-import { useIdPrefix } from '../../internal/useIdPrefix';
-import mdx from './IdPrefix.mdx';
+import React from "react";
+import { IdPrefix } from ".";
+import { useIdPrefix } from "../../internal/useIdPrefix";
+import mdx from "./IdPrefix.mdx";
 
 export default {
-  title: 'Components/IdPrefix',
+  title: "Components/IdPrefix",
   component: IdPrefix,
   parameters: {
     docs: {

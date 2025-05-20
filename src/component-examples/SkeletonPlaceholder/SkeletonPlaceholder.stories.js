@@ -7,13 +7,13 @@
 
 /* eslint-disable no-console */
 
-import React from 'react';
+import React from "react";
 
-import SkeletonPlaceholder from '.';
-import mdx from './SkeletonPlaceholder.mdx';
+import SkeletonPlaceholder from ".";
+import mdx from "./SkeletonPlaceholder.mdx";
 
 export default {
-  title: 'Components/Skeleton/SkeletonPlaceholder',
+  title: "Components/Skeleton/SkeletonPlaceholder",
   component: SkeletonPlaceholder,
   parameters: {
     docs: {

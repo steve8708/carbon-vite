@@ -5,15 +5,15 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import './Icons.stories.scss';
-import React from 'react';
-import { Bee, Edit } from '../../../icons';
-import { IconButton } from '../IconButton';
-import mdx from './Icons.mdx';
+import "./Icons.stories.scss";
+import React from "react";
+import { Bee, Edit } from "../../../icons";
+import { IconButton } from "@carbon/react";
+import mdx from "./Icons.mdx";
 
 // eslint-disable-next-line storybook/csf-component
 export default {
-  title: 'Elements/Icons',
+  title: "Elements/Icons",
   parameters: {
     docs: {
       page: mdx,
@@ -24,11 +24,11 @@ export default {
       return (
         <section className="demo-icon-example">
           <h2>
-            {args.size} {typeof args.size === 'number' && 'pixel'}{' '}
-            {args.size === 16 && '(default)'}
-            {typeof args.size === 'string' &&
-              args.size.includes('rem') &&
-              '(responsive)'}
+            {args.size} {typeof args.size === "number" && "pixel"}{" "}
+            {args.size === 16 && "(default)"}
+            {typeof args.size === "string" &&
+              args.size.includes("rem") &&
+              "(responsive)"}
           </h2>
           <Story />
         </section>
@@ -47,8 +47,8 @@ Default.args = {
 
 Default.argTypes = {
   size: {
-    options: ['16', '20', '32'],
-    control: { type: 'select' },
+    options: ["16", "20", "32"],
+    control: { type: "select" },
   },
 };
 
@@ -57,7 +57,7 @@ export const WithRelativeSize = (args) => {
 };
 
 WithRelativeSize.args = {
-  size: '1rem',
+  size: "1rem",
 };
 
-WithRelativeSize.argTypes = { size: { control: 'text' } };
+WithRelativeSize.argTypes = { size: { control: "text" } };

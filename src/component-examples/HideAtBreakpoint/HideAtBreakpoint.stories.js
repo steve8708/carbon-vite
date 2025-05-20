@@ -5,13 +5,13 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
-import './HideAtBreakpoint-story.scss';
-import mdx from './HideAtBreakpoint.mdx';
+import React from "react";
+import "./HideAtBreakpoint-story.scss";
+import mdx from "./HideAtBreakpoint.mdx";
 
 export default {
-  title: 'Helpers/HideAtBreakpoint',
-  component: 'HideAtBreakpoint',
+  title: "Helpers/HideAtBreakpoint",
+  component: "HideAtBreakpoint",
   parameters: {
     docs: {
       page: mdx,

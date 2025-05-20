@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
+import React from "react";
 import DataTable, {
   Table,
   TableBody,
@@ -14,12 +14,12 @@ import DataTable, {
   TableHead,
   TableHeader,
   TableRow,
-} from '..';
-import { rows, headers } from './shared';
-import mdx from '../DataTable.mdx';
+} from "..";
+import { rows, headers } from "./shared";
+import mdx from "../DataTable.mdx";
 
 export default {
-  title: 'Components/DataTable/Sorting',
+  title: "Components/DataTable/Sorting",
   component: DataTable,
   subcomponents: {
     Table,

@@ -5,20 +5,21 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
-import { ComboBox } from '../ComboBox';
-import { WithFeatureFlags } from '../../../.storybook/templates/WithFeatureFlags';
+import React from "react";
+import { ComboBox } from "@carbon/react";
+import { WithFeatureFlags } from "../../../.storybook/templates/WithFeatureFlags";
 
 export default {
-  title: 'Components/ComboBox/Feature Flag',
+  title: "Components/ComboBox/Feature Flag",
   component: ComboBox,
-  tags: ['!autodocs'],
+  tags: ["!autodocs"],
   decorators: [
     (Story) => (
       <WithFeatureFlags
         flags={{
-          'enable-v12-dynamic-floating-styles': true,
-        }}>
+          "enable-v12-dynamic-floating-styles": true,
+        }}
+      >
         <Story />
       </WithFeatureFlags>
     ),
@@ -28,29 +29,29 @@ export default {
 export const FloatingStyles = (args) => {
   const comboBoxItems = [
     {
-      id: 'option-0',
-      text: 'An example option that is really long to show what should be done to handle long text',
+      id: "option-0",
+      text: "An example option that is really long to show what should be done to handle long text",
     },
     {
-      id: 'option-1',
-      text: 'Option 1',
+      id: "option-1",
+      text: "Option 1",
     },
     {
-      id: 'option-2',
-      text: 'Option 2',
+      id: "option-2",
+      text: "Option 2",
     },
     {
-      id: 'option-3',
-      text: 'Option 3 - a disabled item',
+      id: "option-3",
+      text: "Option 3 - a disabled item",
       disabled: true,
     },
     {
-      id: 'option-4',
-      text: 'Option 4',
+      id: "option-4",
+      text: "Option 4",
     },
     {
-      id: 'option-5',
-      text: 'Option 5',
+      id: "option-5",
+      text: "Option 5",
     },
   ];
   return (
@@ -58,7 +59,7 @@ export const FloatingStyles = (args) => {
       onChange={() => {}}
       id="carbon-combobox"
       items={comboBoxItems}
-      itemToString={(item) => (item ? item.text : '')}
+      itemToString={(item) => (item ? item.text : "")}
       titleText="ComboBox title"
       helperText="Combobox helper text"
       {...args}
@@ -67,14 +68,14 @@ export const FloatingStyles = (args) => {
 };
 
 FloatingStyles.args = {
-  direction: 'bottom',
+  direction: "bottom",
 };
 
 FloatingStyles.argTypes = {
   direction: {
-    options: ['top', 'bottom'],
+    options: ["top", "bottom"],
     control: {
-      type: 'radio',
+      type: "radio",
     },
   },
 };

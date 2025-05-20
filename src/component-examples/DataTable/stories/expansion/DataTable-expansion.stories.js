@@ -5,8 +5,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import './DataTable-expansion-story.scss';
-import React from 'react';
+import "./DataTable-expansion-story.scss";
+import React from "react";
 import DataTable, {
   Table,
   TableBody,
@@ -18,13 +18,13 @@ import DataTable, {
   TableHead,
   TableHeader,
   TableRow,
-} from '../..';
-import { rows, headers } from '../shared';
-import mdx from '../../DataTable.mdx';
-import { action } from '@storybook/addon-actions';
+} from "../..";
+import { rows, headers } from "@carbon/react";
+import mdx from "../../DataTable.mdx";
+import { action } from "@storybook/addon-actions";
 
 export default {
-  title: 'Components/DataTable/Expansion',
+  title: "Components/DataTable/Expansion",
   component: DataTable,
   subcomponents: {
     TableExpandHeader,
@@ -67,7 +67,8 @@ export const Default = (args) => (
       <TableContainer
         title="DataTable"
         description="With expansion"
-        {...getTableContainerProps()}>
+        {...getTableContainerProps()}
+      >
         <Table {...getTableProps()} aria-label="sample table">
           <TableHead>
             <TableRow>
@@ -84,7 +85,8 @@ export const Default = (args) => (
               <React.Fragment key={row.id}>
                 <TableExpandRow
                   {...getRowProps({ row })}
-                  onClick={action('onClick')}>
+                  onClick={action("onClick")}
+                >
                   {row.cells.map((cell) => (
                     <TableCell key={cell.id}>{cell.value}</TableCell>
                   ))}
@@ -92,7 +94,8 @@ export const Default = (args) => (
                 <TableExpandedRow
                   colSpan={headers.length + 1}
                   className="demo-expanded-td"
-                  {...getExpandedRowProps({ row })}>
+                  {...getExpandedRowProps({ row })}
+                >
                   <h6>Expandable row content</h6>
                   <div>Description here</div>
                 </TableExpandedRow>
@@ -127,7 +130,8 @@ export const BatchExpansion = (args) => (
       <TableContainer
         title="DataTable"
         description="With batch expansion"
-        {...getTableContainerProps()}>
+        {...getTableContainerProps()}
+      >
         <Table {...getTableProps()} aria-label="sample table">
           <TableHead>
             <TableRow>
@@ -153,7 +157,8 @@ export const BatchExpansion = (args) => (
                 <TableExpandedRow
                   colSpan={headers.length + 1}
                   className="demo-expanded-td"
-                  {...getExpandedRowProps({ row })}>
+                  {...getExpandedRowProps({ row })}
+                >
                   <h6>Expandable row content</h6>
                   <div>Description here</div>
                 </TableExpandedRow>

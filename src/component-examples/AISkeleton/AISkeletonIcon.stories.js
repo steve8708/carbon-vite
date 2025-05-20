@@ -7,13 +7,13 @@
 
 /* eslint-disable no-console */
 
-import React from 'react';
+import React from "react";
 
-import AISkeletonIcon from './AISkeletonIcon';
-import mdx from './AISkeleton.mdx';
+import AISkeletonIcon from "./AISkeletonIcon";
+import mdx from "./AISkeleton.mdx";
 
 export default {
-  title: 'Components/Skeleton/AISkeleton',
+  title: "Components/Skeleton/AISkeleton",
   component: AISkeletonIcon,
   parameters: {
     docs: {
@@ -24,30 +24,30 @@ export default {
 
 const propsSkeleton = {
   style: {
-    margin: '50px',
+    margin: "50px",
   },
 };
 
 const propsSkeleton2 = {
   style: {
-    margin: '50px',
-    width: '24px',
-    height: '24px',
+    margin: "50px",
+    width: "24px",
+    height: "24px",
   },
 };
 
 export const _AISkeletonIcon = () => {
   const propsSkeleton = {
     style: {
-      margin: '50px',
+      margin: "50px",
     },
   };
 
   const propsSkeleton2 = {
     style: {
-      margin: '50px',
-      width: '24px',
-      height: '24px',
+      margin: "50px",
+      width: "24px",
+      height: "24px",
     },
   };
   return (

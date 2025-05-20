@@ -5,9 +5,9 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
-import { WithLayer } from '../../../.storybook/templates/WithLayer';
-import { useFeatureFlag } from '../FeatureFlags';
+import React from "react";
+import { WithLayer } from "../../../.storybook/templates/WithLayer";
+import { useFeatureFlag } from "@carbon/react";
 
 import {
   StructuredListWrapper,
@@ -16,11 +16,11 @@ import {
   StructuredListRow,
   StructuredListInput,
   StructuredListCell,
-} from './';
-import { WithFeatureFlags } from '../../../.storybook/templates/WithFeatureFlags';
+} from "./";
+import { WithFeatureFlags } from "../../../.storybook/templates/WithFeatureFlags";
 
 export default {
-  title: 'Components/StructuredList/Feature Flag',
+  title: "Components/StructuredList/Feature Flag",
   component: StructuredListWrapper,
   subcomponents: {
     StructuredListHead,
@@ -29,7 +29,7 @@ export default {
     StructuredListInput,
     StructuredListCell,
   },
-  tags: ['!autodocs'],
+  tags: ["!autodocs"],
   argTypes: {
     children: {
       table: {
@@ -100,7 +100,7 @@ Selection.argTypes = {
 
 export const WithBackgroundLayer = () => {
   const v12StructuredRadioIcons = useFeatureFlag(
-    'enable-v12-structured-list-visible-icons'
+    "enable-v12-structured-list-visible-icons",
   );
   return (
     <WithLayer>

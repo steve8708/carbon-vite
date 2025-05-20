@@ -5,11 +5,11 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import { action } from '@storybook/addon-actions';
-import React from 'react';
-import Button from '../../Button';
-import OverflowMenu from '../../OverflowMenu';
-import OverflowMenuItem from '../../OverflowMenuItem';
+import { action } from "@storybook/addon-actions";
+import React from "react";
+import Button from "../../Button";
+import OverflowMenu from "../../OverflowMenu";
+import OverflowMenuItem from "../../OverflowMenuItem";
 import {
   default as DataTable,
   TableContainer,
@@ -24,12 +24,12 @@ import {
   TableToolbarContent,
   TableToolbarSearch,
   TableToolbarMenu,
-} from '..';
-import mdx from '../DataTable.mdx';
-import { headers, rows } from './shared';
+} from "..";
+import mdx from "../DataTable.mdx";
+import { headers, rows } from "./shared";
 
 export default {
-  title: 'Components/DataTable/Toolbar',
+  title: "Components/DataTable/Toolbar",
   component: DataTable,
   subcomponents: {
     TableContainer,
@@ -49,14 +49,14 @@ export default {
 
 const sharedArgTypes = {
   size: {
-    options: ['xs', 'sm', 'md', 'lg', 'xl'],
-    control: { type: 'select' },
+    options: ["xs", "sm", "md", "lg", "xl"],
+    control: { type: "select" },
   },
   useZebraStyles: {
-    control: { type: 'boolean' },
+    control: { type: "boolean" },
   },
-  isSortable: { control: { type: 'boolean' } },
-  persistent: { control: { type: 'boolean' } },
+  isSortable: { control: { type: "boolean" } },
+  persistent: { control: { type: "boolean" } },
   radio: { table: { disable: true } },
 };
 
@@ -75,22 +75,23 @@ export const Default = (args) => (
       <TableContainer
         title="DataTable"
         description="With toolbar"
-        {...getTableContainerProps()}>
+        {...getTableContainerProps()}
+      >
         <TableToolbar {...getToolbarProps()} aria-label="data table toolbar">
           <TableToolbarContent>
             <TableToolbarSearch onChange={onInputChange} />
             <TableToolbarMenu>
-              <TableToolbarAction onClick={action('Action 1 Click')}>
+              <TableToolbarAction onClick={action("Action 1 Click")}>
                 Action 1
               </TableToolbarAction>
-              <TableToolbarAction onClick={action('Action 2 Click')}>
+              <TableToolbarAction onClick={action("Action 2 Click")}>
                 Action 2
               </TableToolbarAction>
-              <TableToolbarAction onClick={action('Action 3 Click')}>
+              <TableToolbarAction onClick={action("Action 3 Click")}>
                 Action 3
               </TableToolbarAction>
             </TableToolbarMenu>
-            <Button onClick={action('Button click')}>Primary Button</Button>
+            <Button onClick={action("Button click")}>Primary Button</Button>
           </TableToolbarContent>
         </TableToolbar>
         <Table {...getTableProps()} aria-label="sample table">
@@ -135,22 +136,23 @@ export const PersistentToolbar = (args) => (
       <TableContainer
         title="DataTable"
         description="With toolbar"
-        {...getTableContainerProps()}>
+        {...getTableContainerProps()}
+      >
         <TableToolbar {...getToolbarProps()} aria-label="data table toolbar">
           <TableToolbarContent>
             <TableToolbarSearch onChange={onInputChange} persistent />
             <TableToolbarMenu>
-              <TableToolbarAction onClick={action('Action 1 Click')}>
+              <TableToolbarAction onClick={action("Action 1 Click")}>
                 Action 1
               </TableToolbarAction>
-              <TableToolbarAction onClick={action('Action 2 Click')}>
+              <TableToolbarAction onClick={action("Action 2 Click")}>
                 Action 2
               </TableToolbarAction>
-              <TableToolbarAction onClick={action('Action 3 Click')}>
+              <TableToolbarAction onClick={action("Action 3 Click")}>
                 Action 3
               </TableToolbarAction>
             </TableToolbarMenu>
-            <Button onClick={action('Button click')}>Primary Button</Button>
+            <Button onClick={action("Button click")}>Primary Button</Button>
           </TableToolbarContent>
         </TableToolbar>
         <Table {...getTableProps()} aria-label="sample table">
@@ -195,25 +197,27 @@ export const SmallPersistentToolbar = (args) => (
       <TableContainer
         title="DataTable"
         description="With toolbar"
-        {...getTableContainerProps()}>
+        {...getTableContainerProps()}
+      >
         <TableToolbar
           {...getToolbarProps()}
           aria-label="data table toolbar"
-          size="sm">
+          size="sm"
+        >
           <TableToolbarContent>
             <TableToolbarSearch onChange={onInputChange} persistent size="sm" />
             <TableToolbarMenu size="sm">
-              <TableToolbarAction onClick={action('Action 1 Click')}>
+              <TableToolbarAction onClick={action("Action 1 Click")}>
                 Action 1
               </TableToolbarAction>
-              <TableToolbarAction onClick={action('Action 2 Click')}>
+              <TableToolbarAction onClick={action("Action 2 Click")}>
                 Action 2
               </TableToolbarAction>
-              <TableToolbarAction onClick={action('Action 3 Click')}>
+              <TableToolbarAction onClick={action("Action 3 Click")}>
                 Action 3
               </TableToolbarAction>
             </TableToolbarMenu>
-            <Button onClick={action('Button click')}>Primary Button</Button>
+            <Button onClick={action("Button click")}>Primary Button</Button>
           </TableToolbarContent>
         </TableToolbar>
         <Table {...getTableProps()} size="sm" aria-label="sample table">
@@ -259,17 +263,17 @@ export const WithOverflowMenu = (args) => (
           <TableToolbarContent>
             <TableToolbarSearch onChange={onInputChange} />
             <TableToolbarMenu>
-              <TableToolbarAction onClick={action('Action 1 Click')}>
+              <TableToolbarAction onClick={action("Action 1 Click")}>
                 Action 1
               </TableToolbarAction>
-              <TableToolbarAction onClick={action('Action 2 Click')}>
+              <TableToolbarAction onClick={action("Action 2 Click")}>
                 Action 2
               </TableToolbarAction>
-              <TableToolbarAction onClick={action('Action 3 Click')}>
+              <TableToolbarAction onClick={action("Action 3 Click")}>
                 Action 3
               </TableToolbarAction>
             </TableToolbarMenu>
-            <Button onClick={action('Button click')}>Primary Button</Button>
+            <Button onClick={action("Button click")}>Primary Button</Button>
           </TableToolbarContent>
         </TableToolbar>
         <Table {...getTableProps()} aria-label="sample table">
@@ -308,6 +312,6 @@ export const WithOverflowMenu = (args) => (
 WithOverflowMenu.argTypes = {
   ...sharedArgTypes,
   overflowMenuOnHover: {
-    control: { type: 'boolean' },
+    control: { type: "boolean" },
   },
 };

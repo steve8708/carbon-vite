@@ -9,10 +9,10 @@ import React from 'react';
 import { action } from '@storybook/addon-actions';
 import { Document, Folder } from '@carbon/icons-react';
 import { default as TreeView, TreeNode } from './';
-import { Button } from '../Button/index';
+import { Button } from '@carbon/react';
 import mdx from './TreeView.mdx';
 import './story.scss';
-import TextInput from '../TextInput';
+import { TextInput } from '@carbon/react';
 
 function renderTree({ nodes, expanded, withIcons = false, withLinks = false }) {
   if (!nodes) {
@@ -821,7 +821,7 @@ export const WithControlledExpansion = () => {
 
   return (
     <>
-      <div style={{ marginBottom: '1rem' }}>
+      <div style={ marginBottom: '1rem' }>
         <Button onClick={() => setExpanded(true)}>Expand all</Button>
         &nbsp;
         <Button onClick={() => setExpanded(false)}>Collapse all</Button>

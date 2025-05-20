@@ -13,10 +13,10 @@ import { WithLayer } from '../../../.storybook/templates/WithLayer';
 import mdx from './MultiSelect.mdx';
 
 import { FilterableMultiSelect, MultiSelect } from '.';
-import Button from '../Button';
-import ButtonSet from '../ButtonSet';
-import { AILabel, AILabelContent, AILabelActions } from '../AILabel';
-import { IconButton } from '../IconButton';
+import { Button } from '@carbon/react';
+import { ButtonSet } from '@carbon/react';
+import { AILabel, AILabelContent, AILabelActions } from '@carbon/react';
+import { IconButton } from '@carbon/react';
 import {
   Toggletip,
   ToggletipActions,
@@ -24,7 +24,7 @@ import {
   ToggletipContent,
   ToggletipLabel,
 } from '../Toggletip';
-import Link from '../Link';
+import { Link } from '@carbon/react';
 
 export default {
   title: 'Components/MultiSelect',
@@ -376,7 +376,7 @@ Filterable.argTypes = {
 export const WithLayerMultiSelect = (args) => (
   <WithLayer>
     {(layer) => (
-      <div style={{ width: 300 }}>
+      <div style={ width: 300 }>
         <MultiSelect
           label="Multiselect Label"
           id={`carbon-multiselect-example-${layer}`}
@@ -395,7 +395,7 @@ export const WithLayerMultiSelect = (args) => (
 export const _FilterableWithLayer = (args) => (
   <WithLayer>
     {(layer) => (
-      <div style={{ width: 300 }}>
+      <div style={ width: 300 }>
         <FilterableMultiSelect
           id={`carbon-multiselect-example-${layer}`}
           titleText="Multiselect title"
@@ -421,7 +421,7 @@ export const _Controlled = (args) => {
   };
 
   return (
-    <div style={{ width: 300 }}>
+    <div style={ width: 300 }>
       <MultiSelect
         id="carbon-multiselect-example-controlled"
         titleText="Multiselect title"
@@ -492,7 +492,7 @@ export const SelectAll = (args) => {
   };
 
   return (
-    <div style={{ width: 300 }}>
+    <div style={ width: 300 }>
       <MultiSelect
         label={label}
         id="carbon-multiselect-example"
@@ -540,7 +540,7 @@ const aiLabel = (
 );
 
 export const withAILabel = () => (
-  <div style={{ width: 400 }}>
+  <div style={ width: 400 }>
     <MultiSelect
       label="Multiselect Label"
       id="carbon-multiselect-example"
@@ -555,7 +555,7 @@ export const withAILabel = () => (
 );
 
 export const FilterableWithAILabel = (args) => (
-  <div style={{ width: 400 }}>
+  <div style={ width: 400 }>
     <FilterableMultiSelect
       label="Multiselect Label"
       id="carbon-multiselect-example"
@@ -576,7 +576,7 @@ export const ExperimentalAutoAlign = (args) => {
     ref?.current?.scrollIntoView({ block: 'center', inline: 'center' });
   });
   return (
-    <div style={{ width: '5000px', height: '5000px' }}>
+    <div style={ width: '5000px', height: '5000px' }>
       <div
         style={{
           position: 'absolute',
@@ -610,7 +610,7 @@ export const withToggletipLabel = (args) => {
         label="Multiselect Label"
         id="carbon-multiselect-example"
         titleText={
-          <div style={{ display: 'flex', alignItems: 'center' }}>
+          <div style={ display: 'flex', alignItems: 'center' }>
             <ToggletipLabel>Multiselect title</ToggletipLabel>
             <Toggletip>
               <ToggletipButton label="Show information">
@@ -672,7 +672,7 @@ export const SelectAllWithDynamicItems = () => {
   }
 
   return (
-    <div style={{ width: 300 }}>
+    <div style={ width: 300 }>
       <MultiSelect
         label={label}
         id="carbon-multiselect-example"

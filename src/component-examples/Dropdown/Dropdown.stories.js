@@ -11,8 +11,8 @@ import { FolderOpen, Folders, Information, View } from '@carbon/icons-react';
 import { WithLayer } from '../../../.storybook/templates/WithLayer';
 
 import { default as Dropdown, DropdownSkeleton } from './';
-import Button from '../Button';
-import { AILabel, AILabelContent, AILabelActions } from '../AILabel';
+import { Button } from '@carbon/react';
+import { AILabel, AILabelContent, AILabelActions } from '@carbon/react';
 import {
   Toggletip,
   ToggletipActions,
@@ -20,9 +20,9 @@ import {
   ToggletipContent,
   ToggletipLabel,
 } from '../Toggletip';
-import { IconButton } from '../IconButton';
+import { IconButton } from '@carbon/react';
 import mdx from './Dropdown.mdx';
-import Link from '../Link';
+import { Link } from '@carbon/react';
 
 export default {
   title: 'Components/Dropdown',
@@ -196,7 +196,7 @@ export const Default = (args) => {
   ];
 
   return (
-    <div style={{ width: 400 }}>
+    <div style={ width: 400 }>
       <Dropdown
         id="default"
         titleText="Dropdown label"
@@ -250,8 +250,8 @@ export const ExperimentalAutoAlign = (args) => {
     },
   ];
   return (
-    <div style={{ width: 400 }}>
-      <div style={{ height: 300 }}></div>
+    <div style={ width: 400 }>
+      <div style={ height: 300 }></div>
       <Dropdown
         autoAlign={true}
         id="default"
@@ -264,7 +264,7 @@ export const ExperimentalAutoAlign = (args) => {
         direction="top"
         {...args}
       />
-      <div style={{ height: 800 }}></div>
+      <div style={ height: 800 }></div>
     </div>
   );
 };
@@ -305,7 +305,7 @@ export const Inline = (args) => {
     },
   ];
   return (
-    <div style={{ width: 600 }}>
+    <div style={ width: 600 }>
       <Dropdown
         id="inline"
         titleText="Inline dropdown label"
@@ -327,7 +327,7 @@ Inline.argTypes = {
 export const _WithLayer = (args) => (
   <WithLayer>
     {(layer) => (
-      <div style={{ width: 400 }}>
+      <div style={ width: 400 }>
         <Dropdown
           id={`default-${layer}`}
           titleText="Dropdown label"
@@ -350,7 +350,7 @@ _WithLayer.argTypes = {
 export const InlineWithLayer = (args) => (
   <WithLayer>
     {(layer) => (
-      <div style={{ width: 600 }}>
+      <div style={ width: 600 }>
         <Dropdown
           id={`inline-${layer}`}
           titleText="Inline dropdown label"
@@ -372,7 +372,7 @@ InlineWithLayer.argTypes = {
 
 export const Skeleton = () => {
   return (
-    <div style={{ width: 300 }}>
+    <div style={ width: 300 }>
       <DropdownSkeleton />
     </div>
   );
@@ -441,7 +441,7 @@ export const withAILabel = (args) => {
   ];
 
   return (
-    <div style={{ width: 400 }}>
+    <div style={ width: 400 }>
       <Dropdown
         id="default"
         titleText="Dropdown title"
@@ -469,7 +469,7 @@ export const withToggletipLabel = () => {
         id="dropdown"
         items={[]}
         titleText={
-          <div style={{ display: 'flex', alignItems: 'center' }}>
+          <div style={ display: 'flex', alignItems: 'center' }>
             <ToggletipLabel>Dropdown title</ToggletipLabel>
             <Toggletip>
               <ToggletipButton label="Show information">

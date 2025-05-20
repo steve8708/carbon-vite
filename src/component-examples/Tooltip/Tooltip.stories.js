@@ -11,7 +11,7 @@ import { Help } from '@carbon/icons-react';
 import React, { useRef, useEffect } from 'react';
 import { Tooltip } from './';
 import mdx from './Tooltip.mdx';
-import Button from '../Button';
+import { Button } from '@carbon/react';
 
 export default {
   title: 'Components/Tooltip',
@@ -117,7 +117,7 @@ export const ExperimentalAutoAlign = () => {
     ref?.current?.scrollIntoView({ block: 'center', inline: 'center' });
   });
   return (
-    <div style={{ width: '5000px', height: '5000px' }}>
+    <div style={ width: '5000px', height: '5000px' }>
       <div
         style={{
           position: 'absolute',

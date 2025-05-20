@@ -11,10 +11,10 @@ import { WithLayer } from '../../../.storybook/templates/WithLayer';
 
 import DatePicker from './DatePicker';
 import DatePickerSkeleton from './DatePicker.Skeleton';
-import DatePickerInput from '../DatePickerInput';
-import Button from '../Button';
-import { AILabel, AILabelContent, AILabelActions } from '../AILabel';
-import { IconButton } from '../IconButton';
+import { DatePickerInput } from '@carbon/react';
+import { Button } from '@carbon/react';
+import { AILabel, AILabelContent, AILabelActions } from '@carbon/react';
+import { IconButton } from '@carbon/react';
 import { View, FolderOpen, Folders, Information } from '@carbon/icons-react';
 
 import mdx from './DatePicker.mdx';
@@ -328,7 +328,7 @@ export const withAILabel = (args) => {
     </AILabel>
   );
   return (
-    <div style={{ width: 400 }}>
+    <div style={ width: 400 }>
       <DatePicker datePickerType="single" {...args}>
         <DatePickerInput
           placeholder="mm/dd/yyyy"

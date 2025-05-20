@@ -5,22 +5,23 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
+import React from "react";
 
-import { Dropdown } from '../Dropdown';
-import { WithFeatureFlags } from '../../../.storybook/templates/WithFeatureFlags';
+import { Dropdown } from "@carbon/react";
+import { WithFeatureFlags } from "../../../.storybook/templates/WithFeatureFlags";
 
 // eslint-disable-next-line storybook/csf-component
 export default {
-  title: 'Components/Dropdown/Feature Flag',
+  title: "Components/Dropdown/Feature Flag",
   component: Dropdown,
-  tags: ['!autodocs'],
+  tags: ["!autodocs"],
   decorators: [
     (Story) => (
       <WithFeatureFlags
         flags={{
-          'enable-v12-dynamic-floating-styles': true,
-        }}>
+          "enable-v12-dynamic-floating-styles": true,
+        }}
+      >
         <Story />
       </WithFeatureFlags>
     ),
@@ -30,32 +31,32 @@ export default {
 export const FloatingStyles = (args) => {
   const items = [
     {
-      text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
+      text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
     },
     {
-      text: 'Option 1',
+      text: "Option 1",
     },
     {
-      text: 'Option 2',
+      text: "Option 2",
     },
     {
-      text: 'Option 3 - a disabled item',
+      text: "Option 3 - a disabled item",
       disabled: true,
     },
     {
-      text: 'Option 4',
+      text: "Option 4",
     },
     {
-      text: 'Option 5',
+      text: "Option 5",
     },
     {
-      text: 'Option 6',
+      text: "Option 6",
     },
     {
-      text: 'Option 7',
+      text: "Option 7",
     },
     {
-      text: 'Option 8',
+      text: "Option 8",
     },
   ];
 
@@ -67,21 +68,21 @@ export const FloatingStyles = (args) => {
       initialSelectedItem={items[1]}
       label="Option 1"
       items={items}
-      itemToString={(item) => (item ? item.text : '')}
+      itemToString={(item) => (item ? item.text : "")}
       {...args}
     />
   );
 };
 
 FloatingStyles.args = {
-  direction: 'bottom',
+  direction: "bottom",
 };
 
 FloatingStyles.argTypes = {
   direction: {
-    options: ['top', 'bottom'],
+    options: ["top", "bottom"],
     control: {
-      type: 'radio',
+      type: "radio",
     },
   },
 };

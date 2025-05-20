@@ -25,8 +25,8 @@ export const Default = () => (
   <>
     <StaticNotification title="StaticNotification has been renamed to Callout" />
 
-    <div style={{ marginLeft: '.5rem', marginTop: '2rem' }}>
-      <p style={{ marginBottom: '1rem' }}>
+    <div style={ marginLeft: '.5rem', marginTop: '2rem' }>
+      <p style={ marginBottom: '1rem' }>
         Run the following codemod to automatically update usages in your
         project:
       </p>

@@ -5,21 +5,22 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
-import { ComboButton } from '../ComboButton';
-import { WithFeatureFlags } from '../../../.storybook/templates/WithFeatureFlags';
-import { MenuItem } from '../Menu';
+import React from "react";
+import { ComboButton } from "@carbon/react";
+import { WithFeatureFlags } from "../../../.storybook/templates/WithFeatureFlags";
+import { MenuItem } from "@carbon/react";
 
 export default {
-  title: 'Components/ComboButton/Feature Flag',
+  title: "Components/ComboButton/Feature Flag",
   component: ComboButton,
-  tags: ['!autodocs'],
+  tags: ["!autodocs"],
   decorators: [
     (Story) => (
       <WithFeatureFlags
         flags={{
-          'enable-v12-dynamic-floating-styles': true,
-        }}>
+          "enable-v12-dynamic-floating-styles": true,
+        }}
+      >
         <Story />
       </WithFeatureFlags>
     ),
@@ -37,14 +38,14 @@ export const FloatingStyles = (args) => {
 };
 
 FloatingStyles.args = {
-  menuAlignment: 'bottom',
+  menuAlignment: "bottom",
 };
 
 FloatingStyles.argTypes = {
   menuAlignment: {
-    options: ['top', 'bottom'],
+    options: ["top", "bottom"],
     control: {
-      type: 'radio',
+      type: "radio",
     },
   },
 };

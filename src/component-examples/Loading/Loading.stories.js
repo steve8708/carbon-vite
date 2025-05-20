@@ -5,12 +5,12 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
-import Loading from '.';
-import mdx from './Loading.mdx';
+import React from "react";
+import Loading from ".";
+import mdx from "./Loading.mdx";
 
 export default {
-  title: 'Components/Loading',
+  title: "Components/Loading",
   component: Loading,
   parameters: {
     docs: {
@@ -20,14 +20,14 @@ export default {
 };
 
 export const Default = (args) => {
-  return <Loading className={'some-class'} {...args} />;
+  return <Loading className={"some-class"} {...args} />;
 };
 
 Default.args = {
   active: true,
   withOverlay: false,
   small: false,
-  description: 'Loading',
+  description: "Loading",
 };
 
 Default.argTypes = {
@@ -49,22 +49,22 @@ Default.argTypes = {
   },
   active: {
     control: {
-      type: 'boolean',
+      type: "boolean",
     },
   },
   withOverlay: {
     control: {
-      type: 'boolean',
+      type: "boolean",
     },
   },
   small: {
     control: {
-      type: 'boolean',
+      type: "boolean",
     },
   },
   description: {
     control: {
-      type: 'text',
+      type: "text",
     },
   },
 };

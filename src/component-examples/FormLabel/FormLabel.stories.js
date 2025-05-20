@@ -5,19 +5,19 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
+import React from "react";
 
-import FormLabel from './FormLabel';
-import { Tooltip } from '../Tooltip';
-import { Information } from '@carbon/icons-react';
-import { ActionableNotification } from '../Notification';
-import { Toggletip, ToggletipButton, ToggletipContent } from '../Toggletip';
-import './form-label-stories.scss';
+import FormLabel from "./FormLabel";
+import { Tooltip } from "@carbon/react";
+import { Information } from "@carbon/icons-react";
+import { ActionableNotification } from "@carbon/react";
+import { Toggletip, ToggletipButton, ToggletipContent } from "@carbon/react";
+import "./form-label-stories.scss";
 
-import mdx from './FormLabel.mdx';
+import mdx from "./FormLabel.mdx";
 
 export default {
-  title: 'Components/FormLabel',
+  title: "Components/FormLabel",
   component: FormLabel,
   parameters: {
     docs: {
@@ -53,7 +53,8 @@ export const WithToggletip = (controls) => {
         className="notification"
         aria-label="Accessibility note on form labels"
         actionButtonLabel="Accessibility button note on form labels"
-        title="Accessibility note">
+        title="Accessibility note"
+      >
         <p>
           <strong>Note:</strong>
           &nbsp; It is not recommended to include interactive items, such as

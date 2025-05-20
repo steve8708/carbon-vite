@@ -5,11 +5,11 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import './story.scss';
+import "./story.scss";
 
-import React from 'react';
-import { TrashCan, Save, Download } from '@carbon/icons-react';
-import { action } from '@storybook/addon-actions';
+import React from "react";
+import { TrashCan, Save, Download } from "@carbon/icons-react";
+import { action } from "@storybook/addon-actions";
 import DataTable, {
   Table,
   TableBatchAction,
@@ -30,69 +30,69 @@ import DataTable, {
   TableToolbarContent,
   TableToolbarSearch,
   TableToolbarMenu,
-} from '../..';
-import { batchActionClick, headers } from '../shared';
-import IconIndicator from '../../../IconIndicator';
+} from "../..";
+import { batchActionClick, headers } from "@carbon/react";
+import IconIndicator from "../../../IconIndicator";
 
 const rows = [
   {
-    id: 'a',
-    name: 'Load Balancer 3',
-    protocol: 'HTTP',
+    id: "a",
+    name: "Load Balancer 3",
+    protocol: "HTTP",
     port: 3000,
-    rule: 'Round robin',
-    attached_groups: 'Kevin’s VM Groups',
+    rule: "Round robin",
+    attached_groups: "Kevin’s VM Groups",
     status: <IconIndicator kind="failed" label="Failed" />,
   },
   {
-    id: 'b',
-    name: 'Load Balancer 1',
-    protocol: 'HTTP',
+    id: "b",
+    name: "Load Balancer 1",
+    protocol: "HTTP",
     port: 443,
-    rule: 'Round robin',
-    attached_groups: 'Maureen’s VM Groups',
+    rule: "Round robin",
+    attached_groups: "Maureen’s VM Groups",
     status: <IconIndicator kind="in-progress" label="In progress" />,
   },
   {
-    id: 'c',
-    name: 'Load Balancer 2',
-    protocol: 'HTTP',
+    id: "c",
+    name: "Load Balancer 2",
+    protocol: "HTTP",
     port: 80,
-    rule: 'DNS delegation',
-    attached_groups: 'Andrew’s VM Groups',
+    rule: "DNS delegation",
+    attached_groups: "Andrew’s VM Groups",
     status: <IconIndicator kind="succeeded" label="Succeeded" />,
   },
   {
-    id: 'd',
-    name: 'Load Balancer 6',
-    protocol: 'HTTP',
+    id: "d",
+    name: "Load Balancer 6",
+    protocol: "HTTP",
     port: 3000,
-    rule: 'Round robin',
-    attached_groups: 'Marc’s VM Groups',
+    rule: "Round robin",
+    attached_groups: "Marc’s VM Groups",
     status: <IconIndicator kind="failed" label="Failed" />,
   },
   {
-    id: 'e',
-    name: 'Load Balancer 4',
-    protocol: 'HTTP',
+    id: "e",
+    name: "Load Balancer 4",
+    protocol: "HTTP",
     port: 443,
-    rule: 'Round robin',
-    attached_groups: 'Mel’s VM Groups',
+    rule: "Round robin",
+    attached_groups: "Mel’s VM Groups",
     status: <IconIndicator kind="in-progress" label="In progress" />,
   },
   {
-    id: 'f',
-    name: 'Load Balancer 5',
-    protocol: 'HTTP',
+    id: "f",
+    name: "Load Balancer 5",
+    protocol: "HTTP",
     port: 80,
-    rule: 'DNS delegation',
-    attached_groups: 'Ronja’s VM Groups',
+    rule: "DNS delegation",
+    attached_groups: "Ronja’s VM Groups",
     status: <IconIndicator kind="succeeded" label="Succeeded" />,
   },
 ];
 
 export default {
-  title: 'Components/DataTable/Dynamic',
+  title: "Components/DataTable/Dynamic",
   component: DataTable,
 };
 
@@ -135,13 +135,13 @@ export const Default = (args) => {
         const { id: _id, rows } = state;
         const id = _id + 1;
         const row = {
-          id: '' + id,
+          id: "" + id,
           name: `New Row ${id}`,
-          protocol: 'HTTP',
+          protocol: "HTTP",
           port: id * 100,
-          rule: id % 2 === 0 ? 'Round robin' : 'DNS delegation',
+          rule: id % 2 === 0 ? "Round robin" : "DNS delegation",
           attached_groups: `Row ${id}'s VM Groups`,
-          status: 'Starting',
+          status: "Starting",
         };
 
         state.headers
@@ -182,7 +182,8 @@ export const Default = (args) => {
               <TableContainer
                 title="DataTable"
                 description="Use the toolbar menu to add rows and headers"
-                {...getTableContainerProps()}>
+                {...getTableContainerProps()}
+              >
                 <TableToolbar {...getToolbarProps()}>
                   <TableBatchActions {...getBatchActionProps()}>
                     <TableBatchAction
@@ -191,7 +192,8 @@ export const Default = (args) => {
                       onClick={batchActionClick(selectedRows)}
                       tabIndex={
                         batchActionProps.shouldShowBatchActions ? 0 : -1
-                      }>
+                      }
+                    >
                       Delete
                     </TableBatchAction>
                     <TableBatchAction
@@ -200,7 +202,8 @@ export const Default = (args) => {
                       onClick={batchActionClick(selectedRows)}
                       tabIndex={
                         batchActionProps.shouldShowBatchActions ? 0 : -1
-                      }>
+                      }
+                    >
                       Save
                     </TableBatchAction>
                     <TableBatchAction
@@ -209,12 +212,14 @@ export const Default = (args) => {
                       onClick={batchActionClick(selectedRows)}
                       tabIndex={
                         batchActionProps.shouldShowBatchActions ? 0 : -1
-                      }>
+                      }
+                    >
                       Download
                     </TableBatchAction>
                   </TableBatchActions>
                   <TableToolbarContent
-                    aria-hidden={batchActionProps.shouldShowBatchActions}>
+                    aria-hidden={batchActionProps.shouldShowBatchActions}
+                  >
                     <TableToolbarSearch
                       tabIndex={
                         batchActionProps.shouldShowBatchActions ? -1 : 0
@@ -224,7 +229,8 @@ export const Default = (args) => {
                     <TableToolbarMenu
                       tabIndex={
                         batchActionProps.shouldShowBatchActions ? -1 : 0
-                      }>
+                      }
+                    >
                       <TableToolbarAction onClick={this.handleOnRowAdd}>
                         Add row
                       </TableToolbarAction>
@@ -258,7 +264,8 @@ export const Default = (args) => {
                         <TableExpandedRow
                           colSpan={headers.length + 3}
                           className="demo-expanded-td"
-                          {...getExpandedRowProps({ row })}>
+                          {...getExpandedRowProps({ row })}
+                        >
                           <h6>Expandable row content</h6>
                           <div>Description here</div>
                         </TableExpandedRow>

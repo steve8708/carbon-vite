@@ -7,19 +7,19 @@
 
 /* eslint-disable storybook/story-exports */
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import {
   unstable__Dialog as Dialog,
   DialogHeader,
   DialogControls,
   DialogCloseButton,
-} from './';
-import Button from '../Button';
-import { action } from '@storybook/addon-actions';
-import mdx from './Dialog.mdx';
+} from "./";
+import { Button } from "@carbon/react";
+import { action } from "@storybook/addon-actions";
+import mdx from "./Dialog.mdx";
 
 export default {
-  title: 'Experimental/unstable_Dialog',
+  title: "Experimental/unstable_Dialog",
   component: Dialog,
   includeStories: [],
   parameters: {
@@ -53,7 +53,7 @@ export const Modal = ({ open: _open, ...args }) => {
   }
 
   function handleRequestClose(e) {
-    action('Dialog onRequestClose');
+    action("Dialog onRequestClose");
     closeDialog(e);
   }
 
@@ -119,7 +119,7 @@ export const NonModal = ({ open: _open, ...args }) => {
   }
 
   function handleRequestClose(e) {
-    action('Dialog onRequestClose');
+    action("Dialog onRequestClose");
     closeDialog(e);
   }
 

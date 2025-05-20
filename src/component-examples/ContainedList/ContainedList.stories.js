@@ -5,9 +5,9 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 
-import { action } from '@storybook/addon-actions';
+import { action } from "@storybook/addon-actions";
 import {
   Add,
   Apple,
@@ -15,23 +15,25 @@ import {
   Strawberry,
   Close,
   Wheat,
-} from '@carbon/icons-react';
+} from "@carbon/icons-react";
 
-import { WithLayer } from '../../../.storybook/templates/WithLayer';
+import { WithLayer } from "../../../.storybook/templates/WithLayer";
 
-import Button from '../Button';
-import Search from '../Search';
-import OverflowMenu from '../OverflowMenu';
-import OverflowMenuItem from '../OverflowMenuItem';
-import Tag from '../Tag';
+import {
+  Button,
+  Search,
+  OverflowMenu,
+  OverflowMenuItem,
+  Tag,
+  ExpandableSearch,
+} from "@carbon/react";
 
-import mdx from './ContainedList.mdx';
+import mdx from "./ContainedList.mdx";
 
-import ContainedList, { ContainedListItem } from '.';
-import ExpandableSearch from '../ExpandableSearch';
+import ContainedList, { ContainedListItem } from ".";
 
 export default {
-  title: 'Components/ContainedList',
+  title: "Components/ContainedList",
   component: ContainedList,
   subcomponents: { ContainedListItem },
   argTypes: {
@@ -73,9 +75,9 @@ const DefaultStory = (args) => (
 export const Default = DefaultStory.bind({});
 
 Default.args = {
-  label: 'List title',
-  kind: 'on-page',
-  size: 'lg',
+  label: "List title",
+  kind: "on-page",
+  size: "lg",
 };
 
 export const Disclosed = () => {
@@ -98,7 +100,7 @@ export const Disclosed = () => {
 };
 
 export const WithInteractiveItems = () => {
-  const onClick = action('onClick (ContainedListItem)');
+  const onClick = action("onClick (ContainedListItem)");
 
   return (
     <ContainedList label="List title" kind="on-page">
@@ -124,7 +126,7 @@ export const WithActions = () => {
   );
 
   return (
-    <ContainedList label="List title" kind="on-page" action={''}>
+    <ContainedList label="List title" kind="on-page" action={""}>
       <ContainedListItem action={itemAction}>List item</ContainedListItem>
       <ContainedListItem action={itemAction} disabled>
         List item
@@ -136,7 +138,7 @@ export const WithActions = () => {
 };
 
 export const WithExpandableSearch = () => {
-  const [searchTerm, setSearchTerm] = React.useState('');
+  const [searchTerm, setSearchTerm] = React.useState("");
   const [searchResults, setSearchResults] = React.useState([]);
   const handleChange = (event) => {
     setSearchTerm(event.target.value);
@@ -144,14 +146,14 @@ export const WithExpandableSearch = () => {
 
   React.useEffect(() => {
     const listItems = [
-      'List item 1',
-      'List item 2',
-      'List item 3',
-      'List item 4',
+      "List item 1",
+      "List item 2",
+      "List item 3",
+      "List item 4",
     ];
 
     const results = listItems.filter((listItem) =>
-      listItem.toLowerCase().includes(searchTerm.toLowerCase())
+      listItem.toLowerCase().includes(searchTerm.toLowerCase()),
     );
     setSearchResults(results);
   }, [searchTerm]);
@@ -169,7 +171,8 @@ export const WithExpandableSearch = () => {
           closeButtonLabelText="Clear search input"
           size="lg"
         />
-      }>
+      }
+    >
       {searchResults.map((listItem, key) => (
         <ContainedListItem key={key}>{listItem}</ContainedListItem>
       ))}
@@ -178,7 +181,7 @@ export const WithExpandableSearch = () => {
 };
 
 export const WithPersistentSearch = () => {
-  const [searchTerm, setSearchTerm] = React.useState('');
+  const [searchTerm, setSearchTerm] = React.useState("");
   const [searchResults, setSearchResults] = React.useState([]);
   const handleChange = (event) => {
     setSearchTerm(event.target.value);
@@ -186,20 +189,20 @@ export const WithPersistentSearch = () => {
 
   React.useEffect(() => {
     const listItems = [
-      'List item 1',
-      'List item 2',
-      'List item 3',
-      'List item 4',
+      "List item 1",
+      "List item 2",
+      "List item 3",
+      "List item 4",
     ];
 
     const results = listItems.filter((listItem) =>
-      listItem.toLowerCase().includes(searchTerm.toLowerCase())
+      listItem.toLowerCase().includes(searchTerm.toLowerCase()),
     );
     setSearchResults(results);
   }, [searchTerm]);
 
   return (
-    <ContainedList label="List title" kind="on-page" action={''}>
+    <ContainedList label="List title" kind="on-page" action={""}>
       <Search
         placeholder="Filter"
         value={searchTerm}
@@ -216,7 +219,7 @@ export const WithPersistentSearch = () => {
 };
 
 export const WithInteractiveItemsAndActions = () => {
-  const onClick = action('onClick (ContainedListItem)');
+  const onClick = action("onClick (ContainedListItem)");
   const itemAction = (
     <Button
       kind="ghost"
@@ -228,7 +231,7 @@ export const WithInteractiveItemsAndActions = () => {
   );
 
   return (
-    <ContainedList label="List title" kind="on-page" action={''}>
+    <ContainedList label="List title" kind="on-page" action={""}>
       <ContainedListItem action={itemAction} onClick={onClick}>
         List item
       </ContainedListItem>
@@ -251,17 +254,19 @@ export const WithListTitleDecorators = () => {
       label={
         <div
           style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-          }}>
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+          }}
+        >
           <span>List title</span>
           <Tag size="sm" role="status" aria-label="4 items in list">
             4
           </Tag>
         </div>
       }
-      kind="on-page">
+      kind="on-page"
+    >
       <ContainedListItem>List item</ContainedListItem>
       <ContainedListItem>List item</ContainedListItem>
       <ContainedListItem>List item</ContainedListItem>
@@ -293,7 +298,7 @@ export const _WithLayer = () => {
 };
 
 export const UsageExamples = () => {
-  const prefix = 'cds';
+  const prefix = "cds";
 
   return (
     <>
@@ -306,7 +311,8 @@ export const UsageExamples = () => {
             renderIcon={Add}
             tooltipPosition="left"
           />
-        }>
+        }
+      >
         {[...Array(3)].map((_, i) => (
           <ContainedListItem
             key={i}
@@ -316,7 +322,8 @@ export const UsageExamples = () => {
                 <OverflowMenuItem itemText="Edit" />
                 <OverflowMenuItem itemText="Remove" isDelete hasDivider />
               </OverflowMenu>
-            }>
+            }
+          >
             List item
           </ContainedListItem>
         ))}
@@ -331,7 +338,8 @@ export const UsageExamples = () => {
             tooltipPosition="left"
             kind="ghost"
           />
-        }>
+        }
+      >
         {[...Array(3)].map((_, i) => (
           <ContainedListItem key={i}>
             List item
@@ -347,10 +355,11 @@ export const UsageExamples = () => {
           <ContainedListItem key={i}>
             <div
               style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(3, 1fr)',
-                columnGap: '1rem',
-              }}>
+                display: "grid",
+                gridTemplateColumns: "repeat(3, 1fr)",
+                columnGap: "1rem",
+              }}
+            >
               <span>List item</span>
               <span>List item details</span>
               <span>List item details</span>

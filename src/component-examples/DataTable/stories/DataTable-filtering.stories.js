@@ -5,9 +5,9 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import { action } from '@storybook/addon-actions';
-import React, { useState } from 'react';
-import Button from '../../Button';
+import { action } from "@storybook/addon-actions";
+import React, { useState } from "react";
+import Button from "../../Button";
 import DataTable, {
   Table,
   TableBody,
@@ -25,15 +25,15 @@ import DataTable, {
   TableBatchAction,
   TableSelectAll,
   TableSelectRow,
-} from '..';
-import { rows, headers } from './shared';
-import mdx from '../DataTable.mdx';
-import TableToolbarFilter from './examples/TableToolbarFilter';
-import './datatable-story.scss';
-import { Add, Download, Save, TrashCan } from '@carbon/icons-react';
+} from "..";
+import { rows, headers } from "./shared";
+import mdx from "../DataTable.mdx";
+import TableToolbarFilter from "./examples/TableToolbarFilter";
+import "./datatable-story.scss";
+import { Add, Download, Save, TrashCan } from "@carbon/icons-react";
 
 export default {
-  title: 'Components/DataTable/Filtering',
+  title: "Components/DataTable/Filtering",
   component: DataTable,
   subcomponents: {
     TableToolbar,
@@ -51,15 +51,15 @@ export default {
   },
   argTypes: {
     size: {
-      options: ['xs', 'sm', 'md', 'lg', 'xl'],
-      control: { type: 'select' },
+      options: ["xs", "sm", "md", "lg", "xl"],
+      control: { type: "select" },
     },
     useZebraStyles: {
-      control: { type: 'boolean' },
+      control: { type: "boolean" },
     },
   },
   args: {
-    size: 'lg',
+    size: "lg",
     useZebraStyles: false,
   },
   parameters: {
@@ -81,7 +81,7 @@ export const Default = (args) => {
         return Object.values(row).some((value) =>
           String(value)
             .toLowerCase()
-            .includes(selectedCheckboxes[i].toLowerCase())
+            .includes(selectedCheckboxes[i].toLowerCase()),
         );
       });
 
@@ -128,17 +128,17 @@ export const Default = (args) => {
                 onResetFilter={handleOnResetFilter}
               />
               <TableToolbarMenu>
-                <TableToolbarAction onClick={action('Action 1 Click')}>
+                <TableToolbarAction onClick={action("Action 1 Click")}>
                   Action 1
                 </TableToolbarAction>
-                <TableToolbarAction onClick={action('Action 2 Click')}>
+                <TableToolbarAction onClick={action("Action 2 Click")}>
                   Action 2
                 </TableToolbarAction>
-                <TableToolbarAction onClick={action('Action 3 Click')}>
+                <TableToolbarAction onClick={action("Action 3 Click")}>
                   Action 3
                 </TableToolbarAction>
               </TableToolbarMenu>
-              <Button onClick={action('Button click')}>Primary Button</Button>
+              <Button onClick={action("Button click")}>Primary Button</Button>
             </TableToolbarContent>
           </TableToolbar>
           <Table {...getTableProps()} aria-label="sample table">

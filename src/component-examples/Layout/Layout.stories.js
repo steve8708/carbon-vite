@@ -7,10 +7,10 @@
 
 import React from 'react';
 
-import { Accordion, AccordionItem } from '../Accordion';
-import Button from '../Button';
-import { HStack, VStack } from '../Stack';
-import { TextInput } from '../TextInput';
+import { Accordion, AccordionItem } from '@carbon/react';
+import { Button } from '@carbon/react';
+import { HStack, VStack } from '@carbon/react';
+import { TextInput } from '@carbon/react';
 
 import { Layout, LayoutConstraint } from './';
 import mdx from './Layout.mdx';
@@ -32,7 +32,7 @@ const Demo = () => (
   <VStack gap={6}>
     <HStack>
       <TextInput labelText="<TextInput />" placeholder="Placeholder" />
-      <div style={{ display: 'flex', alignItems: 'flex-end' }}>
+      <div style={ display: 'flex', alignItems: 'flex-end' }>
         <Button>&lt;Button /&gt;</Button>
       </div>
       <TextInput
@@ -40,7 +40,7 @@ const Demo = () => (
         size="sm"
         placeholder="Placeholder"
       />
-      <div style={{ display: 'flex', alignItems: 'flex-end' }}>
+      <div style={ display: 'flex', alignItems: 'flex-end' }>
         <Button size="sm">&lt;Button size=&quot;sm&quot; /&gt;</Button>
       </div>
     </HStack>

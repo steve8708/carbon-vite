@@ -5,12 +5,12 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
-import { Section, Heading } from '../Heading';
-import mdx from './Heading.mdx';
+import React from "react";
+import { Section, Heading } from "@carbon/react";
+import mdx from "./Heading.mdx";
 
 export default {
-  title: 'Components/Heading',
+  title: "Components/Heading",
   component: Heading,
   subcomponents: {
     Section,

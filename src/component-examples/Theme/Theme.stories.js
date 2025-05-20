@@ -5,17 +5,22 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import './Theme-story.scss';
-import React, { useEffect } from 'react';
+import "./Theme-story.scss";
+import React, { useEffect } from "react";
 
-import { WithLayer } from '../../../.storybook/templates/WithLayer';
-import { VStack } from '../Stack';
+import { WithLayer } from "../../../.storybook/templates/WithLayer";
+import { VStack } from "@carbon/react";
 
-import { GlobalTheme, Theme, usePrefersDarkScheme, useTheme } from '../Theme';
-import mdx from './Theme.mdx';
+import {
+  GlobalTheme,
+  Theme,
+  usePrefersDarkScheme,
+  useTheme,
+} from "@carbon/react";
+import mdx from "./Theme.mdx";
 
 export default {
-  title: 'Components/Theme',
+  title: "Components/Theme",
   component: Theme,
   subcomponents: {
     GlobalTheme,
@@ -41,7 +46,7 @@ export default {
     },
   },
   args: {
-    theme: 'g10',
+    theme: "g10",
   },
 };
 
@@ -100,28 +105,28 @@ export const UseTheme = () => {
   );
 };
 
-UseTheme.storyName = 'useTheme';
+UseTheme.storyName = "useTheme";
 
 export const UsePrefersDarkScheme = () => {
   const prefersDark = usePrefersDarkScheme();
 
-  const theme1 = prefersDark ? 'g100' : 'white';
-  const theme2 = prefersDark ? 'white' : 'g100';
-  const theme3 = prefersDark ? 'g90' : 'g10';
-  const theme4 = prefersDark ? 'g10' : 'g90';
+  const theme1 = prefersDark ? "g100" : "white";
+  const theme2 = prefersDark ? "white" : "g100";
+  const theme3 = prefersDark ? "g90" : "g10";
+  const theme4 = prefersDark ? "g10" : "g90";
 
   return (
     <Theme theme={theme1}>
       <section className="theme-section">
         <ThemeText showIsDark={true}>
-          usePrefersDarkScheme() is {prefersDark ? '`true`' : '`false`'}. Theme
+          usePrefersDarkScheme() is {prefersDark ? "`true`" : "`false`"}. Theme
           set to `{theme1}`.
         </ThemeText>
       </section>
       <Theme theme={theme2}>
         <section className="theme-section">
           <ThemeText showIsDark={true}>
-            usePrefersDarkScheme() is {prefersDark ? '`true`' : '`false`'}. An
+            usePrefersDarkScheme() is {prefersDark ? "`true`" : "`false`"}. An
             alternative theme set of `{theme2}`.
           </ThemeText>
         </section>
@@ -129,7 +134,7 @@ export const UsePrefersDarkScheme = () => {
       <Theme theme={theme3}>
         <section className="theme-section">
           <ThemeText showIsDark={true}>
-            usePrefersDarkScheme() is {prefersDark ? '`true`' : '`false`'}.
+            usePrefersDarkScheme() is {prefersDark ? "`true`" : "`false`"}.
             Theme set to `{theme3}`.
           </ThemeText>
         </section>
@@ -137,7 +142,7 @@ export const UsePrefersDarkScheme = () => {
       <Theme theme={theme4}>
         <section className="theme-section">
           <ThemeText showIsDark={true}>
-            usePrefersDarkScheme() is {prefersDark ? '`true`' : '`false`'}. An
+            usePrefersDarkScheme() is {prefersDark ? "`true`" : "`false`"}. An
             alternative theme set of `{theme4}`.
           </ThemeText>
         </section>
@@ -145,10 +150,10 @@ export const UsePrefersDarkScheme = () => {
     </Theme>
   );
 };
-UsePrefersDarkScheme.storyName = 'usePrefersDarkScheme';
+UsePrefersDarkScheme.storyName = "usePrefersDarkScheme";
 
 export const _WithLayer = () => {
-  const themes = ['white', 'g10', 'g90', 'g100'];
+  const themes = ["white", "g10", "g90", "g100"];
 
   return (
     <VStack gap={7}>

@@ -6,10 +6,10 @@
  */
 
 import React from 'react';
-import FluidTimePicker from '../FluidTimePicker';
-import FluidTimePickerSelect from '../FluidTimePickerSelect';
+import { FluidTimePicker } from '@carbon/react';
+import { FluidTimePickerSelect } from '@carbon/react';
 import FluidTimePickerSkeleton from './FluidTimePicker.Skeleton';
-import SelectItem from '../SelectItem';
+import { SelectItem } from '@carbon/react';
 import {
   ToggletipLabel,
   Toggletip,
@@ -42,7 +42,7 @@ const ToggleTip = (
 );
 
 export const Skeleton = () => (
-  <div style={{ width: '300px' }}>
+  <div style={ width: '300px' }>
     <FluidTimePickerSkeleton />
     <br />
     <br />
@@ -52,7 +52,7 @@ export const Skeleton = () => (
 
 export const Default = (args) => {
   return (
-    <div style={{ width: '350px' }}>
+    <div style={ width: '350px' }>
       <FluidTimePicker id="time-picker-1" {...args}>
         <FluidTimePickerSelect id="select-1" labelText={ToggleTip}>
           <SelectItem value="am" text="AM" />

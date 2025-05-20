@@ -7,14 +7,14 @@
 
 /* eslint-disable no-console */
 
-import React from 'react';
-import { Breadcrumb, BreadcrumbItem, BreadcrumbSkeleton } from '../Breadcrumb';
-import OverflowMenu from '../OverflowMenu';
-import OverflowMenuItem from '../OverflowMenuItem';
-import mdx from './Breadcrumb.mdx';
+import React from "react";
+import { Breadcrumb, BreadcrumbItem, BreadcrumbSkeleton } from "@carbon/react";
+import { OverflowMenu } from "@carbon/react";
+import { OverflowMenuItem } from "@carbon/react";
+import mdx from "./Breadcrumb.mdx";
 
 export default {
-  title: 'Components/Breadcrumb',
+  title: "Components/Breadcrumb",
   component: Breadcrumb,
   subcomponents: {
     BreadcrumbItem,
@@ -34,8 +34,8 @@ const sharedArgTypes = {
     },
   },
   size: {
-    options: ['sm', 'md'],
-    control: { type: 'select' },
+    options: ["sm", "md"],
+    control: { type: "select" },
   },
 };
 

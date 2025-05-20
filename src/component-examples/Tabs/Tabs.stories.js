@@ -16,14 +16,14 @@ import {
   TabPanel,
   IconTab,
 } from './Tabs';
-import TextInput from '../TextInput';
-import Checkbox from '../Checkbox';
-import Button from '../Button';
-import RadioButtonGroup from '../RadioButtonGroup';
-import RadioButton from '../RadioButton';
-import { Stack } from '../Stack';
-import { Grid, Column } from '../Grid';
-import { Layer } from '../Layer';
+import { TextInput } from '@carbon/react';
+import { Checkbox } from '@carbon/react';
+import { Button } from '@carbon/react';
+import { RadioButtonGroup } from '@carbon/react';
+import { RadioButton } from '@carbon/react';
+import { Stack } from '@carbon/react';
+import { Grid, Column } from '@carbon/react';
+import { Layer } from '@carbon/react';
 import mdx from './Tabs.mdx';
 
 import TabsSkeleton from './Tabs.Skeleton';
@@ -178,7 +178,7 @@ export const Dismissable = () => {
 
   return (
     <>
-      <Button style={{ marginBottom: '3rem' }} onClick={resetTabs}>
+      <Button style={ marginBottom: '3rem' } onClick={resetTabs}>
         Reset
       </Button>
       <Tabs
@@ -251,7 +251,7 @@ export const DismissableWithIcons = ({ contained }) => {
 
   return (
     <>
-      <Button style={{ marginBottom: '3rem' }} onClick={resetTabs}>
+      <Button style={ marginBottom: '3rem' } onClick={resetTabs}>
         Reset
       </Button>
       <Tabs
@@ -287,11 +287,11 @@ export const WithIcons = () => {
       <TabPanels>
         <TabPanel>Tab Panel 1</TabPanel>
         <TabPanel>
-          <form style={{ margin: '2em' }}>
+          <form style={ margin: '2em' }>
             <legend className={`cds--label`}>Validation example</legend>
             <Checkbox id="cb" labelText="Accept privacy policy" />
             <Button
-              style={{ marginTop: '1rem', marginBottom: '1rem' }}
+              style={ marginTop: '1rem', marginBottom: '1rem' }
               type="submit">
               Submit
             </Button>
@@ -324,11 +324,11 @@ export const Manual = () => {
       <TabPanels>
         <TabPanel>Tab Panel 1</TabPanel>
         <TabPanel>
-          <form style={{ margin: '2em' }}>
+          <form style={ margin: '2em' }>
             <legend className={`cds--label`}>Validation example</legend>
             <Checkbox id="cb" labelText="Accept privacy policy" />
             <Button
-              style={{ marginTop: '1rem', marginBottom: '1rem' }}
+              style={ marginTop: '1rem', marginBottom: '1rem' }
               type="submit">
               Submit
             </Button>
@@ -434,11 +434,11 @@ export const Contained = () => {
         <TabPanel>Tab Panel 1</TabPanel>
         <TabPanel>
           <Layer>
-            <form style={{ margin: '2em' }}>
+            <form style={ margin: '2em' }>
               <legend className={`cds--label`}>Validation example</legend>
               <Checkbox id="cb" labelText="Accept privacy policy" />
               <Button
-                style={{ marginTop: '1rem', marginBottom: '1rem' }}
+                style={ marginTop: '1rem', marginBottom: '1rem' }
                 type="submit">
                 Submit
               </Button>
@@ -474,11 +474,11 @@ export const ContainedWithIcons = () => {
         <TabPanel>Tab Panel 1</TabPanel>
         <TabPanel>
           <Layer>
-            <form style={{ margin: '2em' }}>
+            <form style={ margin: '2em' }>
               <legend className={`cds--label`}>Validation example</legend>
               <Checkbox id="cb" labelText="Accept privacy policy" />
               <Button
-                style={{ marginTop: '1rem', marginBottom: '1rem' }}
+                style={ marginTop: '1rem', marginBottom: '1rem' }
                 type="submit">
                 Submit
               </Button>
@@ -514,11 +514,11 @@ export const ContainedWithSecondaryLabels = () => {
         <TabPanel>Tab Panel 1</TabPanel>
         <TabPanel>
           <Layer>
-            <form style={{ margin: '2em' }}>
+            <form style={ margin: '2em' }>
               <legend className={`cds--label`}>Validation example</legend>
               <Checkbox id="cb" labelText="Accept privacy policy" />
               <Button
-                style={{ marginTop: '1rem', marginBottom: '1rem' }}
+                style={ marginTop: '1rem', marginBottom: '1rem' }
                 type="submit">
                 Submit
               </Button>
@@ -562,11 +562,11 @@ export const ContainedWithSecondaryLabelsAndIcons = () => {
         <TabPanel>Tab Panel 1</TabPanel>
         <TabPanel>
           <Layer>
-            <form style={{ margin: '2em' }}>
+            <form style={ margin: '2em' }>
               <legend className={`cds--label`}>Validation example</legend>
               <Checkbox id="cb" labelText="Accept privacy policy" />
               <Button
-                style={{ marginTop: '1rem', marginBottom: '1rem' }}
+                style={ marginTop: '1rem', marginBottom: '1rem' }
                 type="submit">
                 Submit
               </Button>
@@ -605,11 +605,11 @@ export const ContainedFullWidth = () => {
             <TabPanel>Tab Panel 1</TabPanel>
             <TabPanel>
               <Layer>
-                <form style={{ margin: '2em' }}>
+                <form style={ margin: '2em' }>
                   <legend className={`cds--label`}>Validation example</legend>
                   <Checkbox id="cb" labelText="Accept privacy policy" />
                   <Button
-                    style={{ marginTop: '1rem', marginBottom: '1rem' }}
+                    style={ marginTop: '1rem', marginBottom: '1rem' }
                     type="submit">
                     Submit
                   </Button>
@@ -653,7 +653,7 @@ export const Vertical = (args) => {
         <TabPanel>Tab Panel 1</TabPanel>
         <TabPanel>
           <Layer>
-            <form style={{ margin: '2em' }}>
+            <form style={ margin: '2em' }>
               <Stack gap={7}>
                 <TextInput id="one" labelText="First Name" />
                 <TextInput id="three" labelText="Middle Initial" />
@@ -719,7 +719,7 @@ Vertical.argTypes = {
 
 export const Skeleton = () => {
   return (
-    <div style={{ maxWidth: '100%' }}>
+    <div style={ maxWidth: '100%' }>
       <TabsSkeleton />
     </div>
   );

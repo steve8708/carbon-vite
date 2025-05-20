@@ -8,7 +8,7 @@
 import React, { useState } from 'react';
 import { action } from '@storybook/addon-actions';
 import { ErrorBoundary, ErrorBoundaryContext } from './';
-import Button from '../Button';
+import { Button } from '@carbon/react';
 import mdx from './ErrorBoundary.mdx';
 
 export default {
@@ -65,7 +65,7 @@ export const WithCustomContext = () => {
     }
 
     return (
-      <ErrorBoundaryContext.Provider value={{ log: action('log') }}>
+      <ErrorBoundaryContext.Provider value={ log: action('log') }>
         <Button onClick={onClick}>Toggle throwing error</Button>
         <div>
           <ErrorBoundary fallback={<Fallback />}>

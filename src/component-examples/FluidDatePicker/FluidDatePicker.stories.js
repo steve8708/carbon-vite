@@ -6,8 +6,8 @@
  */
 
 import React from 'react';
-import FluidDatePicker from '../FluidDatePicker';
-import FluidDatePickerInput from '../FluidDatePickerInput';
+import { FluidDatePicker } from '@carbon/react';
+import { FluidDatePickerInput } from '@carbon/react';
 import FluidDatePickerSkeleton from './FluidDatePicker.Skeleton';
 import {
   ToggletipLabel,
@@ -150,7 +150,7 @@ const ToggleTip = (
 );
 
 export const Simple = (args) => (
-  <div style={{ width: '288px' }}>
+  <div style={ width: '288px' }>
     <FluidDatePicker datePickerType="simple" {...args}>
       <FluidDatePickerInput
         placeholder="mm/dd/yyyy"
@@ -166,10 +166,10 @@ Simple.args = { ...sharedArgs };
 Simple.argTypes = { ...sharedArgTypes };
 
 export const Single = (args) => (
-  <div style={{ width: '288px' }}>
+  <div style={ width: '288px' }>
     <FluidDatePicker datePickerType="single" {...args}>
       <FluidDatePickerInput
-        style={{ width: '288px' }}
+        style={ width: '288px' }
         placeholder="mm/dd/yyyy"
         labelText={ToggleTip}
         id="date-picker-single"
@@ -184,7 +184,7 @@ Single.argTypes = { ...sharedArgTypes };
 
 export const RangeWithCalendar = (args) => {
   return (
-    <div style={{ width: '288px' }}>
+    <div style={ width: '288px' }>
       <FluidDatePicker datePickerType="range" {...args}>
         <FluidDatePickerInput
           id="date-picker-input-id-start"
@@ -209,7 +209,7 @@ RangeWithCalendar.args = { ...sharedArgs };
 RangeWithCalendar.argTypes = { ...sharedArgTypes };
 
 export const Skeleton = () => (
-  <div style={{ width: '300px' }}>
+  <div style={ width: '300px' }>
     <FluidDatePickerSkeleton
       datePickerType="simple"
       labelText="Label"

@@ -161,7 +161,7 @@ DragAndDropUploadSingleContainerExampleApplication.argTypes = {
 
 export const Skeleton = () => {
   return (
-    <div style={{ width: '500px' }}>
+    <div style={ width: '500px' }>
       <FileUploaderSkeleton />
     </div>
   );

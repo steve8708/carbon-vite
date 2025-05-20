@@ -17,13 +17,13 @@ export default {
 };
 
 export const Skeleton = () => (
-  <div style={{ width: '400px' }}>
+  <div style={ width: '400px' }>
     <FluidSearchSkeleton />
   </div>
 );
 
 export const Default = (args) => (
-  <div style={{ width: args.defaultWidth }}>
+  <div style={ width: args.defaultWidth }>
     <FluidSearch {...args} />
   </div>
 );

@@ -9,7 +9,7 @@ import React from 'react';
 
 import { WithLayer } from '../../../.storybook/templates/WithLayer';
 
-import FluidTextArea from '../FluidTextArea';
+import { FluidTextArea } from '@carbon/react';
 import FluidTextAreaSkeleton from './FluidTextArea.Skeleton';
 import {
   ToggletipLabel,
@@ -113,7 +113,7 @@ const sharedArgTypes = {
 };
 
 export const Default = (args) => (
-  <div style={{ width: args.defaultWidth }}>
+  <div style={ width: args.defaultWidth }>
     <FluidTextArea {...args} />
   </div>
 );
@@ -171,7 +171,7 @@ export const DefaultWithTooltip = () => (
 );
 
 export const Skeleton = () => (
-  <div style={{ width: '300px' }}>
+  <div style={ width: '300px' }>
     <FluidTextAreaSkeleton />
   </div>
 );

@@ -5,15 +5,15 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import './AspectRatio-story.scss';
+import "./AspectRatio-story.scss";
 
-import React from 'react';
-import { Grid, Column } from '../Grid';
-import { AspectRatio } from './';
-import mdx from './AspectRatio.mdx';
+import React from "react";
+import { Grid, Column } from "@carbon/react";
+import { AspectRatio } from "./";
+import mdx from "./AspectRatio.mdx";
 
 export default {
-  title: 'Components/AspectRatio',
+  title: "Components/AspectRatio",
   component: AspectRatio,
   decorators: [
     (Story) => (
@@ -60,11 +60,11 @@ Default.argTypes = {
   },
   ratio: {
     control: {
-      type: 'select',
+      type: "select",
     },
-    options: ['16x9', '9x16', '2x1', '1x2', '4x3', '3x4', '1x1'],
+    options: ["16x9", "9x16", "2x1", "1x2", "4x3", "3x4", "1x1"],
     table: {
-      category: 'AspectRatio',
+      category: "AspectRatio",
     },
   },
 };

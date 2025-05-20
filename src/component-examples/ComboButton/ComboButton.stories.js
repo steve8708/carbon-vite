@@ -8,7 +8,7 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
 
-import { MenuItem, MenuItemDivider } from '../Menu';
+import { MenuItem, MenuItemDivider } from '@carbon/react';
 import { CopyFile, Export } from '@carbon/icons-react';
 
 import { ComboButton } from './';
@@ -68,7 +68,7 @@ export const Default = (args) => {
 Default.argTypes = { ...sharedArgTypes };
 
 export const ExperimentalAutoAlign = (args) => (
-  <div style={{ width: '5000px', height: '5000px' }}>
+  <div style={ width: '5000px', height: '5000px' }>
     <div
       style={{
         position: 'absolute',
@@ -113,7 +113,7 @@ WithIcons.argTypes = { ...sharedArgTypes };
 export const WithMenuAlignment = () => {
   return (
     <>
-      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+      <div style={ display: 'flex', justifyContent: 'space-between' }>
         <ComboButton label="Bottom" menuAlignment="bottom">
           <MenuItem label="Second action with a long label description" />
           <MenuItem label="Third action" />

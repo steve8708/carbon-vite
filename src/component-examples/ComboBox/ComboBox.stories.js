@@ -8,10 +8,10 @@
 import React, { useState, useRef } from 'react';
 
 import { WithLayer } from '../../../.storybook/templates/WithLayer';
-import ComboBox from '../ComboBox';
-import Button from '../Button';
-import { AILabel, AILabelContent, AILabelActions } from '../AILabel';
-import { IconButton } from '../IconButton';
+import { ComboBox } from '@carbon/react';
+import { Button } from '@carbon/react';
+import { AILabel, AILabelContent, AILabelActions } from '@carbon/react';
+import { IconButton } from '@carbon/react';
 import { View, FolderOpen, Folders } from '@carbon/icons-react';
 import { action } from '@storybook/addon-actions';
 import mdx from './ComboBox.mdx';
@@ -184,7 +184,7 @@ export const Default = (args) => {
     },
   ];
   return (
-    <div style={{ width: 300 }}>
+    <div style={ width: 300 }>
       <ComboBox
         id="carbon-combobox"
         items={items}
@@ -205,7 +205,7 @@ export const AllowCustomValue = (args) => {
     return menu?.item?.toLowerCase().includes(menu?.inputValue?.toLowerCase());
   };
   return (
-    <div style={{ width: 300 }}>
+    <div style={ width: 300 }>
       <ComboBox
         allowCustomValue
         shouldFilterItem={filterItems}
@@ -221,7 +221,7 @@ export const AllowCustomValue = (args) => {
 
 export const AutocompleteWithTypeahead = (args) => {
   return (
-    <div style={{ width: 300 }}>
+    <div style={ width: 300 }>
       <ComboBox
         allowCustomValue
         onChange={args.onChange}
@@ -243,8 +243,8 @@ export const AutocompleteWithTypeahead = (args) => {
   );
 };
 export const ExperimentalAutoAlign = (args) => (
-  <div style={{ width: 400 }}>
-    <div style={{ height: 300 }}></div>
+  <div style={ width: 400 }>
+    <div style={ height: 300 }></div>
     <ComboBox
       onChange={() => {}}
       id="carbon-combobox"
@@ -255,7 +255,7 @@ export const ExperimentalAutoAlign = (args) => (
       autoAlign={true}
       {...args}
     />
-    <div style={{ height: 800 }}></div>
+    <div style={ height: 800 }></div>
   </div>
 );
 
@@ -268,7 +268,7 @@ AllowCustomValue.argTypes = {
 export const _WithLayer = (args) => (
   <WithLayer>
     {(layer) => (
-      <div style={{ width: 300 }}>
+      <div style={ width: 300 }>
         <ComboBox
           onChange={() => {}}
           id={`carbon-combobox-${layer}`}
@@ -344,7 +344,7 @@ export const withAILabel = (args) => {
     },
   ];
   return (
-    <div style={{ width: 300 }}>
+    <div style={ width: 300 }>
       <ComboBox
         onChange={action('onChange')}
         id="carbon-combobox"
@@ -367,7 +367,7 @@ export const UndefinedChecksTesting = () => {
     return menu?.item?.toLowerCase().includes(menu?.inputValue?.toLowerCase());
   };
   return (
-    <div style={{ width: 300 }}>
+    <div style={ width: 300 }>
       <ComboBox
         shouldFilterItem={filterItems}
         onChange={(event) => {
@@ -402,7 +402,7 @@ export const UndefinedChecksWithAllowCustomValue = () => {
     return menu?.item?.toLowerCase().includes(menu?.inputValue?.toLowerCase());
   };
   return (
-    <div style={{ width: 300 }}>
+    <div style={ width: 300 }>
       <ComboBox
         allowCustomValue
         shouldFilterItem={filterItems}

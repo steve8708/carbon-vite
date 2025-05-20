@@ -5,17 +5,17 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
+import React from "react";
 
-import { WithLayer } from '../../../.storybook/templates/WithLayer';
+import { WithLayer } from "../../../.storybook/templates/WithLayer";
 
-import SelectItem from '../SelectItem';
-import TimePicker from './TimePicker';
-import TimePickerSelect from '../TimePickerSelect';
-import mdx from './TimePicker.mdx';
+import { SelectItem } from "@carbon/react";
+import TimePicker from "./TimePicker";
+import { TimePickerSelect } from "@carbon/react";
+import mdx from "./TimePicker.mdx";
 
 export default {
-  title: 'Components/TimePicker',
+  title: "Components/TimePicker",
   component: TimePicker,
   subcomponents: {
     TimePickerSelect,
@@ -68,36 +68,36 @@ Default.argTypes = {
   },
   disabled: {
     control: {
-      type: 'boolean',
+      type: "boolean",
     },
   },
   hideLabel: {
     control: {
-      type: 'boolean',
+      type: "boolean",
     },
   },
   invalid: {
     control: {
-      type: 'boolean',
+      type: "boolean",
     },
   },
   invalidText: {
-    control: { type: 'text' },
+    control: { type: "text" },
   },
   warning: {
     control: {
-      type: 'boolean',
+      type: "boolean",
     },
   },
   warningText: {
-    control: { type: 'text' },
+    control: { type: "text" },
   },
   labelText: {
-    control: { type: 'text' },
+    control: { type: "text" },
   },
   size: {
-    options: ['sm', 'md', 'lg'],
-    control: { type: 'select' },
+    options: ["sm", "md", "lg"],
+    control: { type: "select" },
   },
   light: {
     table: {

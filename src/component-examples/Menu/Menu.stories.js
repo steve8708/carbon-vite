@@ -5,8 +5,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
-import { action } from '@storybook/addon-actions';
+import React from "react";
+import { action } from "@storybook/addon-actions";
 
 import {
   Copy,
@@ -16,7 +16,7 @@ import {
   TextBold,
   TextItalic,
   TrashCan,
-} from '@carbon/icons-react';
+} from "@carbon/icons-react";
 
 import {
   Menu,
@@ -25,11 +25,11 @@ import {
   MenuItemGroup,
   MenuItemRadioGroup,
   MenuItemDivider,
-} from './';
-import mdx from './Menu.mdx';
+} from "./";
+import mdx from "./Menu.mdx";
 
 export default {
-  title: 'Components/Menu',
+  title: "Components/Menu",
   component: Menu,
   subcomponents: {
     MenuItem,
@@ -51,18 +51,18 @@ export default {
 };
 
 export const Default = (args) => {
-  const itemOnClick = action('onClick (MenuItem)');
-  const selectableOnChange = action('onChange (MenuItemSelectable)');
-  const radioOnChange = action('onChange (MenuItemRadioGroup)');
+  const itemOnClick = action("onClick (MenuItem)");
+  const selectableOnChange = action("onChange (MenuItemSelectable)");
+  const radioOnChange = action("onChange (MenuItemRadioGroup)");
 
-  const target = document.getElementById('storybook-root');
+  const target = document.getElementById("storybook-root");
 
   return (
-    <Menu {...args} target={target} x={document?.dir === 'rtl' ? 250 : 0}>
+    <Menu {...args} target={target} x={document?.dir === "rtl" ? 250 : 0}>
       <MenuItem label="Share with" renderIcon={FolderShared}>
         <MenuItemRadioGroup
           label="Share with"
-          items={['None', 'Product team', 'Organization', 'Company']}
+          items={["None", "Product team", "Organization", "Company"]}
           defaultSelectedItem="Product team"
           onChange={radioOnChange}
         />
@@ -106,7 +106,7 @@ export const Default = (args) => {
       <MenuItemDivider />
       <MenuItemRadioGroup
         label="Text decoration"
-        items={['None', 'Overline', 'Line-through', 'Underline']}
+        items={["None", "Overline", "Line-through", "Underline"]}
         defaultSelectedItem="None"
         onChange={radioOnChange}
       />
@@ -123,7 +123,7 @@ export const Default = (args) => {
 };
 
 Default.args = {
-  onClose: action('onClose'),
+  onClose: action("onClose"),
   open: true,
 };
 

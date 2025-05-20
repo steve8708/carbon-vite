@@ -6,16 +6,10 @@
  */
 
 import React from 'react';
-import { default as Tag } from '.';
-import { default as SelectableTag } from './SelectableTag';
-import { default as OperationalTag } from './OperationalTag';
-import { default as DismissibleTag } from './DismissibleTag';
+import { Tag, SelectableTag, OperationalTag, DismissibleTag, Popover, PopoverContent, Text, Button } from '@carbon/react';
 import { Asleep } from '@carbon/icons-react';
-import { Popover, PopoverContent } from '../Popover';
 import mdx from './Tag.mdx';
 import './storyInteractiveTag.scss';
-import { Text } from '../Text';
-import Button from '../Button';
 
 export default {
   title: 'Components/Tag',
@@ -131,7 +125,7 @@ export const Operational = (args) => {
       <div
         aria-label="Operational tags"
         role="group"
-        style={{ marginBottom: '1rem' }}>
+        style={ marginBottom: '1rem' }>
         <OperationalTag
           type="red"
           className="some-class"
@@ -395,7 +389,7 @@ export const Dismissible = (args) => {
     <>
       <Button
         // aria-label="Re-render all tags in the screen"
-        style={{ marginBottom: '3rem' }}
+        style={ marginBottom: '3rem' }
         onClick={resetTabs}>
         Reset
       </Button>

@@ -5,21 +5,21 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
+import React from "react";
 
-import { WithLayer } from '../../../.storybook/templates/WithLayer';
-import ContentSwitcher from './ContentSwitcher';
-import { Switch, IconSwitch } from '../Switch';
-import mdx from './ContentSwitcher.mdx';
+import { WithLayer } from "../../../.storybook/templates/WithLayer";
+import ContentSwitcher from "./ContentSwitcher";
+import { Switch, IconSwitch } from "@carbon/react";
+import mdx from "./ContentSwitcher.mdx";
 import {
   TableOfContents,
   Workspace,
   ViewMode_2,
   Icon,
-} from '@carbon/icons-react';
+} from "@carbon/icons-react";
 
 export default {
-  title: 'Components/ContentSwitcher',
+  title: "Components/ContentSwitcher",
   component: ContentSwitcher,
   subcomponents: {
     IconSwitch,
@@ -47,10 +47,10 @@ const sharedArgTypes = {
     control: false,
   },
   onChange: {
-    action: 'onChange',
+    action: "onChange",
   },
   size: {
-    options: ['sm', 'md', 'lg'],
+    options: ["sm", "md", "lg"],
   },
 };
 

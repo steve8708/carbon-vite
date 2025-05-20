@@ -5,14 +5,14 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import './story.scss';
+import "./story.scss";
 
-import React from 'react';
-import { DefinitionTooltip } from './';
-import mdx from './DefinitionTooltip.mdx';
+import React from "react";
+import { DefinitionTooltip } from "./";
+import mdx from "./DefinitionTooltip.mdx";
 
 export default {
-  title: 'Components/DefinitionTooltip',
+  title: "Components/DefinitionTooltip",
   component: DefinitionTooltip,
   parameters: {
     controls: {
@@ -21,7 +21,7 @@ export default {
     docs: {
       page: mdx,
     },
-    layout: 'centered',
+    layout: "centered",
   },
   argTypes: {
     children: {
@@ -45,14 +45,14 @@ export default {
 };
 export const Default = (args) => {
   const definition =
-    'Uniform Resource Locator; the address of a resource (such as a document or website) on the Internet.';
+    "Uniform Resource Locator; the address of a resource (such as a document or website) on the Internet.";
   return (
     <p>
       Custom domains direct requests for your apps in this Cloud Foundry
-      organization to a{' '}
+      organization to a{" "}
       <DefinitionTooltip openOnHover definition={definition} {...args}>
         URL
-      </DefinitionTooltip>{' '}
+      </DefinitionTooltip>{" "}
       that you own. A custom domain can be a shared domain, a shared subdomain,
       or a shared domain and host.
     </p>
@@ -60,38 +60,38 @@ export const Default = (args) => {
 };
 
 Default.args = {
-  align: 'bottom-left',
+  align: "bottom-left",
   defaultOpen: false,
-  definition: 'Example definition',
+  definition: "Example definition",
   openOnHover: true,
 };
 
 Default.argTypes = {
   align: {
     options: [
-      'top',
-      'top-left',
-      'top-right',
+      "top",
+      "top-left",
+      "top-right",
 
-      'bottom',
-      'bottom-left',
-      'bottom-right',
+      "bottom",
+      "bottom-left",
+      "bottom-right",
 
-      'left',
-      'left-bottom',
-      'left-top',
+      "left",
+      "left-bottom",
+      "left-top",
 
-      'right',
-      'right-bottom',
-      'right-top',
+      "right",
+      "right-bottom",
+      "right-top",
     ],
     control: {
-      type: 'select',
+      type: "select",
     },
   },
   definition: {
     control: {
-      type: 'text',
+      type: "text",
     },
   },
   id: {
@@ -99,7 +99,7 @@ Default.argTypes = {
   },
   openOnHover: {
     control: {
-      type: 'boolean',
+      type: "boolean",
     },
   },
   tooltipText: {

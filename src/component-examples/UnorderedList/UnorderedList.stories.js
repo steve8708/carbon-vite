@@ -5,14 +5,14 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
+import React from "react";
 
-import ListItem from '../ListItem';
-import UnorderedList from '../UnorderedList';
-import mdx from './UnorderedList.mdx';
+import { ListItem } from "@carbon/react";
+import { UnorderedList } from "@carbon/react";
+import mdx from "./UnorderedList.mdx";
 
 export default {
-  title: 'Components/UnorderedList',
+  title: "Components/UnorderedList",
   component: UnorderedList,
   subcomponents: {
     ListItem,
@@ -41,7 +41,7 @@ Default.args = {
 Default.argTypes = {
   isExpressive: {
     control: {
-      type: 'boolean',
+      type: "boolean",
     },
   },
 };
@@ -77,4 +77,4 @@ export const Nested = () => {
   );
 };
 
-Nested.storyName = 'nested';
+Nested.storyName = "nested";

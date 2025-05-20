@@ -5,16 +5,16 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
-import { MenuItem } from '../Menu';
-import { MenuButton } from '../MenuButton';
-import { WithFeatureFlags } from '../../../.storybook/templates/WithFeatureFlags';
+import React from "react";
+import { MenuItem } from "@carbon/react";
+import { MenuButton } from "@carbon/react";
+import { WithFeatureFlags } from "../../../.storybook/templates/WithFeatureFlags";
 
 // eslint-disable-next-line storybook/csf-component
 export default {
-  title: 'Components/MenuButton/Feature Flag',
+  title: "Components/MenuButton/Feature Flag",
   component: MenuButton,
-  tags: ['!autodocs'],
+  tags: ["!autodocs"],
   decorators: [
     (Story) => (
       <WithFeatureFlags>
@@ -33,14 +33,14 @@ export const FloatingStyles = (args) => (
 );
 
 FloatingStyles.args = {
-  menuAlignment: 'bottom',
+  menuAlignment: "bottom",
 };
 
 FloatingStyles.argTypes = {
   menuAlignment: {
-    options: ['top', 'bottom'],
+    options: ["top", "bottom"],
     control: {
-      type: 'radio',
+      type: "radio",
     },
   },
 };

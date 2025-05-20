@@ -5,13 +5,13 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
-import IconIndicator from '.';
-import { IconIndicatorKinds } from './index';
-import mdx from './IconIndicator.mdx';
+import React from "react";
+import IconIndicator from ".";
+import { IconIndicatorKinds } from "./index";
+import mdx from "./IconIndicator.mdx";
 
 export default {
-  title: 'Experimental/StatusIndicators/unstable__IconIndicator',
+  title: "Experimental/StatusIndicators/unstable__IconIndicator",
   component: IconIndicator,
   parameters: {
     docs: {
@@ -24,10 +24,11 @@ export const Default = (props) => {
   return (
     <div
       style={{
-        display: 'flex',
-        flexFlow: 'column',
-        rowGap: '.5rem',
-      }}>
+        display: "flex",
+        flexFlow: "column",
+        rowGap: ".5rem",
+      }}
+    >
       <IconIndicator kind="failed" label="Failed" {...props} />
       <IconIndicator kind="caution-major" label="Caution major" {...props} />
       <IconIndicator kind="caution-minor" label="Caution minor" {...props} />
@@ -51,7 +52,7 @@ Default.args = {
 Default.argTypes = {
   label: {
     control: {
-      type: 'text',
+      type: "text",
     },
   },
   kind: {
@@ -59,7 +60,7 @@ Default.argTypes = {
   },
   size: {
     control: {
-      type: 'select',
+      type: "select",
     },
     options: [16, 20],
   },

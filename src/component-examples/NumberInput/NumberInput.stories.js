@@ -8,9 +8,9 @@
 import React from 'react';
 import { NumberInput } from './';
 import NumberInputSkeleton from './NumberInput.Skeleton';
-import Button from '../Button';
-import { AILabel, AILabelContent, AILabelActions } from '../AILabel';
-import { IconButton } from '../IconButton';
+import { Button } from '@carbon/react';
+import { AILabel, AILabelContent, AILabelActions } from '@carbon/react';
+import { IconButton } from '@carbon/react';
 import { View, FolderOpen, Folders } from '@carbon/icons-react';
 import mdx from './NumberInput.mdx';
 
@@ -142,7 +142,7 @@ export const withAILabel = (args) => {
   );
 
   return (
-    <div style={{ width: 400 }}>
+    <div style={ width: 400 }>
       <NumberInput
         min={-100}
         max={100}

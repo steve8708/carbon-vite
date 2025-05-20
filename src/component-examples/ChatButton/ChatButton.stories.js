@@ -5,18 +5,18 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
-import { ChatButton, ChatButtonSkeleton } from './';
-import { Add } from '@carbon/icons-react';
-import './chat-button-story.scss';
+import React from "react";
+import { ChatButton, ChatButtonSkeleton } from "./";
+import { Add } from "@carbon/icons-react";
+import "./chat-button-story.scss";
 
 export default {
-  title: 'Experimental/unstable__ChatButton',
+  title: "Experimental/unstable__ChatButton",
   component: ChatButton,
   parameters: {},
   argTypes: {
     onChange: {
-      action: 'onChange',
+      action: "onChange",
       table: {
         disable: true,
       },
