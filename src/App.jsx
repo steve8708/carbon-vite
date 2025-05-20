@@ -1,17 +1,16 @@
-import { Button } from "@carbon/react";
 import React from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout";
+import DashboardHome from "./pages/DashboardHome";
+import AboutPage from "./pages/AboutPage";
 
 export default function App() {
   return (
-    <div>
-      <nav>
-        <Link to="/">Home</Link> | <Link to="/about">About</Link>
-      </nav>
+    <Layout>
       <Routes>
-        <Route path="/" element={<Button>Hello world</Button>} />
-        <Route path="/about" element={<div>About Page</div>} />
+        <Route path="/" element={<DashboardHome />} />
+        <Route path="/about" element={<AboutPage />} />
       </Routes>
-    </div>
+    </Layout>
   );
 }
