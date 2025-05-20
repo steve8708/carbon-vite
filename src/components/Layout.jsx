@@ -109,6 +109,7 @@ export default function Layout({ children }) {
           </Header>
           <Content
             id="main-content"
+            className="cds--content"
             style={{ minHeight: "100vh", background: "#f4f4f4" }}
           >
             {children}

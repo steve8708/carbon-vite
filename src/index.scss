@@ -1,3 +1,10 @@
 @use "@carbon/react" with (
   $font-path: "@ibm/plex"
 );
+
+/* Hide SideNav on desktop (wider than 1056px, Carbon 'lg' breakpoint) */
+@media (min-width: 1056px) {
+  .cds--side-nav {
+    display: none !important;
+  }
+}
