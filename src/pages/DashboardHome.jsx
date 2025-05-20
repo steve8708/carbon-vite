@@ -1,5 +1,17 @@
 import React from "react";
-import { Grid, Column, Tile, DataTable, Tag, ProgressBar, InlineLoading, Tabs, Tab, Accordion, AccordionItem } from "@carbon/react";
+import {
+  Grid,
+  Column,
+  Tile,
+  DataTable,
+  Tag,
+  ProgressBar,
+  InlineLoading,
+  Tabs,
+  Tab,
+  Accordion,
+  AccordionItem,
+} from "@carbon/react";
 
 const rows = [
   { id: "a", name: "Alpha", status: "Active", value: 100 },
@@ -18,18 +30,26 @@ export default function DashboardHome() {
       <Column lg={12} md={8} sm={4}>
         <h2 style={{ margin: "0 0 1rem" }}>Welcome to the Carbon Dashboard</h2>
         <p style={{ marginBottom: "2rem" }}>
-          This is a robust, production-ready dashboard UI built with the Carbon Design System. Explore the widgets, data, and navigation.
+          This is a robust, production-ready dashboard UI built with the Carbon
+          Design System. Explore the widgets, data, and navigation.
         </p>
       </Column>
       <Column lg={4} md={8} sm={4}>
         <Tile style={{ marginBottom: "1rem" }}>
           <h4>Quick Stats</h4>
           <Tag type="green">Online</Tag>
-          <ProgressBar value={75} label="Usage" helperText="75% of quota used" />
+          <ProgressBar
+            value={75}
+            label="Usage"
+            helperText="75% of quota used"
+          />
         </Tile>
         <Tile style={{ marginBottom: "1rem" }}>
           <h4>Notifications</h4>
-          <InlineLoading description="All systems operational" status="finished" />
+          <InlineLoading
+            description="All systems operational"
+            status="finished"
+          />
         </Tile>
       </Column>
       <Column lg={8} md={8} sm={4}>
@@ -43,7 +63,7 @@ export default function DashboardHome() {
               <table className="cds--data-table">
                 <thead>
                   <tr>
-                    {headers.map(header => (
+                    {headers.map((header) => (
                       <th key={header.key} {...getHeaderProps({ header })}>
                         {header.header}
                       </th>
@@ -51,9 +71,9 @@ export default function DashboardHome() {
                   </tr>
                 </thead>
                 <tbody>
-                  {rows.map(row => (
+                  {rows.map((row) => (
                     <tr key={row.id} {...getRowProps({ row })}>
-                      {row.cells.map(cell => (
+                      {row.cells.map((cell) => (
                         <td key={cell.id}>{cell.value}</td>
                       ))}
                     </tr>
@@ -91,11 +111,19 @@ export default function DashboardHome() {
       <Column lg={8} md={8} sm={4}>
         <Tile style={{ marginBottom: "1rem", minHeight: 200 }}>
           <h4>Chart Widget</h4>
-          <div style={{ height: 150, display: "flex", alignItems: "center", justifyContent: "center", color: "#8d8d8d" }}>
+          <div
+            style={{
+              height: 150,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              color: "#8d8d8d",
+            }}
+          >
             [Chart Placeholder]
           </div>
         </Tile>
       </Column>
     </Grid>
   );
-} 
+}
